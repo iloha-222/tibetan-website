@@ -8,18 +8,248 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Tibetan Course Site</title>
-		<meta name="description" content="Learn Tibetan language and culture" />
+		<title>Learn Tibetan - Join Our Learning Family</title>
+		<meta name="description" content="Learn Tibetan language with our supportive community. Choose from live courses or self-study materials." />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-white">
-		<main class="min-h-screen">
-			<div class="container mx-auto px-4 py-8">
-				<h1 class="text-4xl font-bold text-center mb-8">Tibetan Course Site</h1>
-				<p class="text-center text-gray-600 mb-8">Ready for your custom design!</p>
-				<div class="text-center">
-					<p class="text-sm text-gray-500">Upload your PNG design files to replicate the layout</p>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="py-4 px-6">
+			<div class="max-w-7xl mx-auto flex justify-between items-center">
+				<div class="flex space-x-8">
+					<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Self-Paced Courses</a>
+					<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Live Courses</a>
+					<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Resources</a>
+					<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">About</a>
+				</div>
+				<button class="px-6 py-2 rounded-full text-white" style="background-color: #FF751F; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">
+					Start Learning
+				</button>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="py-16 px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<!-- Left Content -->
+					<div>
+						<h1 class="text-5xl font-normal mb-6" style="font-family: 'Bogart', serif; color: #000;">
+							Join Our<br>Learning Family
+						</h1>
+						<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							Learning Tibetan doesn't have to be a lonely journey through complex grammar books. In our courses, you'll find yourself part of a warm community where questions are always welcome and progress is celebrated together. Whether you choose our live learning circles or self-study materials, you'll discover that this ancient language can open doors not just to communication, but to genuine friendships and deeper understanding.
+						</p>
+					</div>
+
+					<!-- Right Illustration -->
+					<div class="flex justify-center">
+						<img src="/assets/illustrations/Illustration 1.webp" alt="Learning community characters" class="w-full max-w-lg">
+					</div>
 				</div>
 			</div>
-		</main>
+		</section>
+
+		<!-- How Can We Help You Section -->
+		<section class="py-16 px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-medium mb-2" style="font-family: 'Bogart', serif; color: #000;">
+						How Can We <span class="font-bold">Help <span style="position: relative;">You<span style="position: absolute; top: -10px; left: -10px; width: 60px; height: 60px; border: 3px solid #FF751F; border-radius: 50%; z-index: -1;"></span></span>?</span>
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+					<!-- Live Learning Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/Illustration 2.webp" alt="Live learning with students" class="w-full rounded-2xl">
+						</div>
+						<h3 class="text-2xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">
+							I Want to Learn Tibetan with Fellow Students
+						</h3>
+						<p class="mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Experience the magic of community learning with students worldwide.
+						</p>
+						<a href="#" class="inline-flex items-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Get started →
+						</a>
+					</div>
+
+					<!-- Self-Study Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/Illustration 3.webp" alt="Self-study at own pace" class="w-full rounded-2xl">
+						</div>
+						<h3 class="text-2xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">
+							I Prefer to Learn at my Own Pace
+						</h3>
+						<p class="mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Check out our self-study courses for independent learners.
+						</p>
+						<a href="#" class="inline-flex items-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Get started →
+						</a>
+					</div>
+
+					<!-- Beginner Guide Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/Illustration 3.webp" alt="Step by step guidance" class="w-full rounded-2xl">
+						</div>
+						<h3 class="text-2xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">
+							I Don't Know Where to Start
+						</h3>
+						<p class="mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							We got it, learning a language can feel overwhelming. That's why we crafted this step by step guide.
+						</p>
+						<a href="#" class="inline-flex items-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Get started →
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Course Levels Section -->
+		<section class="py-16 px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-normal mb-4" style="font-family: 'Bogart', serif; color: #000;">
+						Start Your Tibetan Journey <span class="font-bold">Today,</span><br>
+						No Matter Where You Are
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Beginner Level -->
+					<div class="border-2 rounded-3xl p-8" style="border-color: #B6794D;">
+						<div class="text-center mb-8">
+							<h3 class="text-3xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">Beginner</h3>
+							<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 12pt;">
+								New to Tibetan? Start with the basics of reading, writing, and speaking. Learn foundational grammar and build confidence with gentle, supportive guidance.
+							</p>
+						</div>
+
+						<div class="mb-8">
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">LIVE COURSES</h4>
+							<div class="grid grid-cols-2 gap-4 mb-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Beginner 101</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Beginner 102</button>
+							</div>
+							<p class="text-center text-sm italic" style="color: #B6794D;">🗓️ Next Cohort Starts on January 2026</p>
+						</div>
+
+						<div>
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">SELF-STUDY OPTIONS</h4>
+							<div class="grid grid-cols-2 gap-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Complete Beginner Package</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Webinars Only</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Intermediate Level -->
+					<div class="border-2 rounded-3xl p-8" style="border-color: #B6794D;">
+						<div class="text-center mb-8">
+							<h3 class="text-3xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">Intermediate</h3>
+							<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 12pt;">
+								Ready to expand your skills? Focus on conversation, cultural understanding, and practical communication.
+							</p>
+						</div>
+
+						<div class="mb-8">
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">LIVE COURSES</h4>
+							<div class="grid grid-cols-2 gap-4 mb-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Intermediate 201</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Intermediate 202</button>
+							</div>
+							<p class="text-center text-sm italic" style="color: #B6794D;">🗓️ Next Cohort Starts on January 2026</p>
+						</div>
+
+						<div>
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">SELF-STUDY OPTIONS</h4>
+							<div class="grid grid-cols-2 gap-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Complete Intermediate Package</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Webinars Only</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Advanced Level -->
+					<div class="border-2 rounded-3xl p-8" style="border-color: #B6794D;">
+						<div class="text-center mb-8">
+							<h3 class="text-3xl font-bold mb-4" style="font-family: 'Bogart', serif; color: #000;">Advanced</h3>
+							<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 12pt;">
+								Engage with complex ideas and refine your mastery of this beautiful language.
+							</p>
+						</div>
+
+						<div class="mb-8">
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">LIVE COURSES</h4>
+							<div class="grid grid-cols-2 gap-4 mb-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Advanced 301</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Advanced 302</button>
+							</div>
+							<p class="text-center text-sm italic" style="color: #B6794D;">🗓️ Next Cohort Starts on January 2026</p>
+						</div>
+
+						<div>
+							<h4 class="font-bold mb-4" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 13pt;">SELF-STUDY OPTIONS</h4>
+							<div class="grid grid-cols-2 gap-4">
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Complete Advanced Package</button>
+								<button class="px-4 py-3 rounded-full" style="background-color: #F4E6D6; font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt;">Webinars Only</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials Section -->
+		<section class="py-16 px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-normal mb-8" style="font-family: 'Bogart', serif; color: #000;">
+						We've helped over <span class="font-bold">300 people</span> get started on their learning journey
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<!-- Testimonial 1 -->
+					<div class="p-6 rounded-2xl" style="background-color: #F4E6D6;">
+						<div class="flex mb-4">
+							<span style="color: #FF751F;">★★★★★</span>
+						</div>
+						<p class="mb-4" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt; color: #000;">
+							"This course is simply superb, in every aspect. It is by far the best of all the courses I have ever taken in my life. It will certainly make my journey towards fluency far more exciting than I initially anticipated!"
+						</p>
+						<p class="text-sm italic" style="color: #B6794D;">Beginner Course (TR, 50)</p>
+					</div>
+
+					<!-- Testimonial 2 -->
+					<div class="p-6 rounded-2xl" style="background-color: #F4E6D6;">
+						<div class="flex mb-4">
+							<span style="color: #FF751F;">★★★★★</span>
+						</div>
+						<p class="mb-4" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt; color: #000;">
+							"Dear team of SiNI, I really enjoyed learning in the alphabet course. It is so well structured and organized, the materials on Moodle, also regarding the pace and portions... can I give you full marks on the beginner course!"
+						</p>
+						<p class="text-sm italic" style="color: #B6794D;">Lower Advanced Course (TR, 300)</p>
+					</div>
+
+					<!-- Testimonial 3 -->
+					<div class="p-6 rounded-2xl" style="background-color: #F4E6D6;">
+						<div class="flex mb-4">
+							<span style="color: #FF751F;">★★★★★</span>
+						</div>
+						<p class="mb-4" style="font-family: 'Body Grotesque', Arial, sans-serif; font-size: 12pt; color: #000;">
+							"After so many years of yearning to learn Tibetan, I am immensely grateful to have found SiNI and Franziska Oertle's course in colloquial Tibetan. More than anything, I value that it has such attention to detail about personalities, learning styles and language levels."
+						</p>
+						<p class="text-sm italic" style="color: #B6794D;">Upper Advanced Course (TR, 301)</p>
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
