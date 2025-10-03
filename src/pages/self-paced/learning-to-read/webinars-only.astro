@@ -1,0 +1,200 @@
+---
+import '../../../styles/global.css';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Learning to Read - Webinars Only</title>
+		<meta name="description" content="Access webinar recordings to learn Tibetan reading and alphabet at your own pace." />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://tibetanatsini.com/self-paced/learning-to-read/webinars-only" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tibetanatsini.com/self-paced/learning-to-read/webinars-only" />
+		<meta property="og:title" content="Learning to Read - Webinars Only" />
+		<meta property="og:description" content="Access webinar recordings to learn Tibetan reading and alphabet at your own pace." />
+		<meta property="og:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://tibetanatsini.com/self-paced/learning-to-read/webinars-only" />
+		<meta name="twitter:title" content="Learning to Read - Webinars Only" />
+		<meta name="twitter:description" content="Access webinar recordings to learn Tibetan reading and alphabet at your own pace." />
+		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+	</head>
+	<body style="font-family: 'Work Sans', Arial, sans-serif; background-color: #F5F0E8;">
+		<!-- Header Navigation -->
+		<header class="sticky top-0 z-50 md:relative bg-[#FFF8EE] shadow-sm">
+			<div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+				<div class="mr-8">
+					<a href="/">
+						<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-12 md:h-14 lg:h-16 w-auto">
+					</a>
+				</div>
+				<nav class="hidden md:flex space-x-8">
+					<a href="/" class="text-gray-700 hover:text-orange-500 transition-colors">Home</a>
+					<a href="/self-paced/" class="text-orange-500">Self-Paced Courses</a>
+					<a href="/live/" class="text-gray-700 hover:text-orange-500 transition-colors">Live Courses</a>
+				</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<!-- Close button -->
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+		<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		</div>
+		<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+		<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+		</div>
+		<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+		<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+		</div>
+		<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+		<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+		</div>
+		</div>
+		<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+		<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+		<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black;">Start Learning</a>
+			</div>
+		</div>
+				<div>
+					<a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-colors">
+						Enroll Now
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main class="min-h-screen">
+			<!-- Hero Section -->
+			<section class="py-16">
+				<div class="max-w-7xl mx-auto px-4 text-center">
+					<!-- Breadcrumb -->
+					<nav class="mb-8">
+						<a href="/self-paced/" class="text-orange-500 hover:underline">Self-Paced Courses</a>
+						<span class="mx-2 text-gray-500">/</span>
+						<a href="/self-paced/learning-to-read/" class="text-orange-500 hover:underline">Learn to Read</a>
+						<span class="mx-2 text-gray-500">/</span>
+						<span class="text-gray-700">Webinars Only</span>
+					</nav>
+
+					<div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+						Budget-Friendly Option
+					</div>
+					<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+						Learning to Read - Webinars Only
+					</h1>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+						Join our live webinar sessions to learn Tibetan reading with expert guidance and community support.
+					</p>
+
+					<div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+						<h2 class="text-xl md:text-2xl lg:text-2xl font-bold text-gray-900 mb-6">What's Included</h2>
+
+						<div class="space-y-4 mb-8">
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Weekly live webinar sessions</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Interactive Q&A with instructors</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Community learning environment</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Session recordings for review</span>
+							</div>
+						</div>
+
+						<div class="text-center border-t pt-6">
+							<div class="text-xl md:text-2xl lg:text-3xl font-bold text-orange-500 mb-4">$49</div>
+							<p class="text-gray-600 mb-6">One-time payment • Access to all scheduled webinars</p>
+							<a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-bold transition-colors">
+								Enroll in Webinars Only
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Contact Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+					Got questions?
+				</h2>
+				<p class="text-lg mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 16pt;">
+					We'd love to hear from you. Write to us anytime at <a href="mailto:tibetanatsini@gmail.com" class="font-semibold transition-colors hover:opacity-80" style="color: #FF751F; text-decoration: underline;">tibetanatsini@gmail.com</a>.
+				</p>
+			</div>
+		</section>
+
+
+<script is:inline>
+		// Mobile menu toggle
+		document.addEventListener('DOMContentLoaded', function() {
+		const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+		const mobileMenu = document.getElementById('mobileMenu');
+		const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+		if (mobileMenuBtn && mobileMenu) {
+			mobileMenuBtn.addEventListener('click', function() {
+			mobileMenu.classList.toggle('hidden');
+		});
+		}
+
+		if (closeMobileMenu && mobileMenu) {
+			closeMobileMenu.addEventListener('click', function() {
+				mobileMenu.classList.add('hidden');
+			});
+		}
+		});
+</script>
+	</body>
+</html>

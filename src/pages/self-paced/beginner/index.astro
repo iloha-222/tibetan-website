@@ -1,0 +1,637 @@
+---
+import '../../../styles/global.css';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Beginner Self-Paced Courses - Tibetan Learning</title>
+		<meta name="description" content="Start your Tibetan journey with our beginner self-paced courses. Learn at your own pace with expert instructors and a supportive community." />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://tibetanatsini.com/self-paced/beginner" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tibetanatsini.com/self-paced/beginner" />
+		<meta property="og:title" content="Beginner Self-Paced Courses - Tibetan Learning" />
+		<meta property="og:description" content="Start your Tibetan journey with our beginner self-paced courses. Learn at your own pace with expert instructors and a supportive community." />
+		<meta property="og:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://tibetanatsini.com/self-paced/beginner" />
+		<meta name="twitter:title" content="Beginner Self-Paced Courses - Tibetan Learning" />
+		<meta name="twitter:description" content="Start your Tibetan journey with our beginner self-paced courses. Learn at your own pace with expert instructors and a supportive community." />
+		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="sticky top-0 z-50 md:relative py-3 px-4 md:py-4 md:px-6 bg-[#FFF8EE]">
+			<div class="max-w-7xl mx-auto flex items-center">
+				<!-- Logo -->
+				<div class="mr-8">
+					<a href="/">
+						<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-12 md:h-14 lg:h-16 w-auto">
+					</a>
+				</div>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links and Button Container -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<!-- Self-Paced Courses Dropdown -->
+						<div class="relative group">
+							<a href="/self-paced/" class="text-orange-600 flex items-center font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<!-- Dropdown Menu -->
+							<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-2 text-orange-600 bg-orange-50 hover:bg-orange-100" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Live Courses Dropdown -->
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<!-- Dropdown Menu -->
+							<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/live/learning-to-read" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+
+									<!-- Beginner Submenu -->
+									<div class="relative beginner-submenu">
+										<a href="/live/beginner" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Beginner
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="beginner-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/beginner/101" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Beginner 102</a>
+											</div>
+										</div>
+									</div>
+
+									<!-- Intermediate Submenu -->
+									<div class="relative intermediate-submenu">
+										<a href="/live/intermediate" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Intermediate
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="intermediate-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/intermediate/201" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Intermediate 202</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="relative advanced-submenu">
+										<a href="/live/advanced" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Advanced
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="advanced-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/advanced/301" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Advanced 302</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a href="#package-details" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full text-black border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; border-color: #FF751F; color: black; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<!-- Close button -->
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+		<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		</div>
+		<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+		<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+		</div>
+		<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+		<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+		</div>
+		<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		<div class="pl-4 space-y-1">
+		<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+		<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+		</div>
+		</div>
+		<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+		<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+		<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- CSS for submenu hover effects -->
+		<style>
+			.beginner-submenu:hover .beginner-submenu-dropdown,
+			.intermediate-submenu:hover .intermediate-submenu-dropdown,
+			.advanced-submenu:hover .advanced-submenu-dropdown {
+				opacity: 1;
+				visibility: visible;
+			}
+		</style>
+
+		<!-- Hero Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<!-- Breadcrumb -->
+				<nav class="mb-8">
+					<a href="/self-paced/" class="text-orange-600 hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+					<span class="mx-2 text-gray-500">/</span>
+					<span class="text-gray-700" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</span>
+				</nav>
+
+				<div class="text-center mb-12">
+					<h1 class="text-3xl md:text-4xl lg:text-5xl font-normal mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+						Beginner Self-Paced Courses
+					</h1>
+					<p class="text-lg max-w-4xl mx-auto leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666; font-size: 16pt;">
+						Start your Tibetan journey at your own rhythm. The Beginner self-paced courses give you clear explanations and engaging resources that make learning both practical and enjoyable.
+					</p>
+				</div>
+
+				<!-- Introduction Section with Illustration -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+					<!-- Left Illustration -->
+					<div class="flex justify-center">
+						<div class="bg-white rounded-xl p-4 shadow-lg">
+							<img src="/assets/illustrations/u4174158496_a_woman_studying_tibetan_in_a_caf_smiling_--sref_ht_e1d2fd58-9ceb-47a0-bf89-1d301d0ca898.webp" alt="Woman studying Tibetan in a cafe smiling" class="w-full max-w-lg rounded-lg" loading="lazy">
+						</div>
+					</div>
+
+					<!-- Right Content -->
+					<div>
+						<p class="text-lg leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							The Beginner self-paced courses give you the freedom to study Tibetan on your own schedule while still following the trusted structure of <em>The Heart of Tibetan Language, Volume 1</em>. Whether you want the full set of resources or prefer to focus on the webinars, you'll find clear explanations, engaging media, and practical tools that help you build a strong foundation.
+						</p>
+						<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							This level is divided into two options: the <strong>Full Package</strong>, which includes all learning materials, and <strong>Webinars Only</strong>, which focuses on key grammar explanations and concise video lessons.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What You'll Learn Section -->
+		<section class="py-12 px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+						What You'll <span class="font-bold">Learn</span>
+					</h2>
+					<p class="text-lg mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+						By completing the Beginner self-paced courses, you'll be able to:
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<!-- Reading Card -->
+					<div class="bg-orange-10 rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+						<div class="flex items-center justify-center mx-auto mb-4" style="width: 10.5rem; height: 10.5rem;">
+							<img src="/assets/illustrations/u4174158496_a_young_man_reading_a_paper_with_tibetan_script_on__19f83376-f1dd-4950-9d5b-d18e9d21fd31.webp" alt="Reading illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
+						</div>
+						<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">Read and pronounce Tibetan script</p>
+					</div>
+
+					<!-- Grammar Card -->
+					<div class="bg-orange-10 rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+						<div class="flex items-center justify-center mx-auto mb-4" style="width: 10.5rem; height: 10.5rem;">
+							<img src="/assets/illustrations/u4174158496_a_woman_studying_tibetan_in_a_caf_smiling_--sref_ht_e1d2fd58-9ceb-47a0-bf89-1d301d0ca898.webp" alt="Grammar illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
+						</div>
+						<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">Form sentences with correct Tibetan grammar</p>
+					</div>
+
+					<!-- Conversation Card -->
+					<div class="bg-orange-10 rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+						<div class="flex items-center justify-center mx-auto mb-4" style="width: 10.5rem; height: 10.5rem;">
+							<img src="/assets/illustrations/u4174158496_a_Chinese_man_talking_with_a_tibetan_guy_in_Lhasa_s_42d87e04-d2ae-4bc7-8c0e-3700b84b3783.webp" alt="Conversation illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
+						</div>
+						<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">Hold simple conversations in everyday situations</p>
+					</div>
+
+					<!-- Foundation Card -->
+					<div class="bg-orange-10 rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+						<div class="flex items-center justify-center mx-auto mb-4" style="width: 10.5rem; height: 10.5rem;">
+							<img src="/assets/illustrations/u4174158496_a_woman_studying_tibetan_in_a_caf_smiling_--sref_ht_55f9b256-cbf2-419e-bb04-42a403b118e4.webp" alt="Foundation illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
+						</div>
+						<p class="text-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">Strengthen your foundation for future live study or independent practice</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- A Peek Inside Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<!-- Large container card -->
+				<div class="bg-white rounded-3xl p-8 shadow-lg" style="background-color: #FEFCF8;">
+					<div class="text-left mb-8">
+						<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+							A Peek Inside <span class="font-bold">Beginner 101 & 102</span>
+						</h2>
+						<p class="text-lg" style="font-family: 'DM Sans', sans-serif; color: #666; font-size: 16pt;">
+							Curious about our teaching style? Watch a sample lesson and grammar webinar.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+						<!-- Key Point Video -->
+						<div>
+							<h3 class="text-xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+								Key Point Video
+							</h3>
+							<div class="rounded-2xl p-3 shadow-sm" style="background-color: #FDFDFD; border: 1px solid #F3F4F6;">
+								<div class="rounded-xl overflow-hidden" style="height: 300px;">
+									<iframe
+										width="100%"
+										height="100%"
+										src="https://www.youtube.com/embed/YxjOGWFvN-s"
+										title="Key Point Video"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowfullscreen
+										class="w-full h-full">
+									</iframe>
+								</div>
+							</div>
+						</div>
+
+						<!-- Webinar -->
+						<div>
+							<h3 class="text-xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+								Webinar
+							</h3>
+							<div class="rounded-2xl p-3 shadow-sm" style="background-color: #FDFDFD; border: 1px solid #F3F4F6;">
+								<div class="rounded-xl overflow-hidden" style="height: 300px;">
+									<iframe
+										width="100%"
+										height="100%"
+										src="https://www.youtube.com/embed/2ukXvXkkRY8"
+										title="Webinar"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowfullscreen
+										class="w-full h-full">
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- Choose Your Package Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+						Choose Your <span class="font-bold">Package</span>
+					</h2>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+					<!-- Full Package Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/u4174158496_a_woman_discovering_Lhasa_happy_--sref_httpss.mj.ru_24b438e6-ae73-410e-8d41-2c7b7c70db1e.webp" alt="Woman discovering Lhasa" class="w-full rounded-2xl" loading="lazy">
+						</div>
+						<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+							Beginner Full Package
+						</h3>
+						<p class="text-lg md:text-xl mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							Everything you need from <em>The Heart of Tibetan Language, Volume 1</em> — Lower Beginner (Lessons 0–5) or Upper Beginner (Lessons 6–10).
+						</p>
+
+						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #FF751F;">
+							What's included:
+						</h4>
+
+						<ul class="space-y-3 mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 17px; line-height: 1.6;">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Animated key-point videos for each lesson</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Engaging grammar webinars</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Podcasts in Tibetan</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Anki decks with vocab, audio, and images</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Practice exercises (listening, reading, vocabulary)</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Digital speaking practice in Moodle</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Rubrics & reflection prompts to track progress</span>
+							</li>
+						</ul>
+
+						<div class="space-y-3 pt-8 border-t mb-6" style="border-color: rgba(0,0,0,0.1);">
+							<p class="text-lg md:text-xl" style="font-family: 'DM Sans', sans-serif; color: #000;">
+								💡 Use these materials for self-study or to prepare for 102 or 201.
+							</p>
+							<p class="text-lg md:text-xl" style="font-family: 'DM Sans', sans-serif; color: #000;">
+								👉 <strong>30% discount</strong> for ordained Sangha (email us for a coupon).
+							</p>
+						</div>
+
+						<div class="text-center">
+							<a href="https://sini.corsizio.com/event/65fbfbff2aa6cacfcecda11e" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #FF751F; font-family: 'DM Sans', sans-serif; color: #000; text-decoration: none;">
+								Get Full Package
+							</a>
+						</div>
+					</div>
+
+					<!-- Webinars Only Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/u4174158496_Brazilian_man_learning_tibetan_in_his_living_room_l_5ab24fee-9f92-476c-9792-f37a7793ee5e.webp" alt="Man learning Tibetan at home" class="w-full rounded-2xl" loading="lazy">
+						</div>
+						<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+							Beginner Webinars Only
+						</h3>
+						<p class="text-lg md:text-xl mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							Just the videos and webinars — a lighter option.
+						</p>
+
+						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #FF751F;">
+							What's included:
+						</h4>
+
+						<ul class="space-y-3 mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 17px; line-height: 1.6;">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>Key-point videos (one per lesson, 4–6 minutes)</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #FF751F;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<span>25+ grammar webinars (12–18 minutes each) with clear explanations and playful "non-human classmates"</span>
+							</li>
+						</ul>
+
+						<p class="text-lg md:text-xl mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							Covers Lessons 0–10: alphabet, བདག་ & གཞན་, sentence types, tenses, imperatives, numbers, and the calendar. Lesson 0 also introduces metacognition — learning how to learn.
+						</p>
+
+						<div class="pt-8 border-t mb-6" style="border-color: rgba(0,0,0,0.1);">
+							<p class="text-lg md:text-xl" style="font-family: 'DM Sans', sans-serif; color: #000;">
+								👉 <strong>35% discount</strong> for ordained Sangha (email us for a coupon).
+							</p>
+						</div>
+
+						<div class="text-center">
+							<a href="https://sini.corsizio.com/event/66eef666bbe5d8abf92c1c3b" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #FF751F; font-family: 'DM Sans', sans-serif; color: #000; text-decoration: none;">
+								Get Webinar Package
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Important Note Section -->
+		<section class="py-10 px-6" style="background-color: #FFF8EE;">
+			<div class="max-w-4xl mx-auto">
+				<div class="bg-orange-50 rounded-lg p-8 border-l-4 shadow-sm" style="border-left-color: #FF751F; background-color: #FFFBF7;">
+					<div class="flex items-center gap-3 mb-4">
+						<h3 class="text-lg font-semibold" style="font-family: 'DM Sans', sans-serif; color: #000;">Important Note</h3>
+					</div>
+					<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+						These resources are supplements. They're clear and creative, but they don't replace live conversation and community. Learning a language is a social undertaking. That's why we encourage you to join a course or a small study group.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- This Course is based on this Book -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+			<div class="max-w-5xl mx-auto">
+				<div class="rounded-2xl ring-1 ring-black/5 bg-white p-8 md:p-10 shadow-lg">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center">
+						<!-- Left column: Book cover -->
+						<div class="flex justify-center md:justify-start">
+							<div class="w-full max-w-md h-auto">
+								<img
+									src="/assets/illustrations/TextBookCover_front_1_900x.jpg.webp"
+									alt="The Heart of Tibetan Language, Vol. 1 — cover"
+									loading="lazy"
+									class="w-full h-auto rounded-xl ring-1 ring-black/10 shadow-md"
+								/>
+							</div>
+						</div>
+
+						<!-- Right column: Content -->
+						<div class="space-y-6 text-center">
+							<!-- Title block -->
+							<div class="space-y-3">
+								<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold text-neutral-900" style="font-family: 'Merriweather', serif;">
+									Discover the textbook that accompanies this course
+								</h2>
+								<h3 class="text-xl md:text-2xl font-medium text-neutral-800" style="font-family: 'Merriweather', serif;">
+									The Heart of Tibetan Language, Vol. 1
+								</h3>
+								<p class="text-lg text-neutral-600" style="font-family: 'DM Sans', sans-serif;">
+									with accompanying workbook
+								</p>
+							</div>
+
+							<!-- CTA buttons -->
+							<div class="flex flex-col gap-6 mt-8 items-center">
+								<a href="https://dharmapublishing.com/products/the-heart-of-tibetan-language-textbook-and-exercise-book?_pos=4&_psq=heart+of+&_ss=e&_v=1.0&variant=39512897847472"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
+									style="background-color: #FF7A1A; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									Order hardcopy →
+								</a>
+								<a href="https://play.google.com/store/books/details/Franziska_Oertle_བ_ད_ས_ད_ས_ང_པ_The_Heart_of_Tibeta?id=NW32DwAAQBAJ"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
+									style="background-color: #FF7A1A; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									Get eBook on Google Play →
+								</a>
+								<a href="https://franziska.in"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
+									style="background-color: #FF7A1A; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									Get the Audio files →
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- Who It's For Section -->
+	<section class="py-12 px-6" style="background-color: #FFF8EE;">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center">
+				<!-- Left: Content -->
+				<div class="space-y-4">
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+						Who It's For
+					</h2>
+					<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 16pt;">
+						These courses are for anyone who wants to start speaking and reading Tibetan with ease. They're designed for learners who appreciate the flexibility of self-paced study and want clear, step-by-step guidance.
+					</p>
+					<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 16pt;">
+						They also make a perfect companion if you're preparing to join one of our live Beginner or Intermediate classes—helping you feel confident and ready before you dive in.
+					</p>
+				</div>
+
+				<!-- Right: Illustration -->
+				<div class="flex justify-center md:justify-end">
+					<div class="w-full max-w-sm">
+						<img 
+							src="/assets/illustrations/u4174158496_woman_studying_tibetan_on_her_bed_--sref_httpss.mj._0fb7174d-d9d2-49c2-b25a-9113583bac3a.webp" 
+							alt="Woman studying Tibetan" 
+							loading="lazy"
+							class="w-full h-auto rounded-2xl"
+							style="max-height: 350px; object-fit: cover;"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+		<!-- CTA Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+					Ready to Begin Your <span class="font-bold">Journey</span>?
+				</h2>
+				<p class="text-lg mb-8" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+					Join our welcoming community of learners and start your Tibetan language adventure today.
+				</p>
+				<div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+					<a href="https://sini.corsizio.com/event/65fbfbff2aa6cacfcecda11e" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black; text-decoration: none; border: 2px solid #FF751F;">
+						Get Full Package
+					</a>
+					<a href="#package-details" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors border-2 hover:bg-orange-50" style="font-family: 'Work Sans', Arial, sans-serif; color: #FF751F; text-decoration: none; border-color: #FF751F;">
+						Webinars Only
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+					Got questions?
+				</h2>
+				<p class="text-lg mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 16pt;">
+					We'd love to hear from you. Write to us anytime at <a href="mailto:tibetanatsini@gmail.com" class="font-semibold transition-colors hover:opacity-80" style="color: #FF751F; text-decoration: underline;">tibetanatsini@gmail.com</a>.
+				</p>
+			</div>
+		</section>
+
+	</body>
+</html>

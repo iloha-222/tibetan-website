@@ -1,0 +1,10 @@
+# robots.txt for tibetanatsini.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://tibetanatsini.com/sitemap.xml
+
+# Crawl-delay for good practice
+Crawl-delay: 1

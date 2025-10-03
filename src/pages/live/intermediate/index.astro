@@ -1,0 +1,516 @@
+---
+import '../../../styles/global.css';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Intermediate Live Courses - Tibetan Learning</title>
+		<meta name="description" content="Advance your Tibetan skills with our intermediate live courses. Develop richer communication and deeper cultural connection." />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://tibetanatsini.com/live/intermediate" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tibetanatsini.com/live/intermediate" />
+		<meta property="og:title" content="Intermediate Live Courses - Tibetan Learning" />
+		<meta property="og:description" content="Advance your Tibetan skills with our intermediate live courses. Develop richer communication and deeper cultural connection." />
+		<meta property="og:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://tibetanatsini.com/live/intermediate" />
+		<meta name="twitter:title" content="Intermediate Live Courses - Tibetan Learning" />
+		<meta name="twitter:description" content="Advance your Tibetan skills with our intermediate live courses. Develop richer communication and deeper cultural connection." />
+		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
+
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="sticky top-0 z-50 md:relative py-3 px-4 md:py-4 md:px-6 bg-[#FFF8EE]">
+			<div class="max-w-7xl mx-auto flex items-center">
+				<!-- Logo -->
+				<div class="mr-8">
+					<a href="/">
+						<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-12 md:h-14 lg:h-16 w-auto">
+					</a>
+				</div>
+
+		<!-- Mobile Menu Button -->
+		<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+		</svg>
+		</button>
+
+				<!-- Navigation Links and Button Container -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<!-- Self-Paced Courses Dropdown -->
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<!-- Dropdown Menu -->
+							<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Live Courses Dropdown -->
+						<div class="relative group">
+							<a href="/live/" class="text-orange-600 flex items-center font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<!-- Dropdown Menu -->
+							<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/live/learning-to-read" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+
+									<!-- Beginner Submenu -->
+									<div class="relative beginner-submenu">
+										<a href="/live/beginner" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Beginner
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="beginner-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/beginner/101" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Beginner 102</a>
+											</div>
+										</div>
+									</div>
+
+									<!-- Intermediate Submenu -->
+									<div class="relative intermediate-submenu">
+										<a href="/live/intermediate" class="block px-4 py-2 text-orange-600 bg-orange-50 hover:bg-orange-100 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Intermediate
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="intermediate-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/intermediate/201" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Intermediate 202</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="relative advanced-submenu">
+										<a href="/live/advanced" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+											Advanced
+											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+											</svg>
+										</a>
+										<!-- Submenu -->
+										<div class="advanced-submenu-dropdown absolute left-full top-0 w-36 bg-white rounded-lg shadow-lg border opacity-0 invisible transition-all duration-200 z-50">
+											<div class="py-2">
+												<a href="/live/advanced/301" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt;">Advanced 302</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full text-black border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; border-color: #FF751F; color: black; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<!-- Close button -->
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+		<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		</div>
+		<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+		<div class="pl-4 space-y-2">
+		<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+		<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+		<div class="pl-4 space-y-1">
+			<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+			<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+		</div>
+		<a href="/live/intermediate" class="block text-orange-600 hover:text-orange-600 text-sm font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+		<div class="pl-4 space-y-1">
+			<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+			<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+		</div>
+		<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+		<div class="pl-4 space-y-1">
+			<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+			<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+		</div>
+		</div>
+		<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+		<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+		<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- CSS for submenu hover effects -->
+		<style>
+			.beginner-submenu:hover .beginner-submenu-dropdown,
+			.intermediate-submenu:hover .intermediate-submenu-dropdown,
+			.advanced-submenu:hover .advanced-submenu-dropdown {
+				opacity: 1;
+				visibility: visible;
+			}
+		</style>
+
+		<!-- Hero Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<!-- Breadcrumb -->
+				<nav class="mb-8">
+					<a href="/live/" class="text-orange-600 hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+					<span class="mx-2 text-gray-500">/</span>
+					<span class="text-gray-700" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</span>
+				</nav>
+
+				<div class="text-center mb-12">
+					<h1 class="text-3xl md:text-4xl lg:text-5xl font-normal mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+						Welcome to the Intermediate Live Courses
+					</h1>
+					<p class="text-lg max-w-4xl mx-auto leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666; font-size: 16pt;">
+						Grow from simple conversations into richer, more confident communication, while deepening your cultural connection.
+					</p>
+				</div>
+
+				<!-- Homepage-Style Welcome Section -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+					<!-- Left Content -->
+					<div>
+						<h2 class="text-xl md:text-2xl lg:text-3xl font-normal mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+							This is Where Your Learning <span class="font-bold">Opens Up</span>
+						</h2>
+
+						<p class="text-lg leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							The Intermediate live courses are where your Tibetan learning begins to <strong>open up into richer conversations</strong> and more flexible grammar.
+						</p>
+
+						<p class="text-lg leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							You'll practice speaking about everyday life and explore topics like <strong>travel, health, clothing, and festivals</strong> with cultural depth.
+						</p>
+
+						<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+							Gain the tools to <strong>tell stories, express opinions</strong>, and interact with the language at a deeper cultural level.
+						</p>
+					</div>
+
+					<!-- Right Illustration -->
+					<div class="flex justify-center">
+						<div class="bg-white rounded-3xl p-4 shadow-lg">
+							<img src="/assets/illustrations/u4174158496_Dharamshala_India_--sref_httpss.mj.runbA64C-Sz-6w_h_24f03ad8-599b-4926-ae49-bbeaa81634bf.webp" alt="Dharamshala India" class="w-full max-w-lg rounded-2xl" loading="lazy">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- Choose Your Intermediate Course Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="text-center mb-12">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+						Choose Your <span class="font-bold">Intermediate Course</span>
+					</h2>
+					<p class="text-lg mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+						The Intermediate level is made up of two courses: <strong>Intermediate 201</strong> and <strong>Intermediate 202</strong>. Together, they guide you through <em>The Heart of Tibetan Language, Volume 2</em> and help you grow from basic conversations into confident, flowing communication.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+					<!-- Intermediate 201 Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/u4174158496_dalai_Lama_--ar_11_--sref_httpss.mj.runbA64C-Sz-6w__9e68925b-35e7-4a71-b3df-83dbda51ead8.webp" alt="Dalai Lama" class="w-full rounded-2xl" loading="lazy">
+						</div>
+						<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+							Intermediate 201
+						</h3>
+						<p class="text-sm font-semibold mb-4" style="font-family: 'DM Sans', sans-serif; color: #FF751F;">
+							Lower Intermediate Course
+						</p>
+						<p class="mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Reviews key Beginner material and introduces new grammar structures such as conditional sentences, auxiliaries of probability, and secondary verbs. You'll also expand into new themes like travel, health, and festivals. The focus is on strengthening your foundation and gaining confidence to use Tibetan in more varied contexts.
+						</p>
+						<a href="/live/intermediate/201" class="inline-flex items-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Learn more →
+						</a>
+					</div>
+
+					<!-- Intermediate 202 Card -->
+					<div class="rounded-3xl p-8" style="background-color: #F4E6D6;">
+						<div class="mb-6">
+							<img src="/assets/illustrations/u4174158496_middle_aged_woman_in_her_room_studying_tibetan_manu_521cc22d-59e9-413e-a4e4-7899e333eecf.webp" alt="Middle aged woman studying Tibetan" class="w-full rounded-2xl" loading="lazy">
+						</div>
+						<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+							Intermediate 202
+						</h3>
+						<p class="text-sm font-semibold mb-4" style="font-family: 'DM Sans', sans-serif; color: #FF751F;">
+							Upper Intermediate Course
+						</p>
+						<p class="mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Continues where 201 leaves off. Here, you'll explore reported speech, comparisons, nominalizers, and relative clauses, while deepening your ability to carry conversations about culture, daily life, and personal experience. By the end, you'll be able to interact with more nuance and flexibility in Tibetan.
+						</p>
+						<a href="/live/intermediate/202" class="inline-flex items-center" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 15pt;">
+							Learn more →
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Experience & Outcomes Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+					<!-- What's Included -->
+					<div>
+						<h2 class="text-xl md:text-2xl lg:text-3xl font-normal mb-8 text-center" style="font-family: 'Merriweather', serif; color: #000;">
+							What's <span class="font-bold">Included</span>
+						</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+							<!-- Live Classes Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Weekly Live Classes</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">On Zoom, offered in different time slots for convenience</p>
+							</div>
+
+							<!-- Module Sessions Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Module Sessions</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Four live sessions per module with conversation, culture, and grammar</p>
+							</div>
+
+							<!-- Small Groups Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Small Learning Groups</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Work closely with peers in intimate learning groups</p>
+							</div>
+
+							<!-- Tutor Sessions Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">One-on-One Practice</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Weekly practice sessions with native Tibetan tutors</p>
+							</div>
+
+							<!-- Learning Materials Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4l-2 16h14l-2-16"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Learning Materials</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Key-point videos and pre-recorded webinars</p>
+							</div>
+
+							<!-- Interactive Content Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Interactive Learning</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Songs, games, proverbs, and dialogue podcasts</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- What You'll Learn -->
+					<div>
+						<h2 class="text-xl md:text-2xl lg:text-3xl font-normal mb-6 text-center" style="font-family: 'Merriweather', serif; color: #000;">
+							What You'll <span class="font-bold">Learn</span>
+						</h2>
+
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+							<!-- Conversations Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Rich Conversations</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Take part in conversations on a wider range of everyday and cultural topics</p>
+							</div>
+
+							<!-- Grammar Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Advanced Grammar</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Use key intermediate grammar forms with confidence</p>
+							</div>
+
+							<!-- Storytelling Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Storytelling Skills</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Share stories, opinions, and reflections with greater fluency</p>
+							</div>
+
+							<!-- Cultural Understanding Card -->
+							<div class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
+								<div class="rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #FF751F; width: 3rem; height: 3rem;">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+									</svg>
+								</div>
+								<h3 class="font-bold text-center mb-2" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Cultural Depth</h3>
+								<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #666;">Deepen your understanding of Tibetan culture through language</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Who It's For Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-5xl mx-auto">
+				<div class="rounded-3xl p-8 text-center" style="background-color: #F4E6D6;">
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+						Who is it For?
+					</h2>
+					<p class="text-lg leading-relaxed max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+						These courses are designed for students who have completed the Beginner level or equivalent study elsewhere. You should already be comfortable reading Tibetan script and using basic conversational structures. If you studied on your own or in another program, we'll guide you through a short review to get ready for Intermediate 201.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- CTA Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+					Ready to Expand Your <span class="font-bold">Skills</span>?
+				</h2>
+				<p class="text-lg mb-8" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+					Join our community of intermediate learners and deepen your Tibetan language journey today.
+				</p>
+				<div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+					<a href="/live/intermediate/201" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black; text-decoration: none; border: 2px solid #FF751F;">
+						Start with Intermediate 201
+					</a>
+					<a href="/live/intermediate/202" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors border-2 hover:bg-orange-50" style="font-family: 'Work Sans', Arial, sans-serif; color: #FF751F; text-decoration: none; border-color: #FF751F;">
+						Continue with Intermediate 202
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+					Got questions?
+				</h2>
+				<p class="text-lg mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 16pt;">
+					We'd love to hear from you. Write to us anytime at <a href="mailto:tibetanatsini@gmail.com" class="font-semibold transition-colors hover:opacity-80" style="color: #FF751F; text-decoration: underline;">tibetanatsini@gmail.com</a>.
+				</p>
+			</div>
+		</section>
+
+
+<script is:inline>
+		// Mobile menu toggle
+		document.addEventListener('DOMContentLoaded', function() {
+		const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+		const mobileMenu = document.getElementById('mobileMenu');
+		const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+		if (mobileMenuBtn && mobileMenu) {
+			mobileMenuBtn.addEventListener('click', function() {
+			mobileMenu.classList.toggle('hidden');
+		});
+		}
+
+		if (closeMobileMenu && mobileMenu) {
+			closeMobileMenu.addEventListener('click', function() {
+				mobileMenu.classList.add('hidden');
+			});
+		}
+		});
+</script>
+	</body>
+</html>
