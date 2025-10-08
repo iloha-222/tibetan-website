@@ -11,8 +11,8 @@ injectSpeedInsights();
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About Us - བོད་སྐད་སྙིང་པོ། | Tibetan Learning</title>
-		<meta name="description" content="Learn about བོད་སྐད་སྙིང་པོ། (SINI) - The Heart of Tibetan Language. Our mission, values, and commitment to making Tibetan language learning accessible and joyful." />
+		<title>About - Interbeing | Tibetan at SINI</title>
+		<meta name="description" content="Meet the cherished beings who have made this Tibetan language learning journey possible. A story of interbeing, love, trust and dedication." />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://tibetanatsini.com/about" />
@@ -20,15 +20,15 @@ injectSpeedInsights();
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://tibetanatsini.com/about" />
-		<meta property="og:title" content="About Us - བོད་སྐད་སྙིང་པོ། | Tibetan Learning" />
-		<meta property="og:description" content="Learn about བོད་སྐད་སྙིང་པོ། (SINI) - The Heart of Tibetan Language. Our mission, values, and commitment to making Tibetan language learning accessible and joyful." />
+		<meta property="og:title" content="About - Interbeing | Tibetan at SINI" />
+		<meta property="og:description" content="Meet the cherished beings who have made this Tibetan language learning journey possible. A story of interbeing, love, trust and dedication." />
 		<meta property="og:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content="https://tibetanatsini.com/about" />
-		<meta name="twitter:title" content="About Us - བོད་སྐད་སྙིང་པོ། | Tibetan Learning" />
-		<meta name="twitter:description" content="Learn about བོད་སྐད་སྙིང་པོ། (SINI) - The Heart of Tibetan Language. Our mission, values, and commitment to making Tibetan language learning accessible and joyful." />
+		<meta name="twitter:title" content="About - Interbeing | Tibetan at SINI" />
+		<meta name="twitter:description" content="Meet the cherished beings who have made this Tibetan language learning journey possible. A story of interbeing, love, trust and dedication." />
 		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +44,17 @@ injectSpeedInsights();
 			.advanced-submenu:hover .advanced-submenu-dropdown {
 				opacity: 1;
 				visibility: visible;
+			}
+			.timeline-line {
+				background: linear-gradient(to bottom, #FF751F, #D4A017, #B6794D);
+			}
+			.quote-box {
+				background-color: rgba(255, 117, 31, 0.05);
+				border-left: 4px solid #FF751F;
+				padding: 1.5rem;
+				margin: 1rem 0;
+				border-radius: 0.5rem;
+				font-style: italic;
 			}
 		</style>
 	</head>
@@ -152,7 +163,7 @@ injectSpeedInsights();
 						<a href="/about" class="text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
 						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
-					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full text-black border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; border-color: #FF751F; color: black; text-decoration: none;">
+					<a href="/" class="px-4 py-2 md:px-6 rounded-full text-black border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; border-color: #FF751F; color: black; text-decoration: none;">
 						Start Learning
 					</a>
 				</div>
@@ -186,118 +197,455 @@ injectSpeedInsights();
 				<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
 				<a href="/about" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
 				<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
-				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black;">Start Learning</a>
+				<a href="/" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif; color: black;">Start Learning</a>
 			</div>
 		</div>
 
-		<!-- Main Content -->
-		<main class="max-w-4xl mx-auto px-4 py-12 md:py-16">
-			<!-- Page Header -->
-			<div class="text-center mb-12">
-				<h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
-					བོད་སྐད་སྙིང་པོ། <span class="block text-3xl md:text-4xl mt-2">The Heart of Tibetan Language</span>
+		<!-- Hero Section -->
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+			<div class="max-w-4xl mx-auto text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-8" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+					About
 				</h1>
-				<p class="text-xl text-gray-600 mt-4" style="font-family: 'Work Sans', Arial, sans-serif;">
-					Welcome to SINI - where Tibetan language learning becomes a joyful journey
+				<h2 class="text-3xl md:text-4xl font-bold mb-8" style="font-family: 'Merriweather', serif; color: #FF751F;">
+					Interbeing
+				</h2>
+				<div class="mb-8 flex justify-center">
+					<img src="/assets/illustrations/Foreword.webp" alt="We inter-are" class="w-64 h-64 object-contain">
+				</div>
+				<p class="text-lg leading-relaxed mb-8" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+					It is utterly impossible to honour all people and non-human people who have made this website possible - there are dozens, hundreds, countless of them!
 				</p>
 			</div>
+		</section>
 
-			<!-- About Content -->
-			<div class="space-y-8" style="font-family: 'Work Sans', Arial, sans-serif;">
-				<!-- Our Story -->
-				<section class="bg-white rounded-2xl p-8 shadow-sm">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #FF751F;">
-						Our Story
-					</h2>
-					<div class="prose prose-lg max-w-none text-gray-700 space-y-4">
-						<p>
-							Founded in 2021, བོད་སྐད་སྙིང་པོ། (Tibetan at SINI) was born from a simple belief: learning Tibetan should be joyful, accessible, and focused on real communication. We started as a small community of passionate learners and have grown into a vibrant global family of Tibetan language enthusiasts.
-						</p>
-						<p>
-							Our name, སྙིང་པོ། (SINI), means "heart" or "essence" in Tibetan - reflecting our commitment to getting to the heart of the language and creating a warm, supportive learning environment that feels like home.
-						</p>
-					</div>
-				</section>
-
-				<!-- Our Mission -->
-				<section class="bg-white rounded-2xl p-8 shadow-sm">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #FF751F;">
-						Our Mission
-					</h2>
-					<div class="prose prose-lg max-w-none text-gray-700 space-y-4">
-						<p>
-							We believe that learning Tibetan opens doors to understanding a rich cultural heritage, connecting with Tibetan communities, and experiencing the world in new ways. Our mission is to make high-quality Tibetan language education accessible to everyone, regardless of their background or location.
-						</p>
-						<p>
-							We focus on colloquial Tibetan - the living, spoken language - because we believe language learning should empower you to communicate, connect, and belong.
-						</p>
-					</div>
-				</section>
-
-				<!-- Our Approach -->
-				<section class="bg-white rounded-2xl p-8 shadow-sm">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #FF751F;">
-						Our Approach
-					</h2>
-					<div class="space-y-4 text-gray-700">
-						<div class="flex items-start gap-4">
-							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
-								1
-							</div>
-							<div>
-								<h3 class="font-semibold text-lg mb-2">Communication First</h3>
-								<p>We prioritize practical, conversational Tibetan that you can use from day one.</p>
-							</div>
-						</div>
-						<div class="flex items-start gap-4">
-							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
-								2
-							</div>
-							<div>
-								<h3 class="font-semibold text-lg mb-2">Supportive Community</h3>
-								<p>Our learning family celebrates every milestone and supports each other through challenges.</p>
-							</div>
-						</div>
-						<div class="flex items-start gap-4">
-							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
-								3
-							</div>
-							<div>
-								<h3 class="font-semibold text-lg mb-2">Flexible Learning</h3>
-								<p>Choose between live interactive courses or self-paced study materials to fit your schedule.</p>
-							</div>
-						</div>
-						<div class="flex items-start gap-4">
-							<div class="flex-shrink-0 w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
-								4
-							</div>
-							<div>
-								<h3 class="font-semibold text-lg mb-2">Cultural Connection</h3>
-								<p>Language is a gateway to culture, and we weave cultural insights throughout our curriculum.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Join Us -->
-				<section class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
-						Join Our Learning Family
-					</h2>
-					<p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-						Whether you're taking your first steps in Tibetan or advancing your skills, we're here to support your journey. Come be part of our warm, welcoming community!
+		<!-- Source Section -->
+		<section class="py-8 px-4 md:px-6">
+			<div class="max-w-4xl mx-auto">
+				<h3 class="text-2xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #FF751F;">
+					Source
+				</h3>
+				<div class="space-y-4 text-lg leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+					<p>
+						Who are these countless beings? Students learning with dedication and enthusiasm, Dharma friends supporting my practice, editors working on my textbooks along with their teachers and mentors, voice actors, artists, volunteers helping make videos, students translating the textbook into other languages, my family and society, dogs and cats appearing on the Zoom screen watering my seeds of joy, IT experts creating this platform, their mothers and ancestors, the farmer who grew the wheat which I enjoyed for breakfast, the clouds, the rain, the sunshine…
 					</p>
-					<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-						<a href="/" class="px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition-opacity" style="background-color: #FF751F;">
+					<p>
+						If we look deeply into the nature of རྟེན་འབྲེལ་ལྷན་ཅིག་འབྱུང་བ། inter-being of everything, we'll come to realize that ultimately the whole universe has come together to create this website to support your learning!
+					</p>
+					<p>
+						So, I'll need to make a difficult choice and just mention <em>some</em> beings who have probably supported this website, my བོད་སྐད། Tibetan language activities and path of learning the most concretely.
+					</p>
+					<p>
+						With no further introduction, please join me to meet these cherished beings (and some of their quotes) who have accompanied and supported my work and continue to do so. It's been and continues to be a journey of love, trust and dedication.
+					</p>
+					<p class="font-semibold">
+						Going back in chronological order starting from today…
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Timeline Section -->
+		<section class="py-8 px-4 md:px-6">
+			<div class="max-w-5xl mx-auto relative">
+				<!-- Timeline Line (hidden on mobile, shown on desktop) -->
+				<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 timeline-line" style="top: 0; bottom: 0;"></div>
+
+				<!-- Timeline Items -->
+				<div class="space-y-16">
+					<!-- Laurane Boulenger -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #FF751F;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Laurane Boulenger ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Laurane.jpg" alt="Laurane Boulenger" class="w-48 h-48 rounded-full object-cover shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										This wonderful website has kindly been created with much love and skill by an alumna of our Tibetan Course and dear friend, Laurane Boulenger ལགས།. She also creates and designs amazing <a href="https://www.francaisavecpierreetnoel.com/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">French Courses</a> and <a href="https://padlet.com/lauraneboulenger/useful-resources-links-to-tibetan-and-study-materials-edjl7v68j9h9tykn" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Tibetan language study materials</a>. But, what she loves the most are རི་བོང་། (bunnies).
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Tsering Gellek -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #D4A017;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Tsering Gellek ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Tsering Gellek.webp" alt="Tsering Gellek" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										Designing and offering all these innovative and engaging Tibetan language Courses and resources became possible thanks to the incredible and skilful support of Tsering Gellek ལགས།. She is the director of <a href="https://sini.education/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">SINI</a>, the Sarnath International Nyingma Institute. SINI's motto is "Building Bridges of Goodness". Countless such bridges have been and continue to be built by our dedicated students and committed colleagues at SINI all over the world. Tsering Gellek ལགས།'s skilful leadership, complete trust and deep love for our project is a guiding light for which I'm deeply grateful.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Tarthang Tulku Rinpoche -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #B6794D;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Tarthang Tulku Rinpoche
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Tarthang Tulku Rinpoche.webp" alt="Tarthang Tulku Rinpoche" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										SINI would not exist if it wasn't for Tsering Gellek ལགས།'s father, <a href="https://nyingmainstitute.com/about-us/tarthang-tulku-rinpoche/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Tarthang Tulku Rinpoche</a> asking her to build such an Institute. Upon hearing about Tarthang Tulku Rinpoche's life-long, tireless commitment to the preservation of the Dharma, meeting Tsering Gellek ལགས། and some of his dedicated disciples in 2018, I decided to leave my job at UVa and join SINI instead. Tarthang Tulku Rinpoche with his incredible visionary mind and unceasing Dharma activities at the age of 90 is a true source of inspiration and I'm deeply humbled.
+									</p>
+									<div class="quote-box">
+										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+											"If you want to do your best for future generations of humanity, for your friends and family, you must begin by taking good care of yourself."
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Mr. Sloth -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #FF751F;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Mr. Sloth ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Mr. Sloth.webp" alt="Mr. Sloth" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										Designing and offering these Tibetan language Courses and resources, though being a very joyful activity is also a lot of hard work. Throughout these past years, Mr. Sloth ལགས།, one of our non-human students, has taught us many beautiful lessons, especially the one that resting is an art and is important. Mr. Sloth ལགས། (aka. དོམ་ལག་རིང་ལགས། lit. "bear with long arms") is my mascot, the favorite protagonist of our videos and an inspiration for our dedicated students and colleagues. He exemplifies qualities such as being slow, relaxed, peaceful, humorous and yet engaged and interested.
+									</p>
+									<div class="quote-box">
+										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+											His version of the Nike slogan is: "Just do it - tomorrow!" :-)
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- David Germano -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #D4A017;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										David Germano ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/David Germano.webp" alt="David Germano" class="w-64 h-64 rounded-full object-cover shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										During my time at UVa, the University of Virginia, I received a lot of support and guidance from David Germano ལགས།, for which I'm grateful too. The dinners at his house with interesting people from the world of academia were always interesting and fruitful. Although, I do need to admit that the best part of it always was his wonderful, big dog Snowy. :-)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Geshe Wangdrak -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #B6794D;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Geshe Wangdrak ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Geshe Wangdrak.webp" alt="Geshe Wangdrak" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										I've always had and continue to have the honour and privilege to work with wonderful Tibetan colleagues. The one I learned the most with and from was Geshe Wangdrak ལགས། at the LRZTP program in Dharamshala, 2015-2017. Geshe ལགས། was an extraordinarily kind, skilful, open-minded and humorous teacher and colleague. May we keep alive what we have learned from Geshe ལགས། and thereby be his beautiful continuation! Geshe ལགས། made his transition in 2025 and is missed and remembered dearly.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- རྒན་ Christabella -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #FF751F;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										རྒན་ Christabella ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/རྒན་ Christabella ལགས།.webp" alt="རྒན་ Christabella" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										During my time teaching at the <a href="https://lrztp.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">LRZTP</a> program in Dharamshala, we had two doggies joining our classes. To me, their presence was enriching because I love animals. I believe that there are many beautiful and profound lessons we can learn from them, such as the art of showing joy, being resilient, loyal, etc. རྒན་ Christabella and རྒན་སེང་གེ་ལགས། (Professor Lion) thus became the protagonists of my textbook, illustrating the synthesis of indigenous grammar and contemporary learning methodology.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- རྒན་ Mingyur -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #D4A017;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										རྒན་ Mingyur ལགས།
+									</h3>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										Speaking of <em>The Heart of Tibetan Language</em> textbook…
+									</p>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										My big fascination and little knowledge about the indigenous Tibetan grammar, I owe it all to my fantastic private Tibetan language teacher རྒན་མི་འགྱུར་ལགས།. In countless hours of classes, he skilfully revealed to me the oral teachings on the profound Colloquial Tibetan language and grammar, which is hardly written down. If it was not for him, my textbook series བོད་སྐད་སྙིང་པོ། <em>Heart of Tibetan Language</em>, would simply not exist. Everything I wrote in my <a href="https://escholarship.org/uc/item/3mg3k8rk" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">MA thesis</a>, I've also learned from him. My gratitude to him is very deep.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Tokpa Tulku -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #B6794D;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Tokpa Tulku ལགས།
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Tokpa Tulku.webp" alt="Tokpa Tulku" class="w-64 h-64 rounded-lg object-cover shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										Another wonderful teacher who needs to be mentioned is Tokpa Tulku from <a href="https://www.ryi.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">RYI</a>, Rangjung Yeshe Institute. Not only was he my favorite རྒན་ལགས། (teacher) during my MA studies, teaching us རྒྱུད་བླ་མ།, the <em>Mahāyānottaratantra Śāstra</em>; in his free time, he sat with me for hours and hours to carefully compose the wonderful Dharma dialogues of Volumes 3 and 4 of my textbook.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- My བོད་པའི་ནང་མི། Tibetan family -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #FF751F;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										My བོད་པའི་ནང་མི། Tibetan family
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/My བོད་པའི་ནང་མི། Tibetan family.webp" alt="Tibetan family" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										Another group of wonderful beings who substantially contributed to my Tibetan language learning was of course my བོད་པའི་ནང་མི།, my Tibetan family, including our dogs and cats. For about six years, I had the privilege to share their simple life, enjoy the delicious འབྲས་ཐུག (handmade soup) which my dear ཨ་ཅག་ལགས། (sister) made and join them to do སྐོར་ར། (circumambulations) at the great Bouddhanath stūpa every morning. I have learned so much from and with them including - but also way beyond - Tibetan language vocabulary. Their love and support will forever remain in my heart.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- His Holiness the XIV Dalai Lama -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #D4A017;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										His Holiness the XIV Dalai Lama
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/His Holiness the XIV Dalai Lama.webp" alt="His Holiness the XIV Dalai Lama" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										All the Tibetan language related studies and work I did over the past almost 20 years, is because of His Holiness the XIV Dalai Lama. I always like to say "It is all his fault." :-) The dream of understanding his words in Tibetan directly set me out on this wonderful path. It's an honour to be able to contribute a tiny bit to his wish to preserve the precious Tibetan language. His Holiness' tireless and unwavering commitment to spreading the message of peace, compassion, human values, the promotion of the Tibetan culture and the Dharma as well as the care for the environment remain an unceasing source of inspiration.
+									</p>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										His Holiness' foreword of Volume 1 of my textbook is - no doubt - the best part of the textbook.
+									</p>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										My gratitude for Geshe Lhakdor ལགས། from <a href="https://www.ltwa.net/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">LTWA</a> is also very deep.
+									</p>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Foreword.webp" alt="Foreword by His Holiness" class="w-full max-w-lg rounded-lg shadow-lg">
+									</div>
+									<div class="quote-box">
+										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+											"Be kind whenever possible. It's always possible."
+										</p>
+										<p class="mt-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+											And I believe that we need to include ourselves in that kindness too.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Thích Nhất Hạnh -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #B6794D;"></div>
+
+							<!-- Content (Left side on desktop) -->
+							<div class="md:w-1/2 md:pr-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										Thích Nhất Hạnh
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/Thích Nhất Hạnh.webp" alt="Thích Nhất Hạnh" class="w-64 h-64 rounded-lg object-cover shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										However, my interest in Buddhism was first sparked not through His Holiness the XIV Dalai Lama but by the teachings and practices of Zen master and peace activist Venerable Thích Nhất Hạnh.
+									</p>
+									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										His universal non-sectarian <a href="https://plumvillage.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Plum Village</a> teachings and practices of peace and inclusiveness are guiding me day by day. I'm a lay-member of his Order of Interbeing and have been given the Dharma name True Earth of Wholesomeness.
+									</p>
+									<div class="quote-box">
+										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+											"Each moment is a chance for us to make peace with this world, to make peace possible for the world. The world needs our happiness."
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- My mother and Mother Earth -->
+					<div class="relative">
+						<div class="md:flex md:items-start md:gap-8">
+							<!-- Timeline Dot -->
+							<div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full border-4 border-[#FFF8EE]" style="background-color: #FF751F;"></div>
+
+							<!-- Content (Right side on desktop) -->
+							<div class="md:w-1/2 md:ml-auto md:pl-12">
+								<div class="rounded-3xl p-6 md:p-8" style="background-color: #F4E6D6;">
+									<h3 class="text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+										My mother and Mother Earth
+									</h3>
+									<div class="mb-6 flex justify-center">
+										<img src="/assets/illustrations/My mother and Mother Earth.webp" alt="My mother and Mother Earth" class="w-full max-w-md rounded-lg shadow-lg">
+									</div>
+									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+										This website also would obviously not exist if it was not for my dear mother who brought me into this beautiful Mother Earth. But, not only that, she also supported and continues to support me on every step of my path and never questions my unconventional life-style of being a bit of a dreamer.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Closing Section -->
+		<section class="py-12 px-4 md:px-6">
+			<div class="max-w-4xl mx-auto">
+				<div class="rounded-3xl p-8 md:p-12 text-center" style="background: linear-gradient(135deg, #F4E6D6 0%, #FFE5CC 100%);">
+					<div class="quote-box mb-8">
+						<p class="text-xl" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+							"A dream you dream alone is just a dream. A dream you dream together is a reality."
+						</p>
+						<p class="mt-2 text-lg font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; color: #666;">
+							— John Lennon
+						</p>
+					</div>
+
+					<p class="text-lg leading-relaxed mb-6" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+						Thank you for reading all of this.
+					</p>
+
+					<p class="text-lg leading-relaxed mb-8" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+						And most importantly, thank you very much for studying the fascinating Tibetan language and thereby joining our dream of working towards its preservation.
+					</p>
+
+					<p class="text-2xl font-bold mb-8" style="font-family: 'Work Sans', Arial, sans-serif; color: #FF751F;">
+						ཐུགས་རྗེ་ཆེ་གནང་།
+					</p>
+
+					<!-- YouTube Video Embed -->
+					<div class="mb-8">
+						<p class="text-lg mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
+							To conclude, please enjoy my favorite song "<a href="https://www.youtube.com/watch?v=bvFLKyAGzzI" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Imagine</a>" by John Lennon.
+						</p>
+						<div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
+							<iframe
+								width="100%"
+								height="400"
+								src="https://www.youtube.com/embed/bvFLKyAGzzI"
+								title="Imagine - John Lennon"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+								class="rounded-lg"
+							></iframe>
+						</div>
+					</div>
+
+					<!-- CTA Buttons -->
+					<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+						<a href="/" class="px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition-opacity" style="background-color: #FF751F; font-family: 'Work Sans', Arial, sans-serif;">
 							Explore Our Courses
 						</a>
-						<a href="mailto:tibetanatsini@gmail.com" class="px-8 py-3 rounded-full font-bold border-2 border-orange-600 text-orange-600 hover:bg-orange-50 transition-colors">
+						<a href="mailto:tibetanatsini@gmail.com" class="px-8 py-3 rounded-full font-bold border-2 border-orange-600 text-orange-600 hover:bg-orange-50 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif;">
 							Contact Us
 						</a>
 					</div>
-				</section>
+				</div>
 			</div>
-		</main>
+		</section>
 
 		<!-- Footer -->
 		<footer class="mt-16 py-8 border-t border-gray-200">
