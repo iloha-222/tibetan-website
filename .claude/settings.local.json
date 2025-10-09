@@ -20,7 +20,13 @@
       "Bash(cat:*)",
       "Bash(do grep -q \"bg-white shadow-sm\" \"$file\")",
       "Bash(do [ -f \"$file\" ])",
-      "Bash(echo \"  ✓ $file\")"
+      "Bash(echo \"  ✓ $file\")",
+      "Bash(chmod:*)",
+      "Bash(/tmp/update_nav_glassmorphism.sh:*)",
+      "Bash(/tmp/fix_submenu_parents.sh:*)",
+      "Bash(do if [[ -f \"$f\" ]])",
+      "Bash(then echo \"✓ $f\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []
