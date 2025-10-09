@@ -14,7 +14,13 @@
       "Bash(git commit:*)",
       "Bash(do sed -i '' 's/background-color: #E8683C; font-family: ''''Work Sans'''', Arial, sans-serif; border-color: #E8683C; color: black/background-color: #E8683C; font-family: ''''Work Sans'''', Arial, sans-serif; border-color: #E8683C; color: #F5F5F5/g' \"$file\")",
       "Bash(do sed -i '' 's/background-color: #E8683C; font-family: ''''DM Sans'''', sans-serif; color: #000/background-color: #E8683C; font-family: ''''DM Sans'''', sans-serif; color: #F5F5F5/g' \"$file\")",
-      "Bash(git remote set-url:*)"
+      "Bash(git remote set-url:*)",
+      "Read(//tmp/**)",
+      "Bash(python3:*)",
+      "Bash(cat:*)",
+      "Bash(do grep -q \"bg-white shadow-sm\" \"$file\")",
+      "Bash(do [ -f \"$file\" ])",
+      "Bash(echo \"  ✓ $file\")"
     ],
     "deny": [],
     "ask": []
