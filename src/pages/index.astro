@@ -873,12 +873,12 @@ injectSpeedInsights();
 				</div>
 
 				<div class="text-center mb-6">
-					<button onclick="toggleBioFranziska()" id="readMoreBtnFranziska" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
+					<button onclick="openModal('modalFranziska')" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
 						Read More About Franziska →
 					</button>
 				</div>
 
-				<div id="bioContentFranziska" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+				<div id="bioContentFranziska" style="display: none;">
 					<div class="bg-white rounded-3xl p-8 shadow-lg">
 						<div class="space-y-6">
 							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 13pt;">
@@ -911,12 +911,12 @@ injectSpeedInsights();
 				</div>
 
 				<div class="text-center mb-6">
-					<button onclick="toggleBioJuan()" id="readMoreBtnJuan" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
+					<button onclick="openModal('modalJuan')" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
 						Read More About Juan-Felipe →
 					</button>
 				</div>
 
-				<div id="bioContentJuan" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+				<div id="bioContentJuan" style="display: none;">
 					<div class="bg-white rounded-3xl p-8 shadow-lg">
 						<div class="space-y-6">
 							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 13pt;">
@@ -1161,33 +1161,38 @@ injectSpeedInsights();
 	</div>
 </div>
 
+<div id="modalFranziska" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+	<div style="background: rgba(255, 248, 238, 0.95); backdrop-filter: blur(10px); border-radius: 1.5rem; padding: 2rem; max-width: 600px; max-height: 80vh; overflow-y: auto; margin: 1rem; position: relative; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+		<button onclick="closeModal('modalFranziska')" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #666;">&times;</button>
+		<h3 style="font-family: 'Merriweather', serif; color: #000; margin-bottom: 1rem; font-size: 1.5rem; font-weight: bold;">Franziska Oertle</h3>
+		<div style="font-family: 'DM Sans', sans-serif; color: #333; line-height: 1.6;">
+			<p style="margin-bottom: 1.5rem;">
+				Her path began with a dream: to one day understand His Holiness the Dalai Lama in Tibetan. She left her home country, her job, her family, and her friends to study in Nepal. Nineteen years later, she's helped hundreds of students go from zero to holding conversations, reading Dharma texts, and even interpreting.
+			</p>
+			<p style="margin-bottom: 1.5rem;">
+				What sets Franziska apart is her ability to make a complex language feel approachable. She blends indigenous Tibetan grammar with contemporary teaching and learning methodology, turning abstract concepts into playful, memorable lessons. Students describe her classes as joyful, practical, and surprisingly fun.
+			</p>
+			<p style="margin-bottom: 1.5rem;">
+				Her four-volume textbook series, བོད་སྐད་སྙིང་པོ། <em>The Heart of Tibetan Language</em>, is the foundation of this program. It's a living resource, full of dialogues, cultural notes, (Dharma) vocabulary, grammar explanations, and even Tibetan songs. With the help of her "non-human colleagues", རྒན་སེང་གེ་ལགས། (Gen Sengey la) and རྒན་ Christabella ལགས། (Gen Christabella), she invites students into a learning experience that's warm, creative, and deeply rooted in Tibetan tradition.
+			</p>
+			<p>
+				Franziska's mission is simple: to share the beauty of Tibetan with anyone willing to learn. Her teaching is driven by gratitude for what she's received, and by a commitment to keeping the Tibetan language alive and flourishing.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="modalJuan" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+	<div style="background: rgba(255, 248, 238, 0.95); backdrop-filter: blur(10px); border-radius: 1.5rem; padding: 2rem; max-width: 600px; max-height: 80vh; overflow-y: auto; margin: 1rem; position: relative; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+		<button onclick="closeModal('modalJuan')" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #666;">&times;</button>
+		<h3 style="font-family: 'Merriweather', serif; color: #000; margin-bottom: 1rem; font-size: 1.5rem; font-weight: bold;">Juan Felipe Garcia-Peña</h3>
+		<p style="font-family: 'DM Sans', sans-serif; color: #333; line-height: 1.6;">
+			Juan Felipe Garcia-Peña has always been fascinated by learning technologies, even as a child growing up in Colombia and attending college in Costa Rica. Through his experiences in university-level teaching, government contracting, and private institutions, he understands the importance of evidence-based, collaborative research in solving problems and reaching goals. He has worked to develop medical software and learning systems, integrating philosophy, language, media tools, engineering, and biopedagogy. At SINI, he brings to his work a recognition of education as a vibrant, creative, self-sustaining process where new ideas for making online learning more effective can be tested and improved. He is excited to work on Tarthang Rinpoche's projects through SINI, where higher education is a never-ending journey.
+		</p>
+	</div>
+</div>
+
 <script is:inline>
-	function toggleBioFranziska() {
-		const bioContent = document.getElementById('bioContentFranziska');
-		const btn = document.getElementById('readMoreBtnFranziska');
-
-		if (bioContent.style.maxHeight === '0px' || bioContent.style.maxHeight === '') {
-			bioContent.style.maxHeight = '2000px';
-			btn.textContent = '← Show Less';
-		} else {
-			bioContent.style.maxHeight = '0px';
-			btn.textContent = 'Read More About Franziska →';
-		}
-	}
-
-	function toggleBioJuan() {
-		const bioContent = document.getElementById('bioContentJuan');
-		const btn = document.getElementById('readMoreBtnJuan');
-
-		if (bioContent.style.maxHeight === '0px' || bioContent.style.maxHeight === '') {
-			bioContent.style.maxHeight = '2000px';
-			btn.textContent = '← Show Less';
-		} else {
-			bioContent.style.maxHeight = '0px';
-			btn.textContent = 'Read More About Juan-Felipe →';
-		}
-	}
-
 	function openModal(modalId) {
 		const modal = document.getElementById(modalId);
 		if (modal) {
