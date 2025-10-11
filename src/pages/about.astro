@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
-import { injectSpeedInsights } from '@vercel/speed-insights';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
-injectSpeedInsights();
 ---
 
 <html lang="en">
@@ -31,6 +31,9 @@ injectSpeedInsights();
 		<meta name="twitter:description" content="Meet the cherished beings who have made this Tibetan language learning journey possible. A story of interbeing, love, trust and dedication." />
 		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 		<style>
 			.beginner-submenu:hover .beginner-submenu-dropdown {
@@ -70,7 +73,7 @@ injectSpeedInsights();
 				</div>
 
 				<!-- Mobile Menu Button -->
-				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
@@ -81,7 +84,7 @@ injectSpeedInsights();
 					<div class="flex space-x-8">
 						<!-- Self-Paced Courses Dropdown -->
 						<div class="relative group">
-							<a href="/self-paced/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Self-Paced Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -90,17 +93,17 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
-									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
-									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
-									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Live Courses Dropdown -->
 						<div class="relative group">
-							<a href="/live/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Live Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -109,9 +112,9 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
 									<div class="relative beginner-submenu">
-										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Beginner
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -120,13 +123,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="beginner-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
-												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
+												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative intermediate-submenu">
-										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Intermediate
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -135,13 +138,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="intermediate-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
-												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
+												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative advanced-submenu">
-										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Advanced
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -150,8 +153,8 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="advanced-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
-												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
+												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
 											</div>
 										</div>
 									</div>
@@ -159,11 +162,11 @@ injectSpeedInsights();
 							</div>
 						</div>
 
-						<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
-						<a href="/about" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
-						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+						<a href="#" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
-					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; border-color: #E8683C; color: #F5F5F5; text-decoration: none;">
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
 						Start Learning
 					</a>
 				</div>
@@ -181,36 +184,36 @@ injectSpeedInsights();
 				</button>
 			</div>
 			<div class="px-6 pb-4 space-y-4">
-				<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 				</div>
-				<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
-						<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+						<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+						<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
 					</div>
-					<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
-						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
 					</div>
-					<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
-						<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+						<a href="/live/advanced/301" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
 					</div>
 				</div>
-				<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
-				<a href="/about" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
-				<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
-				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; color: #F5F5F5;">Start Learning</a>
+				<a href="#" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
 			</div>
 		</div>
 
@@ -274,7 +277,7 @@ injectSpeedInsights();
 					<div class="relative">
 						<div class="md:flex md:items-start md:gap-8">
 							<!-- Timeline Dot -->
-							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #E8683C;"></div>
+							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #CF4D21;"></div>
 
 							<!-- Content (Right side on desktop) -->
 							<div class="md:w-1/2 md:ml-auto md:pl-12">
@@ -286,7 +289,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/Laurane.jpg" alt="Laurane Boulenger" class="w-48 h-48 rounded-full object-cover shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										This wonderful website has kindly been created with much love and skill by an alumna of our Tibetan Course and dear friend, Laurane Boulenger ལགས།. She also creates and designs amazing <a href="https://frenchwithoutdrama.com" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">French Courses</a> and <a href="https://small-steps-tibetan.com" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Tibetan language study materials</a>. But, what she loves the most are རི་བོང་། (bunnies).
+										This wonderful website has kindly been created with much love and skill by an alumna of our Tibetan Course and dear friend, Laurane Boulenger ལགས།. She also creates and designs amazing <a href="https://frenchwithoutdrama.com" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">French Courses</a> and <a href="https://small-steps-tibetan.com" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">Tibetan language study materials</a>. But, what she loves the most are རི་བོང་། (bunnies).
 									</p>
 								</div>
 							</div>
@@ -309,7 +312,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/Tsering Gellek.webp" alt="Tsering Gellek" class="w-full max-w-md rounded-lg shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										Designing and offering all these innovative and engaging Tibetan language Courses and resources became possible thanks to the incredible and skilful support of Tsering Gellek ལགས།. She is the director of <a href="https://www.sinibridge.org" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">SINI</a>, the Sarnath International Nyingma Institute. SINI's motto is "Building Bridges of Goodness". Countless such bridges have been and continue to be built by our dedicated students and committed colleagues at SINI all over the world. Tsering Gellek ལགས།'s skilful leadership, complete trust and deep love for our project is a guiding light for which I'm deeply grateful.
+										Designing and offering all these innovative and engaging Tibetan language Courses and resources became possible thanks to the incredible and skilful support of Tsering Gellek ལགས།. She is the director of <a href="https://www.sinibridge.org" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">SINI</a>, the Sarnath International Nyingma Institute. SINI's motto is "Building Bridges of Goodness". Countless such bridges have been and continue to be built by our dedicated students and committed colleagues at SINI all over the world. Tsering Gellek ལགས།'s skilful leadership, complete trust and deep love for our project is a guiding light for which I'm deeply grateful.
 									</p>
 								</div>
 							</div>
@@ -332,7 +335,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/Tarthang Tulku Rinpoche.webp" alt="Tarthang Tulku Rinpoche" class="w-64 h-64 rounded-full object-cover shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										SINI would not exist if it wasn't for Tsering Gellek ལགས།'s father, <a href="https://www.sinibridge.org/about-sini/team-rinpoche/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Tarthang Tulku Rinpoche</a> asking her to build such an Institute. Upon hearing about Tarthang Tulku Rinpoche's life-long, tireless commitment to the preservation of the Dharma, meeting Tsering Gellek ལགས། and some of his dedicated disciples in 2018, I decided to leave my job at UVa and join SINI instead. Tarthang Tulku Rinpoche with his incredible visionary mind and unceasing Dharma activities at the age of 90 is a true source of inspiration and I'm deeply humbled.
+										SINI would not exist if it wasn't for Tsering Gellek ལགས།'s father, <a href="https://www.sinibridge.org/about-sini/team-rinpoche/" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">Tarthang Tulku Rinpoche</a> asking her to build such an Institute. Upon hearing about Tarthang Tulku Rinpoche's life-long, tireless commitment to the preservation of the Dharma, meeting Tsering Gellek ལགས། and some of his dedicated disciples in 2018, I decided to leave my job at UVa and join SINI instead. Tarthang Tulku Rinpoche with his incredible visionary mind and unceasing Dharma activities at the age of 90 is a true source of inspiration and I'm deeply humbled.
 									</p>
 									<div class="quote-box">
 										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
@@ -348,7 +351,7 @@ injectSpeedInsights();
 					<div class="relative">
 						<div class="md:flex md:items-start md:gap-8">
 							<!-- Timeline Dot -->
-							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #E8683C;"></div>
+							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #CF4D21;"></div>
 
 							<!-- Content (Left side on desktop) -->
 							<div class="md:w-1/2 md:pr-12">
@@ -422,7 +425,7 @@ injectSpeedInsights();
 					<div class="relative">
 						<div class="md:flex md:items-start md:gap-8">
 							<!-- Timeline Dot -->
-							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #E8683C;"></div>
+							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #CF4D21;"></div>
 
 							<!-- Content (Right side on desktop) -->
 							<div class="md:w-1/2 md:ml-auto md:pl-12">
@@ -434,7 +437,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/རྒན་ Christabella ལགས།.webp" alt="རྒན་ Christabella" class="w-64 h-64 rounded-full object-cover shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										During my time teaching at the <a href="https://lrztp.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">LRZTP</a> program in Dharamshala, we had two doggies joining our classes. To me, their presence was enriching because I love animals. I believe that there are many beautiful and profound lessons we can learn from them, such as the art of showing joy, being resilient, loyal, etc. རྒན་ Christabella and རྒན་སེང་གེ་ལགས། (Professor Lion) thus became the protagonists of my textbook, illustrating the synthesis of indigenous grammar and contemporary learning methodology.
+										During my time teaching at the <a href="https://lrztp.org/" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">LRZTP</a> program in Dharamshala, we had two doggies joining our classes. To me, their presence was enriching because I love animals. I believe that there are many beautiful and profound lessons we can learn from them, such as the art of showing joy, being resilient, loyal, etc. རྒན་ Christabella and རྒན་སེང་གེ་ལགས། (Professor Lion) thus became the protagonists of my textbook, illustrating the synthesis of indigenous grammar and contemporary learning methodology.
 									</p>
 								</div>
 							</div>
@@ -457,7 +460,7 @@ injectSpeedInsights();
 										Speaking of <em>The Heart of Tibetan Language</em> textbook…
 									</p>
 									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										My big fascination and little knowledge about the indigenous Tibetan grammar, I owe it all to my fantastic private Tibetan language teacher རྒན་མི་འགྱུར་ལགས།. In countless hours of classes, he skilfully revealed to me the oral teachings on the profound Colloquial Tibetan language and grammar, which is hardly written down. If it was not for him, my textbook series བོད་སྐད་སྙིང་པོ། <em>Heart of Tibetan Language</em>, would simply not exist. Everything I wrote in my <a href="https://drive.google.com/file/d/1TERVlXr74gGK9PYTe9kOlcyCUdpxz0N9/view" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">MA thesis</a>, I've also learned from him. My gratitude to him is very deep.
+										My big fascination and little knowledge about the indigenous Tibetan grammar, I owe it all to my fantastic private Tibetan language teacher རྒན་མི་འགྱུར་ལགས།. In countless hours of classes, he skilfully revealed to me the oral teachings on the profound Colloquial Tibetan language and grammar, which is hardly written down. If it was not for him, my textbook series བོད་སྐད་སྙིང་པོ། <em>Heart of Tibetan Language</em>, would simply not exist. Everything I wrote in my <a href="https://drive.google.com/file/d/1TERVlXr74gGK9PYTe9kOlcyCUdpxz0N9/view" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">MA thesis</a>, I've also learned from him. My gratitude to him is very deep.
 									</p>
 								</div>
 							</div>
@@ -480,7 +483,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/Tokpa Tulku.webp" alt="Tokpa Tulku" class="w-64 h-64 rounded-lg object-cover shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										Another wonderful teacher who needs to be mentioned is Tokpa Tulku from <a href="https://www.ryi.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">RYI</a>, Rangjung Yeshe Institute. Not only was he my favorite རྒན་ལགས། (teacher) during my MA studies, teaching us རྒྱུད་བླ་མ།, the <em>Mahāyānottaratantra Śāstra</em>; in his free time, he sat with me for hours and hours to carefully compose the wonderful Dharma dialogues of Volumes 3 and 4 of my textbook.
+										Another wonderful teacher who needs to be mentioned is Tokpa Tulku from <a href="https://www.ryi.org/" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">RYI</a>, Rangjung Yeshe Institute. Not only was he my favorite རྒན་ལགས། (teacher) during my MA studies, teaching us རྒྱུད་བླ་མ།, the <em>Mahāyānottaratantra Śāstra</em>; in his free time, he sat with me for hours and hours to carefully compose the wonderful Dharma dialogues of Volumes 3 and 4 of my textbook.
 									</p>
 								</div>
 							</div>
@@ -491,7 +494,7 @@ injectSpeedInsights();
 					<div class="relative">
 						<div class="md:flex md:items-start md:gap-8">
 							<!-- Timeline Dot -->
-							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #E8683C;"></div>
+							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #CF4D21;"></div>
 
 							<!-- Content (Left side on desktop) -->
 							<div class="md:w-1/2 md:pr-12">
@@ -541,7 +544,7 @@ injectSpeedInsights();
 										<img src="/assets/illustrations/Foreword.webp" alt="Foreword by His Holiness" class="w-full max-w-lg rounded-lg shadow-lg">
 									</div>
 									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										My gratitude for Geshe Lhakdor ལགས། from <a href="https://tibetanlibrary.org" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">LTWA</a> is also very deep.
+										My gratitude for Geshe Lhakdor ལགས། from <a href="https://tibetanlibrary.org" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">LTWA</a> is also very deep.
 									</p>
 									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
 										My favorite of His Holiness' wisdom is:
@@ -578,7 +581,7 @@ injectSpeedInsights();
 										However, my interest in Buddhism was first sparked not through His Holiness the XIV Dalai Lama but by the teachings and practices of Zen master and peace activist Venerable Thích Nhất Hạnh.
 									</p>
 									<p class="text-base leading-relaxed mb-4" style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
-										His universal non-sectarian <a href="https://plumvillage.org/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:underline">Plum Village</a> teachings and practices of peace and inclusiveness are guiding me day by day. I'm a lay-member of his Order of Interbeing and have been given the Dharma name True Earth of Wholesomeness.
+										His universal non-sectarian <a href="https://plumvillage.org/" target="_blank" rel="noopener noreferrer" class="text-[#CF4D21] hover:underline">Plum Village</a> teachings and practices of peace and inclusiveness are guiding me day by day. I'm a lay-member of his Order of Interbeing and have been given the Dharma name True Earth of Wholesomeness.
 									</p>
 									<div class="quote-box">
 										<p style="font-family: 'Work Sans', Arial, sans-serif; color: #333;">
@@ -594,7 +597,7 @@ injectSpeedInsights();
 					<div class="relative">
 						<div class="md:flex md:items-start md:gap-8">
 							<!-- Timeline Dot -->
-							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #E8683C;"></div>
+							<div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-0 w-4 h-4 md:w-6 md:h-6 rounded-full border-2 md:border-4 border-[#FFF8EE]" style="background-color: #CF4D21;"></div>
 
 							<!-- Content (Right side on desktop) -->
 							<div class="md:w-1/2 md:ml-auto md:pl-12">
@@ -662,10 +665,10 @@ injectSpeedInsights();
 
 					<!-- CTA Buttons -->
 					<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-						<a href="/" class="px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition-opacity" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif;">
+						<a href="/" class="px-8 py-3 rounded-full font-bold text-white hover:opacity-90 transition-opacity" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif;">
 							Explore Our Courses
 						</a>
-						<a href="mailto:tibetanatsini@gmail.com" class="px-8 py-3 rounded-full font-bold border-2 border-orange-600 text-orange-600 hover:bg-orange-50 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif;">
+						<a href="mailto:tibetanatsini@gmail.com" class="px-8 py-3 rounded-full font-bold border-2 border-[#CF4D21] text-[#CF4D21] hover:bg-orange-50 transition-colors" style="font-family: 'Work Sans', Arial, sans-serif;">
 							Contact Us
 						</a>
 					</div>

@@ -1,8 +1,8 @@
 ---
 import '../../../styles/global.css';
-import { injectSpeedInsights } from '@vercel/speed-insights';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
-injectSpeedInsights();
 ---
 
 <html lang="en">
@@ -31,6 +31,9 @@ injectSpeedInsights();
 		<meta name="twitter:description" content="Continue your Tibetan journey with our intermediate self-paced courses. Learn at your own pace with expert instructors and a supportive community." />
 		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 	<style>
 		.beginner-submenu:hover .beginner-submenu-dropdown {
@@ -59,7 +62,7 @@ injectSpeedInsights();
 				</div>
 
 				<!-- Mobile Menu Button -->
-				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
@@ -70,7 +73,7 @@ injectSpeedInsights();
 					<div class="flex space-x-8">
 						<!-- Self-Paced Courses Dropdown -->
 						<div class="relative group">
-							<a href="/self-paced/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Self-Paced Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -79,17 +82,17 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
-									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
-									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
-									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Live Courses Dropdown -->
 						<div class="relative group">
-							<a href="/live/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Live Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -98,9 +101,9 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
 									<div class="relative beginner-submenu">
-										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Beginner
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -109,13 +112,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="beginner-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
-												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
+												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative intermediate-submenu">
-										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Intermediate
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -124,13 +127,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="intermediate-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
-												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
+												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative advanced-submenu">
-										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Advanced
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -139,8 +142,8 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="advanced-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
-												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
+												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
 											</div>
 										</div>
 									</div>
@@ -148,11 +151,11 @@ injectSpeedInsights();
 							</div>
 						</div>
 
-						<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
-						<a href="/about" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
-						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+						<a href="#" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
-					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; border-color: #E8683C; color: #F5F5F5; text-decoration: none;">
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
 						Start Learning
 					</a>
 				</div>
@@ -170,36 +173,36 @@ injectSpeedInsights();
 				</button>
 			</div>
 			<div class="px-6 pb-4 space-y-4">
-				<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 				</div>
-				<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
-						<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+						<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+						<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
 					</div>
-					<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
-						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
 					</div>
-					<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
-						<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+						<a href="/live/advanced/301" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
 					</div>
 				</div>
-				<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
-				<a href="/about" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
-				<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
-				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; color: #F5F5F5;">Start Learning</a>
+				<a href="#" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
 			</div>
 		</div>
 
@@ -209,7 +212,7 @@ injectSpeedInsights();
 			<div class="max-w-7xl mx-auto">
 				<!-- Breadcrumb -->
 				<nav class="mb-8">
-					<a href="/self-paced/" class="text-orange-600 hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+					<a href="/self-paced/" class="text-[#CF4D21] hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
 					<span class="mx-2 text-gray-500">/</span>
 					<span class="text-gray-700" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</span>
 				</nav>
@@ -376,49 +379,49 @@ injectSpeedInsights();
 							Everything you need from <em>The Heart of Tibetan Language, Volume 2</em> — Lower Intermediate (Lessons 11–15) and Upper Intermediate (Lessons 16–20).
 						</p>
 
-						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #E8683C;">
+						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #CF4D21;">
 							What's included:
 						</h4>
 
 						<ul class="space-y-3 mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 17px; line-height: 1.6;">
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Animated key-point videos (one per lesson, 25–60 minutes)</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Engaging webinars (1–2 hours each, 1–2 per lesson)</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Tibetan songs with exercises</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Anki decks with vocab, audio, images, example sentences, Wylie</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Practice exercises (listening, vocabulary, reading comprehension)</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Digital speaking practice on Moodle</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Rubrics & reflection prompts for self-assessment and cultural insights</span>
@@ -435,7 +438,7 @@ injectSpeedInsights();
 						</div>
 
 						<div class="text-center">
-							<a href="https://sini.corsizio.com/event/672d0965b0692317b417998b" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #E8683C; font-family: 'DM Sans', sans-serif; color: #F5F5F5; text-decoration: none;">
+							<a href="https://sini.corsizio.com/event/672d0965b0692317b417998b" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #CF4D21; font-family: 'DM Sans', sans-serif; color: #FFFFFF; text-decoration: none;">
 								Get Full Package
 							</a>
 						</div>
@@ -453,19 +456,19 @@ injectSpeedInsights();
 							A lighter option with just the videos and webinars.
 						</p>
 
-						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #E8683C;">
+						<h4 class="text-sm font-bold uppercase tracking-wider mb-4" style="font-family: 'DM Sans', sans-serif; color: #CF4D21;">
 							What's included:
 						</h4>
 
 						<ul class="space-y-3 mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 17px; line-height: 1.6;">
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Key-point videos (one per lesson, 20–55 minutes) — short overviews with playful "non-human classmates" in SLC meetings, with/without subtitles</span>
 							</li>
 							<li class="flex items-start">
-								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #E8683C;" fill="currentColor" viewBox="0 0 20 20">
+								<svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
 								</svg>
 								<span>Grammar webinars (1–4 per lesson, 1–2 hours each) — step-by-step explanations of main grammar points</span>
@@ -486,7 +489,7 @@ injectSpeedInsights();
 						</div>
 
 						<div class="text-center">
-							<a href="https://sini.corsizio.com/event/67e3116c926bad77272e5a68" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #E8683C; font-family: 'DM Sans', sans-serif; color: #F5F5F5; text-decoration: none;">
+							<a href="https://sini.corsizio.com/event/67e3116c926bad77272e5a68" class="mt-4 inline-block text-center px-6 py-3 rounded-full font-bold transition-all hover:shadow-lg" style="background-color: #CF4D21; font-family: 'DM Sans', sans-serif; color: #FFFFFF; text-decoration: none;">
 								Get Webinar Package
 							</a>
 						</div>
@@ -499,7 +502,7 @@ injectSpeedInsights();
 		<!-- Important Note Section -->
 		<section class="py-10 px-6" style="background-color: #FFF8EE;">
 			<div class="max-w-4xl mx-auto">
-				<div class="bg-orange-50 rounded-lg p-8 border-l-4 shadow-sm" style="border-left-color: #E8683C; background-color: #FFFBF7;">
+				<div class="bg-orange-50 rounded-lg p-8 border-l-4 shadow-sm" style="border-left-color: #CF4D21; background-color: #FFFBF7;">
 					<div class="flex items-center gap-3 mb-4">
 						<h3 class="text-lg font-semibold" style="font-family: 'DM Sans', sans-serif; color: #000;">Important Note</h3>
 					</div>
@@ -548,21 +551,21 @@ injectSpeedInsights();
 									target="_blank"
 									rel="noopener noreferrer"
 									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
-									style="background-color: #E8683C; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									style="background-color: #CF4D21; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
 									Order hardcopy →
 								</a>
 								<a href="https://play.google.com/store/books/details/Franziska_Oertle_The_Heart_of_Tibetan_Language_Vol?id=6VfgEAAAQBAJ"
 									target="_blank"
 									rel="noopener noreferrer"
 									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
-									style="background-color: #E8683C; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									style="background-color: #CF4D21; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
 									Get eBook on Google Play →
 								</a>
 								<a href="https://vajrabookshop.com/product/the-heart-of-tibetan-language-a-synthesis-of-indigenous-grammar-and-contemporary-laerning-methodology/?fbclid=IwZXh0bgNhZW0CMTAAAR5Zw525St3IpSu3Tj_R5yc4h4BPovJuYZDbMlK7n4gOJNOKMiQLtFdeb7dorQ_aem_PWDJFmBbzftujgslx_nm6g"
 									target="_blank"
 									rel="noopener noreferrer"
 									class="inline-flex items-center justify-center rounded-lg px-1 py-3 text-base font-bold text-black shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 w-fit"
-									style="background-color: #E8683C; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
+									style="background-color: #CF4D21; font-family: 'DM Sans', sans-serif; padding: 12px 16px; width: auto; max-width: 250px; display: inline-block; text-align: center;">
 									Order in Europe via Vajra Bookstore →
 								</a>
 							</div>
@@ -616,10 +619,10 @@ injectSpeedInsights();
 					Join our welcoming community of learners and advance your Tibetan language skills today.
 				</p>
 				<div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-					<a href="https://sini.corsizio.com/event/672d0965b0692317b417998b" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; color: #F5F5F5; text-decoration: none; border: 2px solid #E8683C;">
+					<a href="https://sini.corsizio.com/event/672d0965b0692317b417998b" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF; text-decoration: none; border: 2px solid #CF4D21;">
 						Get the Full Package
 					</a>
-					<a href="https://sini.corsizio.com/event/67e3116c926bad77272e5a68" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors border-2 hover:bg-orange-50" style="font-family: 'Work Sans', Arial, sans-serif; color: #E8683C; text-decoration: none; border-color: #E8683C;">
+					<a href="https://sini.corsizio.com/event/67e3116c926bad77272e5a68" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors border-2 hover:bg-orange-50" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; text-decoration: none; border-color: #CF4D21;">
 						Webinars Only
 					</a>
 				</div>

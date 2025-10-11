@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
-import { injectSpeedInsights } from '@vercel/speed-insights';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+import { Image } from 'astro:assets';
 
-injectSpeedInsights();
 ---
 
 <html lang="en">
@@ -31,6 +32,9 @@ injectSpeedInsights();
 		<meta name="twitter:description" content="Join a joyful Tibetan journey! Learn colloquial Tibetan through live courses and self-study materials with our supportive community. Start speaking Tibetan today." />
 		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 
 		<!-- Structured Data -->
@@ -103,7 +107,7 @@ injectSpeedInsights();
 				</div>
 
 				<!-- Mobile Menu Button -->
-				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
@@ -114,7 +118,7 @@ injectSpeedInsights();
 					<div class="flex space-x-8">
 						<!-- Self-Paced Courses Dropdown -->
 						<div class="relative group">
-							<a href="/self-paced/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Self-Paced Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -123,17 +127,17 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
-									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
-									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
-									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Live Courses Dropdown -->
 						<div class="relative group">
-							<a href="/live/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Live Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -142,9 +146,9 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
 									<div class="relative beginner-submenu">
-										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Beginner
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -153,13 +157,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="beginner-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
-												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
+												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative intermediate-submenu">
-										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Intermediate
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -168,13 +172,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="intermediate-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/intermediate/201" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
-												<a href="/live/intermediate/202" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
+												<a href="/live/intermediate/201" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative advanced-submenu">
-										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Advanced
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -183,8 +187,8 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="advanced-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/advanced/301" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
-												<a href="/live/advanced/302" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
+												<a href="/live/advanced/301" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-2 text-gray-700 hover:bg-orange-10 hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
 											</div>
 										</div>
 									</div>
@@ -192,11 +196,11 @@ injectSpeedInsights();
 							</div>
 						</div>
 
-						<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
-						<a href="/about" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
-						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+						<a href="#" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
-					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #F5F5F5; text-decoration: none;">
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
 						Start Learning
 					</a>
 				</div>
@@ -214,35 +218,35 @@ injectSpeedInsights();
 				</button>
 			</div>
 			<div class="px-6 pb-4 space-y-4">
-				<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 				</div>
-				<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
-						<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+						<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+						<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
 					</div>
-					<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
-						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
 					</div>
-					<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
-						<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+						<a href="/live/advanced/301" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
 					</div>
 				</div>
-				<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
-				<a href="/about" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
-				<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="#" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
 				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
 			</div>
 		</div>
@@ -280,7 +284,7 @@ injectSpeedInsights();
 			<div class="max-w-7xl mx-auto">
 				<div class="text-center mb-12">
 					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-2" style="font-family: 'Merriweather', serif; color: #000;">
-						How Can We <span class="font-bold">Support <span style="position: relative; display: inline-block;">You<svg style="position: absolute; top: -20px; left: -15px; width: 80px; height: 80px; z-index: -1;" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg"><path d="m810.09 240.84c-19.836 0.99219-39.715 0.59375-59.496-1.1953-5.5781-4.6484-12.352-1.0625-18.062-2.3906-5.207-0.74609-10.523-0.10547-15.402 1.8594-6.5 1.0508-13.074 1.5391-19.656 1.4609-15.938 0-31.871 1.4609-47.809 1.1953-8.1641 0.61719-16.164 2.6367-23.641 5.9766l-48.207 2.3906-13.281 5.8438-33.863 2.2578c-5.3711 2.3008-10.867 4.293-16.465 5.9766-5.1797 1.1953-11.289 0-15.672 2.2578-12.398 4.4297-25.148 7.8047-38.113 10.09-16.07 5.8438-32.535 10.758-48.738 15.938-26.219 8.9766-51.34 20.871-74.902 35.457l-35.855 21.383c-11.883 11.496-24.922 21.73-38.91 30.543l-53.121 53.121c-7.9492 12.137-16.832 23.637-26.562 34.398-16.387 20.691-29.797 43.578-39.84 67.992-5.3125 13.281-9.8281 27.223-14.078 41.035-2.0117 6.2812-3.1758 12.801-3.4492 19.391-1.0859 9.7344-3.2695 19.312-6.5078 28.555l5.0469 13.281 1.5898 31.34c0.83203 2.707 1.8047 5.3672 2.9219 7.9648 8.5117 19.52 20.227 37.473 34.664 53.121 6.6406 6.5078 6.7734 17.664 16.734 21.383 9.9609 3.7188 10.625 15.406 20.586 17.93h-0.003906c22.773 20.883 46.621 40.562 71.449 58.961l116.47 58.699c7.9688 1.7266 17.797-0.66406 26.559 5.3125 14.477 2.125 26.559 10.359 41.699 12.086 11.555 7.5703 26.559 3.8516 37.98 10.758 3.6562 1.5352 7.5898 2.3047 11.555 2.2578 13.289-0.30469 26.508 1.9961 38.91 6.7734 3.8125 1.2305 7.8398 1.6367 11.82 1.1914 25.23 0 50.465 0.92969 75.695 1.0625 10.629 0.90625 21.305-1.0195 30.945-5.5742 1.1367-0.64453 2.4102-1.0117 3.7188-1.0625 24.988-2.2305 49.461-8.418 72.508-18.328 23.949-7.3828 47.41-16.254 70.254-26.559 38.602-17.07 75.172-38.41 109.03-63.613 36.105-27.27 65.156-62.789 84.727-103.59 7.8789-15.77 14.32-32.215 19.258-49.137 4.1172-18.594 0-36.254 5.9766-53.121h-0.003907c0.40625-1.207 0.40625-2.5117 0-3.7188-7.4375-20.586-1.5938-42.23-6.6406-66.402h0.003906c-4.9688-18.199-11.41-35.965-19.258-53.121-2.7383-7.5391-4.5234-15.391-5.3125-23.371l-14.609-17c-20.031-24.984-47.766-42.633-78.883-50.199-10.359-7.0391-23.375-4.9141-34.129-9.4297-11.246-3.7969-23.059-5.6406-34.93-5.4453-3.9883 0.28516-7.9922-0.16406-11.816-1.3281-13.742-5.0781-28.434-7.0742-43.031-5.8398h-79.68c-13.273-1.3477-26.676 0.56641-39.043 5.5742-3.7422 1.3477-7.7148 1.9375-11.688 1.7266-15.93-0.78516-31.848 1.75-46.746 7.4375-21.383 0-41.035 9.9609-62.551 9.8281-9.1641 0-16.867 7.1719-26.559 7.0391-9.1602-0.14844-18.234 1.7578-26.562 5.5781-5.0195 1.6094-10.266 2.418-15.535 2.3906l-22.312 1.8594-13.281 5.3125c-22.391 2.1914-44.941 2.1914-67.328 0l-12.086-10.492c6.6602-11.594 16.719-20.863 28.816-26.562 16.816-10.312 34.609-18.945 53.121-25.762 12.617-3.8516 24.305-11.023 36.918-13.281 12.617-2.2578 22.844-6.375 34.262-9.5625h0.003906c12.227-5 25.105-8.2188 38.246-9.5586 12.121-5.3633 25.262-8.0391 38.512-7.8359 5.1719-1.3086 10.199-3.1328 15.008-5.4453l50.465-2.7891 13.281-5.1797h94.422c24.305 8.8984 49.934 5.7109 74.902 8.5h-0.003906c3.5078 1.8203 7.2031 3.2461 11.023 4.25 9.1641 1.4609 18.461 1.5938 27.621 3.0547 9.1641 1.4609 14.477 6.5078 22.844 6.375 5.2891 0.125 10.566 0.56641 15.805 1.3281 1.3281-0.03125 2.6445 0.24219 3.8516 0.79688 9.6953 4.168 19.934 6.9414 30.41 8.2305 7.2656 2.4336 14.805 3.9492 22.445 4.5156 26.559 12.352 53.121 21.383 79.68 34.793v0.003906c35.32 18.539 66.25 44.445 90.703 75.961 24.766 31.422 42.84 67.578 53.121 106.24 6.0156 16.082 8.9023 33.164 8.5 50.332 0 17.266 0 34.527-0.66406 50.863-2.6289 4.9414-4.5938 10.211-5.8438 15.672-1.2656 13.379-5.3867 26.328-12.086 37.98-7.1484 15.699-16.059 30.535-26.559 44.223-12.219 13.281-22.047 29.48-35.59 42.496-16.336 15.672-36.121 26.559-52.324 42.496-8.3125 4.1719-15.965 9.5391-22.711 15.938-5.3125 3.9844-11.023 7.1719-16.734 10.625-16.543 8.2656-32.512 17.625-47.809 28.02-3.3906 2.0352-7 3.6836-10.754 4.9141-2.168 1.5156-4.4805 2.8047-6.9062 3.8516-20.852 4.9141-38.246 18.062-58.301 24.57l-53.121 17.266v-0.003907c-11.453 3.0586-22.715 6.7812-33.73 11.156-11.156 5.1797-23.773 2.3906-34.527 8.7656h-0.003906c-3.5859 1.6719-7.4648 2.6211-11.418 2.7891-10.527 0.83203-20.918 2.9297-30.945 6.2422-8.9297 2.5234-18.234 3.4648-27.488 2.7891-7.7578 0.75391-15.34 2.7695-22.445 5.9727-53.121 3.1875-106.24 2.125-160.69 0l-14.477-5.5781-39.84-1.9922v0.003906c-5.9297-2.3477-12.004-4.3008-18.191-5.8438-11.809-1.2305-23.492-3.4531-34.926-6.6406-12.219-4.3828-25.629-5.5781-38.113-9.9609-12.484-4.3828-22.711-6.6406-33.863-10.492-14.875-5.1797-29.348-11.289-44.754-15.406s-25.762-13.281-39.84-15.938l-0.003906 0.003906c-21.641-9.9531-42.582-21.355-62.684-34.129-9.4297-7.1719-19.922-13.281-30.012-19.258-19.375-11.461-37.375-25.094-53.652-40.637-4.3164-5.1016-9.3203-9.5703-14.875-13.281-12.508-7.5547-23.461-17.426-32.27-29.082-17.211-18.281-32.023-38.676-44.094-60.691-1.7969-3.5195-3.793-6.9336-5.9727-10.227-2.7891-4.5156-7.7031-8.7656-8.1016-13.281-0.92969-12.219-9.6953-21.91-10.094-34.262-0.79688-6.6602-2.1719-13.234-4.1172-19.656 6.1094-18.594 2.9219-38.777 5.7109-59.363l15.008-43.824c0.67188-2.5156 1.4688-4.9961 2.3906-7.4336 3.8516-8.3672 11.555-14.078 14.609-23.375h-0.003906c3.457-8.4688 7.918-16.496 13.281-23.906 4.6797-7.9414 9.8672-15.57 15.539-22.84 7.1875-11.07 15.129-21.633 23.77-31.605 10.758-9.8281 20.188-21.117 30.809-31.074l0.003907-0.003906c9.0664-9.6602 19.277-18.18 30.41-25.363 5.4805-3.957 10.594-8.4023 15.273-13.281 5.7148-5.5625 12.145-10.34 19.121-14.211 11.156-4.9141 18.062-15.938 30.145-18.859l0.003906 0.003906c35.453-20.473 72.648-37.762 111.15-51.66 14.609-5.5781 31.074-6.5078 45.551-12.484h0.003906c11.488-4.1445 23.645-6.125 35.855-5.8438l15.273-7.3047 29.48-2.5234 11.422-5.3125c4.6484 0 9.9609 0 15.273-1.0625h-0.003906c13.434 0.38672 26.828-1.5938 39.578-5.8438 5.082-1.4727 10.391-2.0156 15.668-1.5938l43.16-2.1211 17.398-6.2422h133.86l13.945 5.9766 28.02 1.5938 0.003906-0.003906c12.52 3.1016 24.773 7.1875 36.652 12.219 4.7812 2.3906-1.3281-0.92969 0.79687 3.8516z" fill="#ff751f"/></svg></span>?</span>
+						How Can We <span class="font-bold">Support <span style="position: relative; display: inline-block;">You<svg style="position: absolute; top: -20px; left: -15px; width: 80px; height: 80px; z-index: -1;" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg"><path d="m810.09 240.84c-19.836 0.99219-39.715 0.59375-59.496-1.1953-5.5781-4.6484-12.352-1.0625-18.062-2.3906-5.207-0.74609-10.523-0.10547-15.402 1.8594-6.5 1.0508-13.074 1.5391-19.656 1.4609-15.938 0-31.871 1.4609-47.809 1.1953-8.1641 0.61719-16.164 2.6367-23.641 5.9766l-48.207 2.3906-13.281 5.8438-33.863 2.2578c-5.3711 2.3008-10.867 4.293-16.465 5.9766-5.1797 1.1953-11.289 0-15.672 2.2578-12.398 4.4297-25.148 7.8047-38.113 10.09-16.07 5.8438-32.535 10.758-48.738 15.938-26.219 8.9766-51.34 20.871-74.902 35.457l-35.855 21.383c-11.883 11.496-24.922 21.73-38.91 30.543l-53.121 53.121c-7.9492 12.137-16.832 23.637-26.562 34.398-16.387 20.691-29.797 43.578-39.84 67.992-5.3125 13.281-9.8281 27.223-14.078 41.035-2.0117 6.2812-3.1758 12.801-3.4492 19.391-1.0859 9.7344-3.2695 19.312-6.5078 28.555l5.0469 13.281 1.5898 31.34c0.83203 2.707 1.8047 5.3672 2.9219 7.9648 8.5117 19.52 20.227 37.473 34.664 53.121 6.6406 6.5078 6.7734 17.664 16.734 21.383 9.9609 3.7188 10.625 15.406 20.586 17.93h-0.003906c22.773 20.883 46.621 40.562 71.449 58.961l116.47 58.699c7.9688 1.7266 17.797-0.66406 26.559 5.3125 14.477 2.125 26.559 10.359 41.699 12.086 11.555 7.5703 26.559 3.8516 37.98 10.758 3.6562 1.5352 7.5898 2.3047 11.555 2.2578 13.289-0.30469 26.508 1.9961 38.91 6.7734 3.8125 1.2305 7.8398 1.6367 11.82 1.1914 25.23 0 50.465 0.92969 75.695 1.0625 10.629 0.90625 21.305-1.0195 30.945-5.5742 1.1367-0.64453 2.4102-1.0117 3.7188-1.0625 24.988-2.2305 49.461-8.418 72.508-18.328 23.949-7.3828 47.41-16.254 70.254-26.559 38.602-17.07 75.172-38.41 109.03-63.613 36.105-27.27 65.156-62.789 84.727-103.59 7.8789-15.77 14.32-32.215 19.258-49.137 4.1172-18.594 0-36.254 5.9766-53.121h-0.003907c0.40625-1.207 0.40625-2.5117 0-3.7188-7.4375-20.586-1.5938-42.23-6.6406-66.402h0.003906c-4.9688-18.199-11.41-35.965-19.258-53.121-2.7383-7.5391-4.5234-15.391-5.3125-23.371l-14.609-17c-20.031-24.984-47.766-42.633-78.883-50.199-10.359-7.0391-23.375-4.9141-34.129-9.4297-11.246-3.7969-23.059-5.6406-34.93-5.4453-3.9883 0.28516-7.9922-0.16406-11.816-1.3281-13.742-5.0781-28.434-7.0742-43.031-5.8398h-79.68c-13.273-1.3477-26.676 0.56641-39.043 5.5742-3.7422 1.3477-7.7148 1.9375-11.688 1.7266-15.93-0.78516-31.848 1.75-46.746 7.4375-21.383 0-41.035 9.9609-62.551 9.8281-9.1641 0-16.867 7.1719-26.559 7.0391-9.1602-0.14844-18.234 1.7578-26.562 5.5781-5.0195 1.6094-10.266 2.418-15.535 2.3906l-22.312 1.8594-13.281 5.3125c-22.391 2.1914-44.941 2.1914-67.328 0l-12.086-10.492c6.6602-11.594 16.719-20.863 28.816-26.562 16.816-10.312 34.609-18.945 53.121-25.762 12.617-3.8516 24.305-11.023 36.918-13.281 12.617-2.2578 22.844-6.375 34.262-9.5625h0.003906c12.227-5 25.105-8.2188 38.246-9.5586 12.121-5.3633 25.262-8.0391 38.512-7.8359 5.1719-1.3086 10.199-3.1328 15.008-5.4453l50.465-2.7891 13.281-5.1797h94.422c24.305 8.8984 49.934 5.7109 74.902 8.5h-0.003906c3.5078 1.8203 7.2031 3.2461 11.023 4.25 9.1641 1.4609 18.461 1.5938 27.621 3.0547 9.1641 1.4609 14.477 6.5078 22.844 6.375 5.2891 0.125 10.566 0.56641 15.805 1.3281 1.3281-0.03125 2.6445 0.24219 3.8516 0.79688 9.6953 4.168 19.934 6.9414 30.41 8.2305 7.2656 2.4336 14.805 3.9492 22.445 4.5156 26.559 12.352 53.121 21.383 79.68 34.793v0.003906c35.32 18.539 66.25 44.445 90.703 75.961 24.766 31.422 42.84 67.578 53.121 106.24 6.0156 16.082 8.9023 33.164 8.5 50.332 0 17.266 0 34.527-0.66406 50.863-2.6289 4.9414-4.5938 10.211-5.8438 15.672-1.2656 13.379-5.3867 26.328-12.086 37.98-7.1484 15.699-16.059 30.535-26.559 44.223-12.219 13.281-22.047 29.48-35.59 42.496-16.336 15.672-36.121 26.559-52.324 42.496-8.3125 4.1719-15.965 9.5391-22.711 15.938-5.3125 3.9844-11.023 7.1719-16.734 10.625-16.543 8.2656-32.512 17.625-47.809 28.02-3.3906 2.0352-7 3.6836-10.754 4.9141-2.168 1.5156-4.4805 2.8047-6.9062 3.8516-20.852 4.9141-38.246 18.062-58.301 24.57l-53.121 17.266v-0.003907c-11.453 3.0586-22.715 6.7812-33.73 11.156-11.156 5.1797-23.773 2.3906-34.527 8.7656h-0.003906c-3.5859 1.6719-7.4648 2.6211-11.418 2.7891-10.527 0.83203-20.918 2.9297-30.945 6.2422-8.9297 2.5234-18.234 3.4648-27.488 2.7891-7.7578 0.75391-15.34 2.7695-22.445 5.9727-53.121 3.1875-106.24 2.125-160.69 0l-14.477-5.5781-39.84-1.9922v0.003906c-5.9297-2.3477-12.004-4.3008-18.191-5.8438-11.809-1.2305-23.492-3.4531-34.926-6.6406-12.219-4.3828-25.629-5.5781-38.113-9.9609-12.484-4.3828-22.711-6.6406-33.863-10.492-14.875-5.1797-29.348-11.289-44.754-15.406s-25.762-13.281-39.84-15.938l-0.003906 0.003906c-21.641-9.9531-42.582-21.355-62.684-34.129-9.4297-7.1719-19.922-13.281-30.012-19.258-19.375-11.461-37.375-25.094-53.652-40.637-4.3164-5.1016-9.3203-9.5703-14.875-13.281-12.508-7.5547-23.461-17.426-32.27-29.082-17.211-18.281-32.023-38.676-44.094-60.691-1.7969-3.5195-3.793-6.9336-5.9727-10.227-2.7891-4.5156-7.7031-8.7656-8.1016-13.281-0.92969-12.219-9.6953-21.91-10.094-34.262-0.79688-6.6602-2.1719-13.234-4.1172-19.656 6.1094-18.594 2.9219-38.777 5.7109-59.363l15.008-43.824c0.67188-2.5156 1.4688-4.9961 2.3906-7.4336 3.8516-8.3672 11.555-14.078 14.609-23.375h-0.003906c3.457-8.4688 7.918-16.496 13.281-23.906 4.6797-7.9414 9.8672-15.57 15.539-22.84 7.1875-11.07 15.129-21.633 23.77-31.605 10.758-9.8281 20.188-21.117 30.809-31.074l0.003907-0.003906c9.0664-9.6602 19.277-18.18 30.41-25.363 5.4805-3.957 10.594-8.4023 15.273-13.281 5.7148-5.5625 12.145-10.34 19.121-14.211 11.156-4.9141 18.062-15.938 30.145-18.859l0.003906 0.003906c35.453-20.473 72.648-37.762 111.15-51.66 14.609-5.5781 31.074-6.5078 45.551-12.484h0.003906c11.488-4.1445 23.645-6.125 35.855-5.8438l15.273-7.3047 29.48-2.5234 11.422-5.3125c4.6484 0 9.9609 0 15.273-1.0625h-0.003906c13.434 0.38672 26.828-1.5938 39.578-5.8438 5.082-1.4727 10.391-2.0156 15.668-1.5938l43.16-2.1211 17.398-6.2422h133.86l13.945 5.9766 28.02 1.5938 0.003906-0.003906c12.52 3.1016 24.773 7.1875 36.652 12.219 4.7812 2.3906-1.3281-0.92969 0.79687 3.8516z" fill="#CF4D21"/></svg></span>?</span>
 					</h2>
 				</div>
 
@@ -418,7 +422,7 @@ injectSpeedInsights();
 									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
 									<div class="grid grid-cols-2 gap-2 md:gap-3">
 										<a href="/self-paced/beginner" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Beginner Package</a>
-										<a href="#" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+										<a href="/self-paced/beginner#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
@@ -457,7 +461,7 @@ injectSpeedInsights();
 									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
 									<div class="grid grid-cols-2 gap-2 md:gap-3">
 										<a href="/self-paced/intermediate" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Intermediate Package</a>
-										<a href="#" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+										<a href="/self-paced/intermediate#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
@@ -496,7 +500,7 @@ injectSpeedInsights();
 									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
 									<div class="grid grid-cols-2 gap-2 md:gap-3">
 										<a href="/self-paced/advanced" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Advanced Package</a>
-										<a href="#" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+										<a href="/self-paced/advanced#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
@@ -579,8 +583,8 @@ injectSpeedInsights();
 				<div class="text-center mb-12">
 					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-2" style="font-family: 'Merriweather', serif; color: #000;">
 						We have supported over <span class="font-bold relative">300 students<svg width="180" height="15" viewBox="400 570 400 80" xmlns="http://www.w3.org/2000/svg" class="opacity-80 absolute -bottom-2 left-0 hidden md:inline">
-							<path d="m1047.1 584.71c-29.32-2.9883-55.773-2.5078-83.535-2.5742-54.172-0.14844-108.33-11.734-162.51-11.332-121.32 1.0547-244.52-5.6133-366.27 5.3594-35.961 3.1875-71.879 5.8945-107.48 10.48-3.4141 0.41406-6.8008 0.83984-10.227 1.3203-33.398 4.375-77 1.8125-110.2 6.3984-29.227 6.0938-51.879 13.734-79.867 11.652-7.4258-1.4414-15.332-4.0391-19.785-9.3086-9.7188-11.309-14.238-21.652-9.5352-30.281 1.5352-2.8398 4.1719-5.7617 7.0273-8.3867 5.5625-4.875 12.23-8.7031 15.855-9.0352 62.559-6.668 133.54-7.9219 190.07-9.1055 27.906-0.55859 56.719-1.3203 91.945-2.7734 81.387-2.0781 209.72-3.4141 291.19-5.4141 71.188-1.8008 142.56 8.1211 213.05 15.492 26.801 2.7852 43.68 2.7852 67.707 3.5469 4.0117 0.054687 8.5469 0.19922 13.199 0.33203 23.746 0.76172 66.52-2.9883 80.332 4.2266 13.828 7.293 23.48 8.0547 35.559 21.453 0.64062 13.215-4.2266 19.32-10.398 21.535-14.387 5.2812-27.574 11.188-38.762 13-13.105 2.0781-23.68 2.1602-25.828-2.8398-2.0781-5.0117-0.90625-8.1211 1.1719-10.414 3.6133-3.7461 10.133-7.8516 15.973-10.625z" fill="#ff751f"/>
-							<path d="m476.59 644.48c22.359-1.1719 44.852-2.707 67.148-1.8945 28.199 0.98828 52.094 4.1875 80.078 3.7461 9.4414-0.12109 66.879 0.066407 74.719-0.054687 24.441-0.42578 48.48-0.34766 72.852 0.33203 16.172 0.48047 32.426 1.4531 48.48 3.3477 37.773 4.4414 76.801 7.4258 113.96 15.895 9.4414 2.1602 19.094 3.9609 28.602 2.2266 9.4414-1.668 23.895-6.668 22.922-17.012-1.1055-12.094-11.105-27.148-23.133-30.961-3.6797-1.1211-12.148-6.332-15.895-7.1055-3.5352-0.69141-6.668-3.1719-9.9336-3.6016-7.707-1.0391-13.48 2.5078-20.625 4.2383-8.332 2.0117-26.387-3.625-35-3.8281-30.414-0.76172-48.121 7-78.547 6.7344-17.973-0.13281-36.039-0.69141-54.027-0.98828-17.266-0.28125-34.574 0.22656-51.801-0.69141-12.027-0.61328-23.895-3.8945-35.828-4.1602-10.227-0.21484-20.574 1.668-30.625 3.6797-8.6016 1.8008-18.066 1.0391-26.801 1.1055-7.9883 0.14844-17.773-1.8672-25.215 0-9.5859 2.4414-20.227 2.5078-30 3.4648-18.398 1.8125-27.652-1.4531-45.973 0.83984-11.398 1.3867-19.812 5.7617-31.188 4.1719-5.8281-0.83984-20.762 2.9219-26.586 2.293-5.9883-0.55859-6.3984 3.7344-11.801 4.4414-6.5469 0.8125-13.148 0.625-19.668 0.89453-2.7734 0.14844-10.215-0.14844-12.148 2.0273-2.7188 2.9883 2.707 9.1602 6.7852 10.906 14.945 6.5195 36.535 1.3086 52.293 0.76172 5.6328-0.18359 11.273-0.46094 16.953-0.80859z" fill="#ff751f"/>
+							<path d="m1047.1 584.71c-29.32-2.9883-55.773-2.5078-83.535-2.5742-54.172-0.14844-108.33-11.734-162.51-11.332-121.32 1.0547-244.52-5.6133-366.27 5.3594-35.961 3.1875-71.879 5.8945-107.48 10.48-3.4141 0.41406-6.8008 0.83984-10.227 1.3203-33.398 4.375-77 1.8125-110.2 6.3984-29.227 6.0938-51.879 13.734-79.867 11.652-7.4258-1.4414-15.332-4.0391-19.785-9.3086-9.7188-11.309-14.238-21.652-9.5352-30.281 1.5352-2.8398 4.1719-5.7617 7.0273-8.3867 5.5625-4.875 12.23-8.7031 15.855-9.0352 62.559-6.668 133.54-7.9219 190.07-9.1055 27.906-0.55859 56.719-1.3203 91.945-2.7734 81.387-2.0781 209.72-3.4141 291.19-5.4141 71.188-1.8008 142.56 8.1211 213.05 15.492 26.801 2.7852 43.68 2.7852 67.707 3.5469 4.0117 0.054687 8.5469 0.19922 13.199 0.33203 23.746 0.76172 66.52-2.9883 80.332 4.2266 13.828 7.293 23.48 8.0547 35.559 21.453 0.64062 13.215-4.2266 19.32-10.398 21.535-14.387 5.2812-27.574 11.188-38.762 13-13.105 2.0781-23.68 2.1602-25.828-2.8398-2.0781-5.0117-0.90625-8.1211 1.1719-10.414 3.6133-3.7461 10.133-7.8516 15.973-10.625z" fill="#CF4D21"/>
+							<path d="m476.59 644.48c22.359-1.1719 44.852-2.707 67.148-1.8945 28.199 0.98828 52.094 4.1875 80.078 3.7461 9.4414-0.12109 66.879 0.066407 74.719-0.054687 24.441-0.42578 48.48-0.34766 72.852 0.33203 16.172 0.48047 32.426 1.4531 48.48 3.3477 37.773 4.4414 76.801 7.4258 113.96 15.895 9.4414 2.1602 19.094 3.9609 28.602 2.2266 9.4414-1.668 23.895-6.668 22.922-17.012-1.1055-12.094-11.105-27.148-23.133-30.961-3.6797-1.1211-12.148-6.332-15.895-7.1055-3.5352-0.69141-6.668-3.1719-9.9336-3.6016-7.707-1.0391-13.48 2.5078-20.625 4.2383-8.332 2.0117-26.387-3.625-35-3.8281-30.414-0.76172-48.121 7-78.547 6.7344-17.973-0.13281-36.039-0.69141-54.027-0.98828-17.266-0.28125-34.574 0.22656-51.801-0.69141-12.027-0.61328-23.895-3.8945-35.828-4.1602-10.227-0.21484-20.574 1.668-30.625 3.6797-8.6016 1.8008-18.066 1.0391-26.801 1.1055-7.9883 0.14844-17.773-1.8672-25.215 0-9.5859 2.4414-20.227 2.5078-30 3.4648-18.398 1.8125-27.652-1.4531-45.973 0.83984-11.398 1.3867-19.812 5.7617-31.188 4.1719-5.8281-0.83984-20.762 2.9219-26.586 2.293-5.9883-0.55859-6.3984 3.7344-11.801 4.4414-6.5469 0.8125-13.148 0.625-19.668 0.89453-2.7734 0.14844-10.215-0.14844-12.148 2.0273-2.7188 2.9883 2.707 9.1602 6.7852 10.906 14.945 6.5195 36.535 1.3086 52.293 0.76172 5.6328-0.18359 11.273-0.46094 16.953-0.80859z" fill="#CF4D21"/>
 						</svg></span> on their path of learning
 					</h2>
 				</div>
@@ -595,19 +599,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -622,19 +626,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -649,19 +653,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -676,19 +680,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -703,19 +707,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -730,19 +734,19 @@ injectSpeedInsights();
 								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
 									<div class="flex justify-center mb-6 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
-											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#ff751f" fill-rule="evenodd"/>
+											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
 									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
@@ -863,7 +867,7 @@ injectSpeedInsights();
 			<!-- Franziska Oertle -->
 			<div class="flex flex-col items-center">
 				<div class="mb-6">
-					<img src="/assets/illustrations/Franziska-Oertle-min.jpg" alt="Franziska Oertle - Tibetan Language Teacher" class="w-64 h-64 rounded-full object-cover shadow-lg">
+					<img src="/assets/illustrations/Franziska-Oertle-min.webp" alt="Franziska Oertle - Tibetan Language Teacher" class="w-64 h-64 rounded-full object-cover shadow-lg">
 				</div>
 
 				<div class="text-center mb-6">
@@ -901,7 +905,7 @@ injectSpeedInsights();
 			<!-- Juan-Felipe Garcia-Peña -->
 			<div class="flex flex-col items-center">
 				<div class="mb-6">
-					<img src="/assets/illustrations/Juan-Garcia_Tibetan-Online-Learning-Development-and-Tech.jpg" alt="Juan-Felipe Garcia-Peña - Learning Development and Tech" class="w-64 h-64 rounded-full object-cover shadow-lg">
+					<img src="/assets/illustrations/Juan-Garcia_Tibetan-Online-Learning-Development-and-Tech.webp" alt="Juan-Felipe Garcia-Peña - Learning Development and Tech" class="w-64 h-64 rounded-full object-cover shadow-lg">
 				</div>
 
 				<div class="text-center mb-6">
@@ -951,7 +955,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Nat Thammamitr</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Assistant Teacher</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Dedicated to sharing the beauty of Tibetan language and culture.</p>
-				<button onclick="toggleBioNat()" id="readMoreBtnNat" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioNat()" id="readMoreBtnNat" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentNat" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -977,7 +981,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Lhakpa Tsering</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Teacher</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Nepal-born Buddhist scholar with a Shastri in Buddhist philosophy and an Acharya in Tibetan linguistics.</p>
-				<button onclick="toggleBioLhakpa()" id="readMoreBtnLhakpa" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioLhakpa()" id="readMoreBtnLhakpa" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentLhakpa" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -997,7 +1001,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Bhargavi</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Teacher</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Holds a master's in Tibetan history from Columbia and has studied Tibetan at Esukhia, Tibet University, and Rangjung Yeshe.</p>
-				<button onclick="toggleBioBhargavi()" id="readMoreBtnBhargavi" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioBhargavi()" id="readMoreBtnBhargavi" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentBhargavi" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -1017,7 +1021,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Ania Samborska</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Assistant Teacher</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Polish teacher and translator in Dharamshala who studies Tibetan language and Dharma, teaches Classical Tibetan at SINI, and supports Colloquial Tibetan courses.</p>
-				<button onclick="toggleBioAnia()" id="readMoreBtnAnia" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioAnia()" id="readMoreBtnAnia" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentAnia" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -1053,7 +1057,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Pema Woeser</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Tutor Coordinator</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Native speaker holding a master's degree in Tibetan literature and committed to online Tibetan language education.</p>
-				<button onclick="toggleBioPema()" id="readMoreBtnPema" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioPema()" id="readMoreBtnPema" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentPema" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -1073,7 +1077,7 @@ injectSpeedInsights();
 				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Tzoe Wong</h3>
 				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Admin & IT Support</p>
 				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Tibetan language enthusiast who began as a student at SINI in 2021 and now supports the team with video production, webinars, and IT, often in the company of Mr. Sloth.</p>
-				<button onclick="toggleBioTzoe()" id="readMoreBtnTzoe" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
+				<button onclick="toggleBioTzoe()" id="readMoreBtnTzoe" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
 					Read More →
 				</button>
 				<div id="bioContentTzoe" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
@@ -1344,5 +1348,7 @@ injectSpeedInsights();
 		</div>
 	</footer>
 
-	</body>
+		<Analytics />
+	<SpeedInsights />
+</body>
 </html>

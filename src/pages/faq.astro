@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
-import { injectSpeedInsights } from '@vercel/speed-insights';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
-injectSpeedInsights();
 ---
 
 <html lang="en">
@@ -31,6 +31,9 @@ injectSpeedInsights();
 		<meta name="twitter:description" content="Find answers to common questions about our Tibetan language courses, enrollment, prerequisites, and more." />
 		<meta name="twitter:image" content="https://tibetanatsini.com/assets/illustrations/Logo.png" />
 
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 		<style>
 			.beginner-submenu:hover .beginner-submenu-dropdown {
@@ -50,7 +53,7 @@ injectSpeedInsights();
 				transition: background-color 0.2s ease;
 			}
 			.faq-item:hover {
-				background-color: rgba(255, 117, 31, 0.02);
+				background-color: transparent;
 			}
 			.faq-question {
 				cursor: pointer;
@@ -65,7 +68,7 @@ injectSpeedInsights();
 			.faq-answer.active {
 				max-height: 1000px;
 				padding: 1.5rem;
-				background-color: rgba(255, 117, 31, 0.03);
+				background-color: transparent;
 				border-radius: 12px;
 				margin: 0.5rem 0 1rem 0;
 			}
@@ -89,7 +92,7 @@ injectSpeedInsights();
 				</div>
 
 				<!-- Mobile Menu Button -->
-				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-orange-600" aria-label="Toggle menu">
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
@@ -100,7 +103,7 @@ injectSpeedInsights();
 					<div class="flex space-x-8">
 						<!-- Self-Paced Courses Dropdown -->
 						<div class="relative group">
-							<a href="/self-paced/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Self-Paced Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -109,17 +112,17 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
-									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
-									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
-									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Live Courses Dropdown -->
 						<div class="relative group">
-							<a href="/live/" class="text-black hover:text-orange-600 flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
 								Live Courses
 								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -128,9 +131,9 @@ injectSpeedInsights();
 							<!-- Dropdown Menu -->
 							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
 								<div class="py-3">
-									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
 									<div class="relative beginner-submenu">
-										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Beginner
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -139,13 +142,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="beginner-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
-												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
+												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative intermediate-submenu">
-										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Intermediate
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -154,13 +157,13 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="intermediate-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
-												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
+												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative advanced-submenu">
-										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
 											Advanced
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -169,8 +172,8 @@ injectSpeedInsights();
 										<!-- Submenu -->
 										<div class="advanced-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
 											<div class="py-3">
-												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
-												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-orange-600 transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
+												<a href="/live/advanced/301" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
 											</div>
 										</div>
 									</div>
@@ -178,11 +181,11 @@ injectSpeedInsights();
 							</div>
 						</div>
 
-						<a href="#" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
-						<a href="/about" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
-						<a href="/faq" class="text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+						<a href="#" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
-					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; border-color: #E8683C; color: #F5F5F5; text-decoration: none;">
+					<a href="#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
 						Start Learning
 					</a>
 				</div>
@@ -200,36 +203,36 @@ injectSpeedInsights();
 				</button>
 			</div>
 			<div class="px-6 pb-4 space-y-4">
-				<a href="/self-paced/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 				</div>
-				<a href="/live/" class="block text-black hover:text-orange-600 font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
 				<div class="pl-4 space-y-2">
-					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-					<a href="/live/beginner" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
+					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
+					<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/beginner/101" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
-						<a href="/live/beginner/102" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
+						<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
+						<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
 					</div>
-					<a href="/live/intermediate" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
+					<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
-						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
+						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
+						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
 					</div>
-					<a href="/live/advanced" class="block text-gray-700 hover:text-orange-600 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
 					<div class="pl-4 space-y-1">
-						<a href="/live/advanced/301" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
-						<a href="/live/advanced/302" class="block text-gray-600 hover:text-orange-600 text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
+						<a href="/live/advanced/301" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
+						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
 					</div>
 				</div>
-				<a href="#" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
-				<a href="/about" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
-				<a href="/faq" class="block text-black hover:text-orange-600" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
-				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #E8683C; font-family: 'Work Sans', Arial, sans-serif; color: #F5F5F5;">Start Learning</a>
+				<a href="#" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
 			</div>
 		</div>
 
@@ -251,14 +254,14 @@ injectSpeedInsights();
 			<div class="max-w-4xl mx-auto">
 				<!-- Getting Started -->
 				<div class="mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #E8683C;">Getting Started</h2>
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #CF4D21;">Getting Started</h2>
 					<div class="space-y-0">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Which course should I start with?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -277,7 +280,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What dialect will I learn?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -293,7 +296,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Who teaches the courses?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -309,7 +312,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Do you have an entrance test for higher levels?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -324,14 +327,14 @@ injectSpeedInsights();
 
 				<!-- How the Live Courses Work -->
 				<div class="mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #E8683C;">How the Live Courses Work</h2>
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #CF4D21;">How the Live Courses Work</h2>
 					<div class="space-y-0">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									How many modules are there?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -358,7 +361,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What's the weekly time commitment?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -374,7 +377,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									How fast do modules run?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -391,7 +394,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What's inside a module?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -417,7 +420,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What are SLCs and weekly 1:1s?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -433,7 +436,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What is Module 0?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -449,7 +452,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Which textbooks do we use?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -465,7 +468,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Is there Buddhist content?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -480,14 +483,14 @@ injectSpeedInsights();
 
 				<!-- Schedule & Logistics -->
 				<div class="mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #E8683C;">Schedule & Logistics</h2>
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #CF4D21;">Schedule & Logistics</h2>
 					<div class="space-y-0">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									When are the live classes?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -503,7 +506,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Do I have to pick one time slot for the whole term?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -519,7 +522,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What if I miss a live class?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -535,7 +538,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What tools do I need?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -559,14 +562,14 @@ injectSpeedInsights();
 
 				<!-- Auditing, Tuition, and Policies -->
 				<div class="mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #E8683C;">Auditing, Tuition, and Policies</h2>
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #CF4D21;">Auditing, Tuition, and Policies</h2>
 					<div class="space-y-0">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Can I audit instead of enrolling as a regular student?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -582,7 +585,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Do you offer a sliding scale or discounts?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -598,7 +601,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What's your refund policy?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -614,7 +617,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Do you have materials for self-study or review before I join?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -629,14 +632,14 @@ injectSpeedInsights();
 
 				<!-- Extras and Nice-to-Know -->
 				<div class="mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #E8683C;">Extras and Nice-to-Know</h2>
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8" style="font-family: 'Merriweather', serif; color: #CF4D21;">Extras and Nice-to-Know</h2>
 					<div class="space-y-0">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									What are "White Wednesday" talks?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -652,7 +655,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Will I use English in class?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -668,7 +671,7 @@ injectSpeedInsights();
 								<h3 class="text-lg font-medium pr-8" style="font-family: 'DM Sans', sans-serif; color: #000;">
 									Do Advanced students get Volume 3 if it's not out yet?
 								</h3>
-								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #E8683C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="faq-icon w-5 h-5 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</button>
@@ -706,25 +709,21 @@ injectSpeedInsights();
 			}
 
 			// Mobile menu toggle
-			document.addEventListener('DOMContentLoaded', function() {
-			<script>
-		document.addEventListener('DOMContentLoaded', function() {
-		const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-				const mobileMenu = document.getElementById('mobileMenu');
-				const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const mobileMenu = document.getElementById('mobileMenu');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
 
-				if (mobileMenuBtn && mobileMenu) {
-					mobileMenuBtn.addEventListener('click', function() {
-						mobileMenu.classList.toggle('hidden');
-					});
-				}
+			if (mobileMenuBtn && mobileMenu) {
+				mobileMenuBtn.addEventListener('click', function() {
+					mobileMenu.classList.toggle('hidden');
+				});
+			}
 
-				if (closeMobileMenu && mobileMenu) {
-					closeMobileMenu.addEventListener('click', function() {
-						mobileMenu.classList.add('hidden');
-					});
-				}
-			});
+			if (closeMobileMenu && mobileMenu) {
+				closeMobileMenu.addEventListener('click', function() {
+					mobileMenu.classList.add('hidden');
+				});
+			}
 		</script>
 
 			<!-- SINI Affiliation Section -->
@@ -784,10 +783,10 @@ injectSpeedInsights();
 				<div class="flex flex-col items-center md:items-start">
 					<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
 					<ul class="space-y-3">
-						<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
-						<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
-						<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
-						<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						<li><a href="/live" class="text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+						<li><a href="/self-paced" class="text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+						<li><a href="/about" class="text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+						<li><a href="/faq" class="text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
 					</ul>
 				</div>
 
@@ -796,7 +795,7 @@ injectSpeedInsights();
 					<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
 					<ul class="space-y-3">
 						<li>
-							<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+							<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
 								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
 								</svg>
@@ -804,7 +803,7 @@ injectSpeedInsights();
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+							<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:opacity-90 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
 								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 									<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
 								</svg>
