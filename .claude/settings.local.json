@@ -17,7 +17,22 @@
       "Bash(git push:*)",
       "Bash(vercel:*)",
       "Bash(find:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(src/pages/index.astro)",
+      "Bash(for file in /Users/lauraneboulenger/tibetan-course-site/src/pages/self-paced/advanced/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/self-paced/learning-to-read/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/self-paced/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/self-paced/beginner/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/self-paced/intermediate/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/about.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/faq.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/advanced/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/learning-to-read/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/beginner/index.astro )",
+      "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/intermediate/index.astro)",
+      "Bash(do)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
