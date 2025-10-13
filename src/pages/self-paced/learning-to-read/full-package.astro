@@ -34,18 +34,22 @@ import Analytics from "@vercel/analytics/astro";
 	</head>
 	<body style="font-family: 'Work Sans', Arial, sans-serif; background-color: #F5F0E8;">
 		<!-- Header Navigation -->
-		<header class="sticky top-0 z-50 md:relative bg-[#FFF8EE] shadow-sm">
-			<div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-				<div class="mr-8">
-					<a href="/">
-						<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-12 md:h-14 lg:h-16 w-auto">
-					</a>
-				</div>
-				<nav class="hidden md:flex space-x-8">
-					<a href="/" class="text-gray-700 hover:text-orange-500 transition-colors">Home</a>
-					<a href="/self-paced/" class="text-orange-500">Self-Paced Courses</a>
-					<a href="/live/" class="text-gray-700 hover:text-orange-500 transition-colors">Live Courses</a>
-				</nav>
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<!-- SINI Logo - larger to extend past the header border -->
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<!-- Sloth Logo -->
+					<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
 
 		<!-- Mobile Menu -->
 		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">

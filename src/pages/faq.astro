@@ -82,14 +82,16 @@ import Analytics from "@vercel/analytics/astro";
 	</head>
 	<body style="background-color: #FFF8EE;">
 				<!-- Navigation -->
-		<nav class="sticky top-0 z-50 md:relative py-4 px-4 md:py-5 md:px-6 bg-white shadow-sm">
-			<div class="max-w-7xl mx-auto flex items-center">
-				<!-- Logo -->
-				<div class="mr-8">
-					<a href="/">
-						<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-16 md:h-18 lg:h-20 w-auto">
-					</a>
-				</div>
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<!-- SINI Logo - larger to extend past the header border -->
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<!-- Sloth Logo -->
+					<img src="/assets/illustrations/Logo.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
 
 				<!-- Mobile Menu Button -->
 				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
