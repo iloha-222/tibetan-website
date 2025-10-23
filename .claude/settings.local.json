@@ -32,7 +32,9 @@
       "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/beginner/index.astro )",
       "Bash(/Users/lauraneboulenger/tibetan-course-site/src/pages/live/intermediate/index.astro)",
       "Bash(do)",
-      "Bash(done)"
+      "Bash(done)",
+      "WebFetch(domain:www.heartoftibetanlanguage.com)",
+      "Bash(for:*)"
     ],
     "deny": [],
     "ask": []
