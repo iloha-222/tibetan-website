@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>FAQ - Frequently Asked Questions | Tibetan Learning</title>
 		<meta name="description" content="Find answers to common questions about our Tibetan language courses, enrollment, prerequisites, and more." />
+		<meta name="keywords" content="tibetan course faq, tibetan learning questions, tibetan course enrollment, tibetan language prerequisites, tibetan course information, how to learn tibetan" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/faq" />
@@ -35,6 +36,57 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - FAQPage -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Which course should I start with?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "If you don't yet read Tibetan script, begin with the Alphabet & Reading Pre-course (or its self-study equivalent). If you can already read, start with Beginner 101 → Beginner 102, then continue to Intermediate 201 → 202, and finally Advanced 301 → 302."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What dialect will I learn?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "We teach colloquial Central/Exile Tibetan."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Who teaches the courses?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Each course is led by main and assistant teachers (both native and non-native speakers) and supported by a team of tutors. The program was designed by Franziska Oertle, author of The Heart of Tibetan Language, and all teachers are trained in this learning-centred methodology."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Do you have an entrance test for higher levels?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Instead of a test, new students at the Upper Beginner, Intermediate and Advanced levels are requested to submit a short video presentation in Tibetan about course-relevant topics and share their motivation in English."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "How many modules are there?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Each course is made up of 6 Modules. Each level (Beginner, Intermediate, Advanced) has 12 Modules in total, taught across two courses."
+					}
+				}
+			]
+		}
+		</script>
+
 		<style>
 			.beginner-submenu:hover .beginner-submenu-dropdown {
 				opacity: 1;

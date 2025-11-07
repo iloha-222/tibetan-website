@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Advanced Live Courses - Tibetan Learning</title>
 		<meta name="description" content="Take your Tibetan to the next level with our advanced live courses. Connect deeply with dharma vocabulary and Buddhist themes." />
+		<meta name="keywords" content="advanced tibetan course, tibetan dharma texts, classical tibetan, advanced tibetan grammar, tibetan 301, fluent tibetan" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/live/advanced" />
@@ -35,6 +36,31 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Course -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Advanced Tibetan Live Courses",
+			"description": "Take your Tibetan to the next level with our advanced live courses. Connect deeply with dharma vocabulary and Buddhist themes.",
+			"provider": {
+				"@type": "EducationalOrganization",
+				"name": "བོད་སྐད་སྙིང་པོ། - The Heart of Tibetan Language (SINI)",
+				"url": "https://www.heartoftibetanlanguage.com"
+			},
+			"educationalLevel": "Advanced",
+			"inLanguage": "en-US",
+			"availableLanguage": ["en", "bo"],
+			"courseCode": "Advanced 301-302",
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "online",
+				"courseWorkload": "PT12W"
+			}
+		}
+		</script>
+
 		<style>
 			.beginner-submenu:hover .beginner-submenu-dropdown,
 			.intermediate-submenu:hover .intermediate-submenu-dropdown,

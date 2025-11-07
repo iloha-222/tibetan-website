@@ -3,15 +3,23 @@
 	<!-- Homepage -->
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
+	</url>
+
+	<!-- About -->
+	<url>
+		<loc>https://www.heartoftibetanlanguage.com/about</loc>
+		<lastmod>2025-11-07</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 
 	<!-- FAQ -->
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/faq</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -19,67 +27,67 @@
 	<!-- Live Courses -->
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/learning-to-read</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/beginner</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/beginner/101</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/beginner/102</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/intermediate</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/intermediate/201</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/intermediate/202</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/advanced</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/advanced/301</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/live/advanced/302</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -87,43 +95,43 @@
 	<!-- Self-Paced Courses -->
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/learning-to-read</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/learning-to-read/full-package</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/learning-to-read/webinars-only</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/beginner</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/intermediate</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.heartoftibetanlanguage.com/self-paced/advanced</loc>
-		<lastmod>2025-10-02</lastmod>
+		<lastmod>2025-11-07</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>

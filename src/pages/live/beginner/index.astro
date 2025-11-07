@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Beginner Live Courses - Tibetan Learning</title>
 		<meta name="description" content="Start your Tibetan journey with our beginner live courses. Learn with expert instructors and a supportive community." />
+		<meta name="keywords" content="beginner tibetan course, learn tibetan for beginners, basic tibetan language, introductory tibetan, tibetan 101, start learning tibetan" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/live/beginner" />
@@ -35,6 +36,31 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Course -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Beginner Tibetan Live Courses",
+			"description": "Start your Tibetan journey with our beginner live courses. Learn with expert instructors and a supportive community.",
+			"provider": {
+				"@type": "EducationalOrganization",
+				"name": "བོད་སྐད་སྙིང་པོ། - The Heart of Tibetan Language (SINI)",
+				"url": "https://www.heartoftibetanlanguage.com"
+			},
+			"educationalLevel": "Beginner",
+			"inLanguage": "en-US",
+			"availableLanguage": ["en", "bo"],
+			"courseCode": "Beginner 101-102",
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "online",
+				"courseWorkload": "PT12W"
+			}
+		}
+		</script>
+
 	<style>
 		.beginner-submenu:hover .beginner-submenu-dropdown {
 			opacity: 1;
