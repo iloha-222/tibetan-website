@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Advanced Self-Paced Learning - Tibetan Learning</title>
 		<meta name="description" content="Master Tibetan with our advanced self-paced learning. Learn at your own pace with expert instructors and a supportive community." />
+		<meta name="keywords" content="advanced tibetan course, tibetan dharma texts, classical tibetan, advanced tibetan grammar, tibetan 301, fluent tibetan" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/self-paced/advanced" />
@@ -35,6 +36,60 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+		<!-- Structured Data - BreadcrumbList -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Self-Paced Courses",
+					"item": "https://www.heartoftibetanlanguage.com/self-paced/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Advanced",
+					"item": "https://www.heartoftibetanlanguage.com/self-paced/advanced"
+				}
+			]
+		}
+		</script>
+
+		<!-- Structured Data - Course -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Advanced Tibetan Self-Paced Courses",
+			"description": "Master Tibetan with our advanced self-paced learning. Learn at your own pace with expert instructors and a supportive community.",
+			"provider": {
+				"@type": "EducationalOrganization",
+				"name": "བོད་སྐད་སྙིང་པོ། - The Heart of Tibetan Language (SINI)",
+				"url": "https://www.heartoftibetanlanguage.com"
+			},
+			"educationalLevel": "Advanced",
+			"inLanguage": "en-US",
+			"availableLanguage": ["en", "bo"],
+			"courseCode": "Advanced 301-302",
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "online",
+				"courseWorkload": "PT12W"
+			}
+		}
+		</script>
+
 	<style>
 		.beginner-submenu:hover .beginner-submenu-dropdown {
 			opacity: 1;

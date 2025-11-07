@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Live Courses - Tibetan Learning</title>
 		<meta name="description" content="Learn Tibetan with live instruction, real-time feedback, and a supportive community of fellow learners." />
+		<meta name="keywords" content="live tibetan courses, tibetan live classes, online tibetan instruction, tibetan group lessons, interactive tibetan learning, tibetan video classes, real-time tibetan lessons" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/live/" />
@@ -35,6 +36,29 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - BreadcrumbList -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Live Courses",
+					"item": "https://www.heartoftibetanlanguage.com/live/"
+				}
+			]
+		}
+		</script>
+
 	<style>
 		.beginner-submenu:hover .beginner-submenu-dropdown {
 			opacity: 1;

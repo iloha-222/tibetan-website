@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -35,6 +35,41 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - BreadcrumbList -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Live Courses",
+					"item": "https://www.heartoftibetanlanguage.com/live/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Beginner",
+					"item": "https://www.heartoftibetanlanguage.com/live/beginner"
+				},
+				{
+					"@type": "ListItem",
+					"position": 4,
+					"name": "Beginner 102",
+					"item": "https://www.heartoftibetanlanguage.com/live/beginner/102"
+				}
+			]
+		}
+		</script>
+
 		<style>
 			.beginner-submenu:hover .beginner-submenu-dropdown {
 				opacity: 1;

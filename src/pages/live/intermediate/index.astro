@@ -5,7 +5,7 @@ import Analytics from "@vercel/analytics/astro";
 
 ---
 
-<html lang="en">
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,6 +13,7 @@ import Analytics from "@vercel/analytics/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Intermediate Live Courses - Tibetan Learning</title>
 		<meta name="description" content="Advance your Tibetan skills with our intermediate live courses. Develop richer communication and deeper cultural connection." />
+		<meta name="keywords" content="intermediate tibetan course, tibetan conversation, conversational tibetan, tibetan 201, improve tibetan skills, intermediate tibetan lessons" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/live/intermediate" />
@@ -35,6 +36,59 @@ import Analytics from "@vercel/analytics/astro";
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Course -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Intermediate Tibetan Live Courses",
+			"description": "Advance your Tibetan skills with our intermediate live courses. Develop richer communication and deeper cultural connection.",
+			"provider": {
+				"@type": "EducationalOrganization",
+				"name": "བོད་སྐད་སྙིང་པོ། - The Heart of Tibetan Language (SINI)",
+				"url": "https://www.heartoftibetanlanguage.com"
+			},
+			"educationalLevel": "Intermediate",
+			"inLanguage": "en-US",
+			"availableLanguage": ["en", "bo"],
+			"courseCode": "Intermediate 201-202",
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "online",
+				"courseWorkload": "PT12W"
+			}
+		}
+		</script>
+
+		<!-- Structured Data - BreadcrumbList -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Live Courses",
+					"item": "https://www.heartoftibetanlanguage.com/live/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Intermediate",
+					"item": "https://www.heartoftibetanlanguage.com/live/intermediate"
+				}
+			]
+		}
+		</script>
+
 	<style>
 		.beginner-submenu:hover .beginner-submenu-dropdown {
 			opacity: 1;
