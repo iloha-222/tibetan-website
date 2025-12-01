@@ -34,7 +34,8 @@
       "Bash(do)",
       "Bash(done)",
       "WebFetch(domain:www.heartoftibetanlanguage.com)",
-      "Bash(for:*)"
+      "Bash(for:*)",
+      "Read(//Users/lauraneboulenger/**)"
     ],
     "deny": [],
     "ask": []
