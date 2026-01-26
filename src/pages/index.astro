@@ -199,7 +199,7 @@ import { Image } from 'astro:assets';
 							</div>
 						</div>
 
-						<a href="#" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
+						<a href="/resources/" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
 						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
 						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
 					</div>
@@ -247,7 +247,7 @@ import { Image } from 'astro:assets';
 						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
 					</div>
 				</div>
-				<a href="#" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
+				<a href="/resources/" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
 				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
 				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
 				<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
@@ -359,151 +359,178 @@ import { Image } from 'astro:assets';
 		-->
 
 		<!-- NEW LAYOUT: Horizontal Timeline/Stepper -->
-		<section id="course-levels" class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+		<section id="course-levels" class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
 			<div class="max-w-7xl mx-auto">
-				<div class="text-center mb-16">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+				<div class="text-center mb-12 lg:mb-20">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4" style="font-family: 'Merriweather', serif; color: #000;">
 						Start Your Tibetan Journey <span class="font-bold">Today</span>,<br>
 						No Matter Where You Are
 					</h2>
-					<p class="text-lg" style="font-family: 'DM Sans', sans-serif; color: #666;">Follow the path from beginner to advanced mastery</p>
+					<p class="text-lg max-w-2xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #666;">Follow the path from beginner to advanced mastery</p>
 				</div>
 
 				<!-- Timeline Container: Horizontal on desktop, vertical on mobile -->
 				<div class="relative">
-					<!-- Step Badges Row (Desktop Only) -->
-					<div class="hidden lg:flex items-center justify-between mb-8 px-4">
+					<!-- Step Badges Row (Desktop Only) - Refined design -->
+					<div class="hidden lg:flex items-center justify-between mb-10 px-8">
 						<div class="flex items-center" style="flex: 1;">
-							<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #CF4D21;">
+							<div class="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform duration-300 hover:scale-110" style="background: linear-gradient(135deg, #CF4D21 0%, #e85a2c 100%);">
 								<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">1</span>
 							</div>
-							<div class="flex-1 h-1 mx-4" style="background: linear-gradient(to right, #CF4D21, #F5B60F);"></div>
+							<div class="flex-1 h-0.5 mx-4 rounded-full" style="background: linear-gradient(to right, #CF4D21, #F5B60F);"></div>
 						</div>
 						<div class="flex items-center" style="flex: 1;">
-							<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #F5B60F;">
+							<div class="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform duration-300 hover:scale-110" style="background: linear-gradient(135deg, #F5B60F 0%, #f7c535 100%);">
 								<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">2</span>
 							</div>
-							<div class="flex-1 h-1 mx-4" style="background: linear-gradient(to right, #F5B60F, #B6794D);"></div>
+							<div class="flex-1 h-0.5 mx-4 rounded-full" style="background: linear-gradient(to right, #F5B60F, #B6794D);"></div>
 						</div>
-						<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #B6794D;">
+						<div class="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform duration-300 hover:scale-110" style="background: linear-gradient(135deg, #B6794D 0%, #c98a5e 100%);">
 							<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">3</span>
 						</div>
 					</div>
 
 					<!-- Cards Row -->
-					<div class="flex flex-col lg:flex-row gap-6 lg:gap-6 items-stretch">
+					<div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
 						<!-- Step 1: Beginner -->
-						<div class="flex-1 flex flex-col">
+						<div class="flex-1 flex flex-col group">
 							<!-- Mobile Badge -->
 							<div class="lg:hidden flex items-center mb-6">
-								<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #CF4D21;">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full shadow-md" style="background: linear-gradient(135deg, #CF4D21 0%, #e85a2c 100%);">
 									<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">1</span>
 								</div>
 							</div>
 
 							<!-- Content Card -->
-							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-2xl h-full" style="background-color: #FEFBF7; box-shadow: 0 4px 20px rgba(182, 121, 77, 0.1); border: 1px solid rgba(182, 121, 77, 0.2);">
-								<div class="text-center mb-3 md:mb-6">
-									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-4" style="font-family: 'Merriweather', serif; color: #000;">Beginner</h3>
-									<p class="course-description text-center text-sm md:text-base" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-1 h-full relative overflow-hidden" style="background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%); box-shadow: 0 4px 24px rgba(207, 77, 33, 0.08); border: 1px solid rgba(207, 77, 33, 0.12);">
+								<!-- Subtle accent line at top -->
+								<div class="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style="background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);"></div>
+
+								<div class="text-center mb-4 md:mb-6 pt-2">
+									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Beginner</h3>
+									<p class="course-description text-center text-sm md:text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #444;">
 										New to Tibetan? With these courses, you'll build the foundations of speaking and reading while discovering that language learning can be joyful, practical, and shared with new friends.
 									</p>
 								</div>
 
-								<div class="mb-3 md:mb-6">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #C9A882; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">LIVE COURSES</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/live/beginner/101" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Beginner 101</a>
+								<div class="mb-4 md:mb-6">
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #C9A882 0%, #d4b896 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" class="animate-pulse"/></svg>
+										LIVE COURSES
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/live/beginner/101" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Beginner 101</a>
 										<div>
-											<a href="/live/beginner/102" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Beginner 102</a>
-											<p class="text-xs italic mt-1 text-center" style="color: #B6794D;">🗓️ Starts January 2026</p>
+											<a href="/live/beginner/102" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Beginner 102</a>
+											<p class="text-xs mt-2 text-center font-medium" style="color: #B6794D;">Starts January 2026</p>
 										</div>
 									</div>
 								</div>
 
 								<div class="mt-auto">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/self-paced/beginner" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Beginner Package</a>
-										<a href="/self-paced/beginner#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #B6794D 0%, #c98a5e 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+										SELF-STUDY OPTIONS
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/self-paced/beginner" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium leading-tight" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Complete Beginner Package</a>
+										<a href="/self-paced/beginner#webinars" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<!-- Step 2: Intermediate -->
-						<div class="flex-1 flex flex-col">
+						<div class="flex-1 flex flex-col group">
 							<!-- Mobile Badge -->
 							<div class="lg:hidden flex items-center mb-6">
-								<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #D4A017;">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full shadow-md" style="background: linear-gradient(135deg, #F5B60F 0%, #f7c535 100%);">
 									<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">2</span>
 								</div>
 							</div>
 
 							<!-- Content Card -->
-							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-2xl h-full" style="background-color: #FEFBF7; box-shadow: 0 4px 20px rgba(182, 121, 77, 0.1); border: 1px solid rgba(182, 121, 77, 0.2);">
-								<div class="text-center mb-3 md:mb-6">
-									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-4" style="font-family: 'Merriweather', serif; color: #000;">Intermediate</h3>
-									<p class="course-description text-center text-sm md:text-base" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-1 h-full relative overflow-hidden" style="background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%); box-shadow: 0 4px 24px rgba(245, 182, 15, 0.08); border: 1px solid rgba(245, 182, 15, 0.15);">
+								<!-- Subtle accent line at top -->
+								<div class="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style="background: linear-gradient(90deg, #F5B60F 0%, #f7c535 100%);"></div>
+
+								<div class="text-center mb-4 md:mb-6 pt-2">
+									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Intermediate</h3>
+									<p class="course-description text-center text-sm md:text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #444;">
 										Ready to expand your skills? These courses help you grow from simple conversations into richer, more confident communication, while deepening your cultural connection.
 									</p>
 								</div>
 
-								<div class="mb-3 md:mb-6">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #C9A882; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">LIVE COURSES</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/live/intermediate/201" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Intermediate 201</a>
+								<div class="mb-4 md:mb-6">
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #C9A882 0%, #d4b896 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" class="animate-pulse"/></svg>
+										LIVE COURSES
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/live/intermediate/201" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Intermediate 201</a>
 										<div>
-											<a href="/live/intermediate/202" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Intermediate 202</a>
-											<p class="text-xs italic mt-1 text-center" style="color: #B6794D;">🗓️ Starts January 2026</p>
+											<a href="/live/intermediate/202" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Intermediate 202</a>
+											<p class="text-xs mt-2 text-center font-medium" style="color: #B6794D;">Starts January 2026</p>
 										</div>
 									</div>
 								</div>
 
 								<div class="mt-auto">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/self-paced/intermediate" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Intermediate Package</a>
-										<a href="/self-paced/intermediate#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #B6794D 0%, #c98a5e 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+										SELF-STUDY OPTIONS
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/self-paced/intermediate" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium leading-tight" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Complete Intermediate Package</a>
+										<a href="/self-paced/intermediate#webinars" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<!-- Step 3: Advanced -->
-						<div class="flex-1 flex flex-col">
+						<div class="flex-1 flex flex-col group">
 							<!-- Mobile Badge -->
 							<div class="lg:hidden flex items-center mb-6">
-								<div class="flex items-center justify-center w-12 h-12 rounded-full" style="background-color: #B6794D;">
+								<div class="flex items-center justify-center w-12 h-12 rounded-full shadow-md" style="background: linear-gradient(135deg, #B6794D 0%, #c98a5e 100%);">
 									<span class="text-white font-bold text-xl" style="font-family: 'Work Sans', Arial, sans-serif;">3</span>
 								</div>
 							</div>
 
 							<!-- Content Card -->
-							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 hover:shadow-2xl h-full" style="background-color: #FEFBF7; box-shadow: 0 4px 20px rgba(182, 121, 77, 0.1); border: 1px solid rgba(182, 121, 77, 0.2);">
-								<div class="text-center mb-3 md:mb-6">
-									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-4" style="font-family: 'Merriweather', serif; color: #000;">Advanced</h3>
-									<p class="course-description text-center text-sm md:text-base" style="font-family: 'DM Sans', sans-serif; color: #000;">
+							<div class="rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-1 h-full relative overflow-hidden" style="background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%); box-shadow: 0 4px 24px rgba(182, 121, 77, 0.08); border: 1px solid rgba(182, 121, 77, 0.15);">
+								<!-- Subtle accent line at top -->
+								<div class="absolute top-0 left-0 right-0 h-1 rounded-t-3xl" style="background: linear-gradient(90deg, #B6794D 0%, #c98a5e 100%);"></div>
+
+								<div class="text-center mb-4 md:mb-6 pt-2">
+									<h3 class="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Advanced</h3>
+									<p class="course-description text-center text-sm md:text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #444;">
 										These courses are a unique blend of Dharma vocabulary and colloquial language. Ideal for anyone aspiring to understand Dharma teachings in Tibetan.
 									</p>
 								</div>
 
-								<div class="mb-3 md:mb-6">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #C9A882; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">LIVE COURSES</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/live/advanced/301" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Advanced 301</a>
+								<div class="mb-4 md:mb-6">
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #C9A882 0%, #d4b896 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" class="animate-pulse"/></svg>
+										LIVE COURSES
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/live/advanced/301" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Advanced 301</a>
 										<div>
-											<a href="/live/advanced/302" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 40px; md:height: 48px;">Advanced 302</a>
-											<p class="text-xs italic mt-1 text-center" style="color: #B6794D;">🗓️ Starts January 2026</p>
+											<a href="/live/advanced/302" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333;">Advanced 302</a>
+											<p class="text-xs mt-2 text-center font-medium" style="color: #B6794D;">Starts January 2026</p>
 										</div>
 									</div>
 								</div>
 
 								<div class="mt-auto">
-									<div class="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full mb-2 md:mb-3 text-xs md:text-sm" style="background-color: #B6794D; color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">SELF-STUDY OPTIONS</div>
-									<div class="grid grid-cols-2 gap-2 md:gap-3">
-										<a href="/self-paced/advanced" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px; line-height: 1.2;">Complete Advanced Package</a>
-										<a href="/self-paced/advanced#webinars" class="px-3 md:px-4 rounded-full text-center text-xs md:text-sm transition-all duration-200 hover:bg-orange-100 hover:shadow-md flex items-center justify-center" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: black; height: 56px; md:height: 64px;">Webinars Only</a>
+									<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-3 text-xs md:text-sm" style="background: linear-gradient(135deg, #B6794D 0%, #c98a5e 100%); color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+										SELF-STUDY OPTIONS
+									</div>
+									<div class="grid grid-cols-2 gap-3">
+										<a href="/self-paced/advanced" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium leading-tight" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Complete Advanced Package</a>
+										<a href="/self-paced/advanced#webinars" class="px-4 py-3 rounded-xl text-center text-xs md:text-sm transition-all duration-300 hover:bg-orange-50 hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center font-medium" style="background-color: #F4E6D6; font-family: 'Work Sans', Arial, sans-serif; text-decoration: none; color: #333; min-height: 56px;">Webinars Only</a>
 									</div>
 								</div>
 							</div>
@@ -521,59 +548,73 @@ import { Image } from 'astro:assets';
 		-->
 
 		<!-- What Makes Us Different Section -->
-		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
-			<div class="max-w-7xl mx-auto">
-				<div class="text-center mb-12">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+		<section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+			<div class="max-w-6xl mx-auto">
+				<div class="text-center mb-14">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4" style="font-family: 'Merriweather', serif; color: #000;">
 						What Makes Us <span class="font-bold">Different</span>
 					</h2>
 				</div>
 
-				<div class="max-w-6xl mx-auto">
-					<!-- 2x2 Grid: Desktop layout with 2 columns, Mobile stacks into 1 column -->
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 md:gap-16">
-						<!-- Student-centered learning -->
-						<div class="text-center">
-							<div class="rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #CF4D21; width: 4rem; height: 4rem;">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<!-- 2x2 Grid with card design -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+					<!-- Student-centered learning -->
+					<div class="group p-6 md:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+						<div class="flex items-start gap-5">
+							<div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style="background-color: rgba(207, 77, 33, 0.1);">
+								<svg class="w-7 h-7" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
 								</svg>
 							</div>
-							<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">Student-centered learning</h3>
-							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Courses are built around your pace. Whether you need extra time on reading practice or want to move quickly through grammar, you'll have space to learn in the way that fits you best. We support you in growing your meta-cognitive skills, meaning "learning how to learn".</p>
+							<div class="flex-1">
+								<h3 class="text-lg md:text-xl font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Student-centered learning</h3>
+								<p class="leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555; font-size: 15px;">Courses are built around your pace. Whether you need extra time on reading practice or want to move quickly through grammar, you'll have space to learn in the way that fits you best. We support you in growing your meta-cognitive skills, meaning "learning how to learn".</p>
+							</div>
 						</div>
+					</div>
 
-						<!-- Joyful methodology -->
-						<div class="text-center">
-							<div class="rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #CF4D21; width: 4rem; height: 4rem;">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<!-- Joyful methodology -->
+					<div class="group p-6 md:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+						<div class="flex items-start gap-5">
+							<div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style="background-color: rgba(207, 77, 33, 0.1);">
+								<svg class="w-7 h-7" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
 								</svg>
 							</div>
-							<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">Joyful methodology</h3>
-							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Alongside your human teachers, you'll be guided by a cast of non-human classmates like Ms. Giraffe, Mr. Sloth, and Ms. Ostrich. They bring Tibetan grammar and cultural concepts to life in surprising ways, making difficult ideas easier to remember.</p>
+							<div class="flex-1">
+								<h3 class="text-lg md:text-xl font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Joyful methodology</h3>
+								<p class="leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555; font-size: 15px;">Alongside your human teachers, you'll be guided by a cast of non-human classmates like Ms. Giraffe, Mr. Sloth, and Ms. Ostrich. They bring Tibetan grammar and cultural concepts to life in surprising ways, making difficult ideas easier to remember.</p>
+							</div>
 						</div>
+					</div>
 
-						<!-- Community and connection -->
-						<div class="text-center">
-							<div class="rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #CF4D21; width: 4rem; height: 4rem;">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<!-- Community and connection -->
+					<div class="group p-6 md:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+						<div class="flex items-start gap-5">
+							<div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style="background-color: rgba(207, 77, 33, 0.1);">
+								<svg class="w-7 h-7" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
 								</svg>
 							</div>
-							<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">Community and connection</h3>
-							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">Small learning communities (SLC) with peers, live sessions, and one-on-one practice with native speakers give you real conversation experience and a supportive circle of classmates, tutors and teachers.</p>
+							<div class="flex-1">
+								<h3 class="text-lg md:text-xl font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Community and connection</h3>
+								<p class="leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555; font-size: 15px;">Small learning communities (SLC) with peers, live sessions, and one-on-one practice with native speakers give you real conversation experience and a supportive circle of classmates, tutors and teachers.</p>
+							</div>
 						</div>
+					</div>
 
-						<!-- Flexible format -->
-						<div class="text-center">
-							<div class="rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #CF4D21; width: 4rem; height: 4rem;">
-								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<!-- Flexible format -->
+					<div class="group p-6 md:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+						<div class="flex items-start gap-5">
+							<div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center" style="background-color: rgba(207, 77, 33, 0.1);">
+								<svg class="w-7 h-7" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 								</svg>
 							</div>
-							<h3 class="text-xl md:text-2xl lg:text-2xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #000;">Flexible format</h3>
-							<p class="text-lg leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">You don't need to rearrange your life to learn Tibetan. Live classes are offered in two time zones, and recordings are always available if you miss a session. All the levels are also offer in a self-paced way.</p>
+							<div class="flex-1">
+								<h3 class="text-lg md:text-xl font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Flexible format</h3>
+								<p class="leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555; font-size: 15px;">You don't need to rearrange your life to learn Tibetan. Live classes are offered in two time zones, and recordings are always available if you miss a session. All the levels are also offer in a self-paced way.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -581,9 +622,9 @@ import { Image } from 'astro:assets';
 		</section>
 
 		<!-- Testimonials Section -->
-		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+		<section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
 			<div class="max-w-7xl mx-auto">
-				<div class="text-center mb-12">
+				<div class="text-center mb-16">
 					<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-2" style="font-family: 'Merriweather', serif; color: #000;">
 						We have supported over <span class="font-bold relative">300 students<svg width="180" height="15" viewBox="400 570 400 80" xmlns="http://www.w3.org/2000/svg" class="opacity-80 absolute -bottom-2 left-0 hidden md:inline">
 							<path d="m1047.1 584.71c-29.32-2.9883-55.773-2.5078-83.535-2.5742-54.172-0.14844-108.33-11.734-162.51-11.332-121.32 1.0547-244.52-5.6133-366.27 5.3594-35.961 3.1875-71.879 5.8945-107.48 10.48-3.4141 0.41406-6.8008 0.83984-10.227 1.3203-33.398 4.375-77 1.8125-110.2 6.3984-29.227 6.0938-51.879 13.734-79.867 11.652-7.4258-1.4414-15.332-4.0391-19.785-9.3086-9.7188-11.309-14.238-21.652-9.5352-30.281 1.5352-2.8398 4.1719-5.7617 7.0273-8.3867 5.5625-4.875 12.23-8.7031 15.855-9.0352 62.559-6.668 133.54-7.9219 190.07-9.1055 27.906-0.55859 56.719-1.3203 91.945-2.7734 81.387-2.0781 209.72-3.4141 291.19-5.4141 71.188-1.8008 142.56 8.1211 213.05 15.492 26.801 2.7852 43.68 2.7852 67.707 3.5469 4.0117 0.054687 8.5469 0.19922 13.199 0.33203 23.746 0.76172 66.52-2.9883 80.332 4.2266 13.828 7.293 23.48 8.0547 35.559 21.453 0.64062 13.215-4.2266 19.32-10.398 21.535-14.387 5.2812-27.574 11.188-38.762 13-13.105 2.0781-23.68 2.1602-25.828-2.8398-2.0781-5.0117-0.90625-8.1211 1.1719-10.414 3.6133-3.7461 10.133-7.8516 15.973-10.625z" fill="#CF4D21"/>
@@ -598,9 +639,9 @@ import { Image } from 'astro:assets';
 					<div id="testimonials-carousel" class="overflow-hidden relative">
 						<div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out items-start">
 							<!-- Testimonial 1 -->
-							<div class="testimonial-1 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-1 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -617,17 +658,17 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"Fantastic online Tibetan course! Absolutely recommend - you'll have fun!!"
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Lower Advanced Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Lower Advanced Course</p>
 								</div>
 							</div>
 
 							<!-- Testimonial 2 -->
-							<div class="testimonial-2 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-2 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -644,17 +685,17 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"This course is simply superb. In every aspect. It is by far one of the best courses I have ever taken in my life. It will exceed your highest expectations, I promise everyone that."
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Beginner Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Beginner Course</p>
 								</div>
 							</div>
 
 							<!-- Testimonial 3 -->
-							<div class="testimonial-3 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-3 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -671,17 +712,17 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"This course is very complete with materials about grammar, vocabulary and conversation in a simple but rich learning environment for those who want to learn Tibetan."
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Intermediate Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Intermediate Course</p>
 								</div>
 							</div>
 
 							<!-- Testimonial 4 -->
-							<div class="testimonial-4 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-4 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -698,17 +739,17 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"Dear team of SINI, I really enjoyed learning in the alphabet course. It is so well structured and organized, the materials on Moodle, also regarding the pace and portions... can I give Lopen la such marks like with this reviews, and now I feel like we have had such a very good time to practice with my buddy. I appreciate also your liveliness and flexibility which you've shown all over the course organisation. See you on the beginner course!"
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Alphabet Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Alphabet Course</p>
 								</div>
 							</div>
 
 							<!-- Testimonial 5 -->
-							<div class="testimonial-5 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-5 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -725,17 +766,17 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"The course was exceptional in all aspects. The range of materials, the clear path of progression, the expertise, kindness and patience of the tutors, and the holistic way in which we were introduced to Tibetan culture whilst engaging with this beautiful and enchanting language all came together to create a multi-faceted and supportive worldwide learning community. I was surprised how much I enjoyed the Small Learning Community group, what fun it was to have our weekly meetings, and delighted to form new friendships within the group and with my learning buddy. Thank you so much for your flexibility and patience with the obstacles I encountered during the course, and I am very happy that there is a six week review course starting in a few weeks. What a wonderful five months it has been."
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Beginner Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Beginner Course</p>
 								</div>
 							</div>
 
 							<!-- Testimonial 6 -->
-							<div class="testimonial-6 w-full flex-shrink-0 px-8">
-								<div class="p-8 rounded-2xl text-center" style="background-color: #F4E6D6;">
-									<div class="flex justify-center mb-6 space-x-1">
+							<div class="testimonial-6 w-full flex-shrink-0 px-4 md:px-12">
+								<div class="p-8 md:p-10 rounded-3xl text-center relative shadow-sm" style="background-color: #FEFBF7; border: 1px solid rgba(207, 77, 33, 0.1);">
+									<div class="flex justify-center mb-5 space-x-1">
 										<svg width="20" height="20" viewBox="0 0 1200 1200" class="fill-current" style="color: #CF4D21;">
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
@@ -752,37 +793,37 @@ import { Image } from 'astro:assets';
 											<path d="m1094.8 513.42-241.13 216.89 67.594 317.21c4.9688 23.344-19.875 41.297-40.5 29.391l-280.78-162.32-280.78 162.28c-20.625 11.906-45.469-6.0469-40.547-29.344l67.594-317.21-241.08-216.89c-17.766-15.984-8.2031-45.141 15.516-47.578l322.6-33.75 131.72-296.29c9.5625-21.516 39.844-22.5 50.062 0.28125l131.58 296.02 322.6 33.75 15.234 6.3281c11.531 9.8906 13.641 29.297 0.32812 41.25z" fill="#CF4D21" fill-rule="evenodd"/>
 										</svg>
 									</div>
-									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; color: #000;">
+									<p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; font-size: 16px; color: #333;">
 										"After so many years of yearning to learn Tibetan language, I am immensely grateful to have found SINI and Franziska Oertle's course in colloquial Tibetan. The team is fantastic, tutors are inspiring, and classmates are joy to work with. I particularly appreciate the grammatical explanations and tables, the way that new vocabulary is presented through association with other words and very practical examples, and the method of learning, including small learning communities, and e-portfolios through which the study becomes a spiritual practice as well. Saying that, what I appreciate more than anything is that it is designed to suit very different types of personalities, learning styles and language levels - I have learnt so much from that. Thank you!"
 									</p>
-									<p class="text-sm italic" style="color: #B6794D;">Upper Advanced Course</p>
+									<p class="text-sm font-medium px-4 py-1.5 rounded-full inline-block" style="color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Upper Advanced Course</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Navigation Arrows (hidden on mobile) -->
-					<button id="prev-btn" class="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow" style="border: 2px solid #CF4D21;" aria-label="Previous testimonial">
-						<svg class="w-6 h-6" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+					<button id="prev-btn" class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 items-center justify-center w-12 h-12 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105" style="background-color: #CF4D21;" aria-label="Previous testimonial">
+						<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
 						</svg>
 					</button>
-					<button id="next-btn" class="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow" style="border: 2px solid #CF4D21;" aria-label="Next testimonial">
-						<svg class="w-6 h-6" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					<button id="next-btn" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 items-center justify-center w-12 h-12 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105" style="background-color: #CF4D21;" aria-label="Next testimonial">
+						<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
 						</svg>
 					</button>
 
 				</div>
 
 				<!-- Dots Indicator (desktop only, mobile uses swipe) -->
-				<div class="hidden md:flex justify-center mt-8 space-x-3">
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="0" aria-label="Show testimonial 1" style="background-color: #CF4D21;"></button>
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="1" style="background-color: #D1D5DB;" aria-label="Show testimonial 2"></button>
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="2" style="background-color: #D1D5DB;" aria-label="Show testimonial 3"></button>
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="3" style="background-color: #D1D5DB;" aria-label="Show testimonial 4"></button>
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="4" style="background-color: #D1D5DB;" aria-label="Show testimonial 5"></button>
-						<button class="carousel-dot w-11 h-11 rounded-full transition-colors" data-slide="5" style="background-color: #D1D5DB;" aria-label="Show testimonial 6"></button>
+				<div class="hidden md:flex justify-center mt-10 space-x-2">
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="0" aria-label="Show testimonial 1" style="background-color: #CF4D21;"></button>
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="1" style="background-color: #D1D5DB;" aria-label="Show testimonial 2"></button>
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="2" style="background-color: #D1D5DB;" aria-label="Show testimonial 3"></button>
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="3" style="background-color: #D1D5DB;" aria-label="Show testimonial 4"></button>
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="4" style="background-color: #D1D5DB;" aria-label="Show testimonial 5"></button>
+						<button class="carousel-dot w-3 h-3 rounded-full transition-all duration-300 hover:scale-125" data-slide="5" style="background-color: #D1D5DB;" aria-label="Show testimonial 6"></button>
 					</div>
 				</div>
 			</div>
@@ -858,31 +899,42 @@ import { Image } from 'astro:assets';
 		</script>
 
 <!-- Who's Behind those Courses Section -->
-<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
-	<div class="max-w-7xl mx-auto">
-		<div class="text-center mb-12">
-			<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+<section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+	<div class="max-w-6xl mx-auto">
+		<div class="text-center mb-16">
+			<h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4" style="font-family: 'Merriweather', serif; color: #000;">
 				Who's Behind those <span class="font-bold">Courses</span>?
 			</h2>
+			<p class="text-lg max-w-2xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #666;">Meet the passionate educators bringing Tibetan language to learners worldwide</p>
 		</div>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 			<!-- Franziska Oertle -->
-			<div class="flex flex-col items-center">
-				<div class="mb-6">
-					<img src="/assets/illustrations/Franziska-Oertle-min.webp" alt="Franziska Oertle - Tibetan Language Teacher" class="w-64 h-64 rounded-full object-cover shadow-lg">
-				</div>
+			<div class="group">
+				<div class="rounded-3xl p-8 md:p-10 h-full transition-all duration-500 hover:shadow-xl" style="background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%); border: 1px solid rgba(207, 77, 33, 0.1);">
+					<div class="flex flex-col items-center">
+						<!-- Photo with gradient border -->
+						<div class="relative mb-6">
+							<div class="w-44 h-44 md:w-52 md:h-52 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+								<img src="/assets/illustrations/Franziska-Oertle-min.webp" alt="Franziska Oertle - Tibetan Language Teacher" class="w-full h-full rounded-full object-cover">
+							</div>
+						</div>
 
-				<div class="text-center mb-6">
-					<p class="text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 16pt;">
-						<strong>Franziska Oertle</strong> is affectionately known by her students as the one who has cracked the code of teaching Tibetan. She has taught Tibetan and designed language courses over more than 15 years at places like RYI, SIT Nepal, Emory study abroad semester, Sarah College, LRZTP and now at SINI.
-					</p>
-				</div>
+						<!-- Name and Role -->
+						<h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Franziska Oertle</h3>
+						<p class="text-sm font-semibold text-center mb-6 px-4 py-1.5 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Lead Teacher & Course Designer</p>
 
-				<div class="text-center mb-6">
-					<button onclick="openModal('modalFranziska')" style="color: #CF4D21;" class="font-semibold hover:opacity-80 transition-opacity" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
-						Read More About Franziska →
-					</button>
+						<!-- Description -->
+						<p class="text-center leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #444; font-size: 15px;">
+							Affectionately known by her students as the one who has cracked the code of teaching Tibetan. She has taught Tibetan and designed language courses over more than 15 years at places like RYI, SIT Nepal, Emory study abroad semester, Sarah College, LRZTP and now at SINI.
+						</p>
+
+						<!-- Button -->
+						<button onclick="openModal('modalFranziska')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="font-family: 'Work Sans', Arial, sans-serif; color: white; background: linear-gradient(135deg, #CF4D21 0%, #e85a2c 100%); cursor: pointer;">
+							Read More About Franziska
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+						</button>
+					</div>
 				</div>
 
 				<div id="bioContentFranziska" style="display: none;">
@@ -906,21 +958,31 @@ import { Image } from 'astro:assets';
 			</div>
 
 			<!-- Juan-Felipe Garcia-Peña -->
-			<div class="flex flex-col items-center">
-				<div class="mb-6">
-					<img src="/assets/illustrations/Juan-Garcia_Tibetan-Online-Learning-Development-and-Tech.webp" alt="Juan-Felipe Garcia-Peña - Learning Development and Tech" class="w-64 h-64 rounded-full object-cover shadow-lg">
-				</div>
+			<div class="group">
+				<div class="rounded-3xl p-8 md:p-10 h-full transition-all duration-500 hover:shadow-xl" style="background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%); border: 1px solid rgba(207, 77, 33, 0.1);">
+					<div class="flex flex-col items-center">
+						<!-- Photo with gradient border -->
+						<div class="relative mb-6">
+							<div class="w-44 h-44 md:w-52 md:h-52 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+								<img src="/assets/illustrations/Juan-Garcia_Tibetan-Online-Learning-Development-and-Tech.webp" alt="Juan-Felipe Garcia-Peña - Learning Development and Tech" class="w-full h-full rounded-full object-cover">
+							</div>
+						</div>
 
-				<div class="text-center mb-6">
-					<p class="text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 16pt;">
-						<strong>Juan Felipe Garcia-Peña</strong> grew up in Colombia, studied in Costa Rica, and has long been passionate about learning technologies. He has developed medical software and learning systems by blending philosophy, language, media, engineering, and biopedagogy. At SINI, he treats education as a creative, ongoing process for testing and improving new ideas in online learning.
-					</p>
-				</div>
+						<!-- Name and Role -->
+						<h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Juan Felipe Garcia-Peña</h3>
+						<p class="text-sm font-semibold text-center mb-6 px-4 py-1.5 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Learning Development & Tech</p>
 
-				<div class="text-center mb-6">
-					<button onclick="openModal('modalJuan')" style="color: #CF4D21;" class="font-semibold hover:opacity-80 transition-opacity" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 14pt; cursor: pointer;">
-						Read More About Juan-Felipe →
-					</button>
+						<!-- Description -->
+						<p class="text-center leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #444; font-size: 15px;">
+							Grew up in Colombia, studied in Costa Rica, and has long been passionate about learning technologies. He has developed medical software and learning systems by blending philosophy, language, media, engineering, and biopedagogy. At SINI, he treats education as a creative, ongoing process for testing and improving new ideas in online learning.
+						</p>
+
+						<!-- Button -->
+						<button onclick="openModal('modalJuan')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" style="font-family: 'Work Sans', Arial, sans-serif; color: white; background: linear-gradient(135deg, #CF4D21 0%, #e85a2c 100%); cursor: pointer;">
+							Read More About Juan-Felipe
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+						</button>
+					</div>
 				</div>
 
 				<div id="bioContentJuan" style="display: none;">
@@ -938,155 +1000,129 @@ import { Image } from 'astro:assets';
 </section>
 
 <!-- Meet the Team Gallery Section -->
-<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
+<section class="py-12 md:py-16 lg:py-24 px-4 md:px-6" style="background: linear-gradient(180deg, #FFF8EE 0%, #FEF5E7 100%);">
 	<div class="max-w-7xl mx-auto">
-		<div class="text-center mb-12">
+		<div class="text-center mb-16">
 			<h3 class="text-xl md:text-2xl lg:text-3xl font-normal mb-6" style="font-family: 'Merriweather', serif; color: #000;">
 				Meet the <span class="font-bold">Dedicated Team</span>
 			</h3>
-			<p class="text-xl leading-relaxed max-w-4xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 16pt;">
+			<p class="text-lg leading-relaxed max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #555;">
 				Our courses are the work of an entire team. Teachers, tutors, IT admins, and coordinators all contribute. Many hands and minds shape the lessons you see here. Each person adds a voice, an image, or a detail that makes the courses come alive!
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 place-items-center">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 			<!-- Nat Thammamitr -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Nat-Thammamitr.webp" alt="Nat Thammamitr" class="w-40 h-40 object-cover rounded-full shadow-lg" loading="lazy">
-				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Nat Thammamitr</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Assistant Teacher</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Dedicated to sharing the beauty of Tibetan language and culture.</p>
-				<button onclick="toggleBioNat()" id="readMoreBtnNat" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
-				</button>
-				<div id="bioContentNat" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
-					<div class="bg-white rounded-2xl p-6 shadow-lg">
-						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
-							Tashi Delek, everyone!
-							<br><br>
-							Like many of you, I am sure, I wanted to understand the precious Dharma teachings directly from the peerless teachers like His Holiness the Dalai Lama and others.  Many years ago I traveled far up north of India to a small village called Spiti, where His Holiness was going to teach.  The peerless teacher was there; the precious teaching was there; the excellent translator was there.  Most foreigners had small radios to tune into the teaching.  I too had one.  Sounded perfect, right?  But of course, the radio transmission was far from perfect.  We could not hear anything.  Most of us foreigners were sitting there like ignorant monkeys holding precious diamonds.  At that moment, I promised myself that I must study the Tibetan language.
-							<br><br>
-							I tested the weather with Rangjung Yeshe Institute's (RYI) summer intensive programs – 3 consecutive summers on beginning, intermediate, and advanced colloquial and Dharma Tibetan courses.  Before I knew it, I spent 2 years in Dharamsala and graduated from Lotsawa Rinchen Zangpo Translator Program (LRZTP7) in 2017.  Gen Franziska la was (still is) my teacher from both RYI and LRZTP.
-							<br><br>
-							I cannot wait to support you to learn this amazing language and I am looking forward to hearing your experience on the first time you understand the teachings in Tibetan. I promise you; it will be special.
-						</p>
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Nat-Thammamitr.webp" alt="Nat Thammamitr" class="w-full h-full object-cover rounded-full" loading="lazy">
 					</div>
 				</div>
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Nat Thammamitr</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Assistant Teacher</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Dedicated to sharing the beauty of Tibetan language and culture.</p>
+				<button onclick="toggleBioNat()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
 			</div>
 
 			<!-- Lhakpa Tsering -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Lhakpa.webp" alt="Lhakpa Tsering" class="w-40 h-40 object-cover rounded-full shadow-lg">
-				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Lhakpa Tsering</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Teacher</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Nepal-born Buddhist scholar with a Shastri in Buddhist philosophy and an Acharya in Tibetan linguistics.</p>
-				<button onclick="toggleBioLhakpa()" id="readMoreBtnLhakpa" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
-				</button>
-				<div id="bioContentLhakpa" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
-					<div class="bg-white rounded-2xl p-6 shadow-lg">
-						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
-							Lhakpa Tsering Lama was born in Nepal and raised in India. He completed his Bachelor's (Shastri degree) in Buddhist philosophy in 2019. He recently earned his M.A. (Acharya) in Tibetan linguistics at the Central Institute of Higher Tibetan Studies (C.I.H.T.S.) in Sarnath, Varanasi, India. During summer vacations, he enjoys traveling to rural areas, including Tibetan settlements, to explore and promote the Tibetan language. He has had the opportunity to visit several Tibetan settlements where knowledge of the language is limited. During a one-month summer break in Pharping, Kathmandu, Nepal, he taught Tibetan to monks.
-						</p>
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Lhakpa.webp" alt="Lhakpa Tsering" class="w-full h-full object-cover rounded-full">
 					</div>
 				</div>
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Lhakpa Tsering</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Teacher</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Nepal-born Buddhist scholar with a Shastri in Buddhist philosophy and an Acharya in Tibetan linguistics.</p>
+				<button onclick="toggleBioLhakpa()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
 			</div>
 
 			<!-- Bhargavi -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Bhargavi-scaled.webp" alt="Bhargavi" class="w-40 h-40 object-cover rounded-full shadow-lg" loading="lazy">
-				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Bhargavi</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Teacher</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Holds a master's in Tibetan history from Columbia and has studied Tibetan at Esukhia, Tibet University, and Rangjung Yeshe.</p>
-				<button onclick="toggleBioBhargavi()" id="readMoreBtnBhargavi" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
-				</button>
-				<div id="bioContentBhargavi" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
-					<div class="bg-white rounded-2xl p-6 shadow-lg">
-						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
-							Tashi Delek! My name is Bhargavi, and I am from Chennai, India. I grew up in China for most of my life and completed my undergraduate studies in Chinese language. I recently earned a master's degree in Tibetan history from Columbia University. I have studied Tibetan at Esukhia in Dharamsala (2018), Tibet University (2019), and Rangjung Yeshe Institute (2023), and I continue to learn online. I am currently interning at SINI, assisting Gen Franziska la and her team in their tasks.
-						</p>
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Bhargavi-scaled.webp" alt="Bhargavi" class="w-full h-full object-cover rounded-full" loading="lazy">
 					</div>
 				</div>
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Bhargavi</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Teacher</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Holds a master's in Tibetan history from Columbia and has studied Tibetan at Esukhia, Tibet University, and Rangjung Yeshe.</p>
+				<button onclick="toggleBioBhargavi()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
 			</div>
 
 			<!-- Ania Samborska -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Ania-.webp" alt="Ania Samborska" class="w-40 h-40 object-cover rounded-full shadow-lg">
-				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Ania Samborska</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Assistant Teacher</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Polish teacher and translator in Dharamshala who studies Tibetan language and Dharma, teaches Classical Tibetan at SINI, and supports Colloquial Tibetan courses.</p>
-				<button onclick="toggleBioAnia()" id="readMoreBtnAnia" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
-				</button>
-				<div id="bioContentAnia" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
-					<div class="bg-white rounded-2xl p-6 shadow-lg">
-						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
-							Tashi delek! My name is Ania, a Polish national currently living in Dharamshala. My journey with Tibetan language started during the pandemic when རྒན་ Franziska ལགས་ offered a beginner language course on-line, in the summer of 2020. Since then I have been studying both Colloquial and Classical Tibetan at various institutions: SINI, Rangjung Yeshe Institute in Kathmandu and most recently at the 2-year Lotsawa Rinchen Zangpo Translation Program here in Dharamshala.
-							<br><br>
-							At SINI I teach the Classical Tibetan translation class and support Franziska and her team in the Colloquial Tibetan courses.
-							<br><br>
-							Outside of studying Tibetan language, I dedicate my time to Dharma studies. You can often find me attending teachings in Tibetan monasteries in India and Nepal. On the weekends I am frequently up in the mountains taking walks or meeting with friends at the local coffee shops.
-							<br><br>
-							Wishing you all the best on your Tibetan language journey! 🙂
-						</p>
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Ania-.webp" alt="Ania Samborska" class="w-full h-full object-cover rounded-full">
 					</div>
 				</div>
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Ania Samborska</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Assistant Teacher</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Polish teacher and translator in Dharamshala who studies Tibetan language and Dharma, teaches Classical Tibetan at SINI.</p>
+				<button onclick="toggleBioAnia()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
 			</div>
 
 			<!-- Melissa Katz -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Melissa-Katz-Photo.jpeg" alt="Melissa Katz" class="w-40 h-40 object-cover rounded-full shadow-lg">
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Melissa-Katz-Photo.jpeg" alt="Melissa Katz" class="w-full h-full object-cover rounded-full">
+					</div>
 				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Melissa Katz</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Assistant Teacher</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">U.S.-born student of Tibetan language and medicine in Dharamshala who studies at Sarah College, writes guides on India, and helps share SINI's learning materials worldwide.</p>
-				<button onclick="toggleBioMelissa()" id="readMoreBtnMelissa" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Melissa Katz</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Assistant Teacher</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">U.S.-born student of Tibetan language and medicine in Dharamshala who helps share SINI's learning materials worldwide.</p>
+				<button onclick="toggleBioMelissa()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
 				</button>
 			</div>
 
 			<!-- Pema Woeser -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Pema-Woeser-.webp" alt="Pema Woeser" class="w-40 h-40 object-cover rounded-full shadow-lg" loading="lazy">
-				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Pema Woeser</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Tutor Coordinator</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Native speaker holding a master's degree in Tibetan literature and committed to online Tibetan language education.</p>
-				<button onclick="toggleBioPema()" id="readMoreBtnPema" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
-				</button>
-				<div id="bioContentPema" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
-					<div class="bg-white rounded-2xl p-6 shadow-lg">
-						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
-							Hello, my name is Pema Woeser and I am from Pemako, one of the major sacred places of Guru Padma Sambhava which is located in east Arunachal Pradesh, India. I have completed my master on Tibetan literature in Central Institute of higher Tibetan Studies, Sarnath, Varanasi. In 2019, I got this opportunity to work with such a well-organized online course by SINI. Currently, I am working as a coordination and I am putting my best effort to take all my responsibility.
-						</p>
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Pema-Woeser-.webp" alt="Pema Woeser" class="w-full h-full object-cover rounded-full" loading="lazy">
 					</div>
 				</div>
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Pema Woeser</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Tutor Coordinator</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Native speaker holding a master's degree in Tibetan literature and committed to online Tibetan language education.</p>
+				<button onclick="toggleBioPema()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
 			</div>
 
 			<!-- Tzoe Wong -->
 			<div class="flex flex-col items-center group">
-				<div class="mb-4 overflow-hidden rounded-full transition-transform duration-300 group-hover:scale-105">
-					<img src="/assets/illustrations/Tzoe-Wong--scaled.jpg" alt="Tzoe Wong" class="w-40 h-40 object-cover rounded-full shadow-lg">
+				<div class="relative mb-5">
+										<div class="relative w-36 h-36 rounded-full p-0.5 transition-transform duration-500 group-hover:scale-105" style="background-color: #CF4D21;">
+						<img src="/assets/illustrations/Tzoe-Wong--scaled.jpg" alt="Tzoe Wong" class="w-full h-full object-cover rounded-full">
+					</div>
 				</div>
-				<h3 class="text-xl font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #000;">Tzoe Wong</h3>
-				<p class="text-sm font-semibold text-center mb-2" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">Admin & IT Support</p>
-				<p class="text-center text-sm leading-relaxed mb-3" style="font-family: 'DM Sans', sans-serif; color: #666;">Tibetan language enthusiast who began as a student at SINI in 2021 and now supports the team with video production, webinars, and IT, often in the company of Mr. Sloth.</p>
-				<button onclick="toggleBioTzoe()" id="readMoreBtnTzoe" class="text-[#CF4D21] font-semibold hover:text-orange-700 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif; cursor: pointer;">
-					Read More →
+				<h3 class="text-lg font-bold text-center mb-1" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Tzoe Wong</h3>
+				<p class="text-xs font-semibold text-center mb-3 px-3 py-1 rounded-full" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">Admin & IT Support</p>
+				<p class="text-center text-sm leading-relaxed mb-4 px-2" style="font-family: 'DM Sans', sans-serif; color: #666; min-height: 60px;">Tibetan language enthusiast who supports the team with video production, webinars, and IT.</p>
+				<button onclick="toggleBioTzoe()" class="inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-md" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.08); cursor: pointer;">
+					Read More
+					<svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
 				</button>
-				<div id="bioContentTzoe" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4">
+				<div id="bioContentTzoe" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" class="mt-4 hidden">
 					<div class="bg-white rounded-2xl p-6 shadow-lg">
 						<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333;">
 							Tzoe was a student of the Colloquial Tibetan Beginner Course back in 2021. She has always been interested in the Tibetan language and Buddhism and did not hesitate to sign up when she found out about the online program offered by SINI. She enjoyed it very much and connected with the small group of non-human students, especially Mr. Sloth. In 2023, Tzoe was fortunate to be given the opportunity to work with the program to assist in filming and producing the key point videos and webinars for the Intermediate classes. She is very grateful to be able to be part of the process of bringing these non-human students to live and to share them with Tibetan language learners all over the world. Currently, Tzoe is assisting with the production of the Advanced Course webinars and helps with administrative tasks and IT support. She counts herself truly lucky to be able to support aspiring language learners and to work with an amazing and dedicated team at SINI. When she is not checking something off her to-do list, you will find her idling around with Mr. Sloth.
