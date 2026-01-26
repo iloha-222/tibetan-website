@@ -1,0 +1,793 @@
+---
+import '../../../styles/global.css';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+
+const article = {
+	title: "How to Type in Tibetan",
+	excerpt: "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+	category: "Getting Started",
+	readTime: "8 min read",
+	date: "January 2025"
+};
+---
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{article.title} | Heart of Tibetan Language</title>
+		<meta name="description" content={article.excerpt} />
+		<meta name="keywords" content="type tibetan, tibetan keyboard, tibetan unicode, tibetan typing, tibetan on computer, tibetan on phone, learn tibetan" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta property="og:title" content={article.title} />
+		<meta property="og:description" content={article.excerpt} />
+		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta name="twitter:title" content={article.title} />
+		<meta name="twitter:description" content={article.excerpt} />
+		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Article -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": "How to Type in Tibetan",
+			"description": "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+			"author": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png"
+				}
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+			}
+		}
+		</script>
+
+		<!-- BreadcrumbList structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Resources",
+					"item": "https://www.heartoftibetanlanguage.com/resources/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "How to Type in Tibetan",
+					"item": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+				}
+			]
+		}
+		</script>
+
+		<style>
+			.article-content h2 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #1a1a1a;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid rgba(207, 77, 33, 0.15);
+			}
+			.article-content h3 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.125rem;
+				font-weight: 600;
+				color: #333;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+			.article-content p {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+			}
+			.article-content ul, .article-content ol {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+				padding-left: 1.25rem;
+			}
+			.article-content li {
+				margin-bottom: 0.35rem;
+			}
+			.article-content strong {
+				color: #1a1a1a;
+				font-weight: 600;
+			}
+			/* Enhanced info card */
+			.info-card {
+				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
+				border: 1px solid rgba(207, 77, 33, 0.12);
+				box-shadow: 0 4px 20px rgba(207, 77, 33, 0.06);
+				position: relative;
+				overflow: hidden;
+			}
+			.info-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
+				border-radius: 1rem 1rem 0 0;
+			}
+			/* Table of contents */
+			.toc-container {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			.toc-item {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				padding: 0.5rem 0;
+				transition: all 0.2s ease;
+			}
+			.toc-item:hover {
+				padding-left: 0.25rem;
+			}
+			.toc-number {
+				font-size: 0.9rem;
+				font-weight: 600;
+				font-family: 'Work Sans', sans-serif;
+				color: #CF4D21;
+				min-width: 1.25rem;
+			}
+			.toc-link {
+				transition: all 0.2s ease;
+				font-family: 'DM Sans', sans-serif;
+				color: #444;
+			}
+			.toc-link:hover {
+				color: #CF4D21;
+			}
+			/* Steps box */
+			.steps-box {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			.steps-box ol {
+				list-style: decimal;
+				padding-left: 1.5rem;
+			}
+			.steps-box li {
+				margin-bottom: 0.5rem;
+			}
+			/* CTA cards */
+			.cta-card {
+				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
+				border: 1px solid rgba(207, 77, 33, 0.08);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+				transition: all 0.4s ease;
+			}
+			.cta-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
+			}
+			/* FAQ compact styles */
+			.faq-item {
+				border-bottom: 1px solid #E5E7EB;
+			}
+			.faq-question {
+				cursor: pointer;
+			}
+			.faq-question h3 {
+				font-size: 0.95rem;
+				font-weight: 500;
+			}
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease, padding 0.3s ease;
+			}
+			.faq-answer.active {
+				max-height: 500px;
+				padding-bottom: 0.75rem;
+			}
+			.faq-answer p {
+				font-size: 0.9rem;
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+			.faq-icon {
+				transition: transform 0.3s ease;
+			}
+			.faq-icon.rotated {
+				transform: rotate(180deg);
+			}
+			/* Section icon in orange rounded square */
+			.section-icon-box {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				background-color: #CF4D21;
+				border-radius: 8px;
+				flex-shrink: 0;
+			}
+			.section-icon-box img {
+				width: 18px;
+				height: 18px;
+				filter: brightness(0) invert(1);
+			}
+			.tibetan-text {
+				font-size: 1.1em;
+			}
+			@media (max-width: 767px) {
+				.article-content h2 {
+					font-size: 1.25rem !important;
+				}
+				.article-content h3 {
+					font-size: 1rem !important;
+				}
+				.article-content p, .article-content ul, .article-content ol {
+					font-size: 0.95rem !important;
+				}
+				.faq-question h3 {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/resources/" class="text-[#CF4D21] font-medium" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="/#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/resources/" class="block text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="/#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- Breadcrumb -->
+		<div class="px-4 md:px-6 py-4" style="background-color: #fbf9f7;">
+			<div class="max-w-4xl mx-auto">
+				<nav class="flex items-center gap-2 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+					<a href="/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<a href="/resources/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Blog</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<span class="text-[#CF4D21]">How to Type in Tibetan</span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Article Header -->
+		<header class="px-4 md:px-6 py-8 md:py-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex flex-wrap items-center gap-3 mb-6">
+					<span class="px-4 py-1.5 rounded-full text-sm font-medium" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">
+						{article.category}
+					</span>
+					<span class="text-sm text-gray-500" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.readTime}
+					</span>
+					<span class="text-sm text-gray-400" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.date}
+					</span>
+				</div>
+
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+					{article.title}
+				</h1>
+
+				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
+					Here's the thing you quickly discover: you can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. You can't text a friend, look up a word online, or write down a note properly. This guide won't give you a confusing list of software options. You'll be typing <span class="tibetan-text">བོད་སྐད་</span> on your own computer or phone by the end of this article.
+				</p>
+			</div>
+		</header>
+
+		<!-- Article Content -->
+		<article class="px-4 md:px-6 pb-16">
+			<div class="max-w-4xl mx-auto">
+				<!-- What you'll learn -->
+				<div class="info-card rounded-2xl p-5 mb-8">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+						</span>
+						What you'll get here:
+					</h3>
+					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							The one system you need: Unicode (and what that actually means for you)
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							How to set it up on Windows, Mac, Android, and iPhone in under 3 minutes
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							What to do when your text looks wrong (the "broken font" problem)
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Real-world practice drills
+						</li>
+					</ul>
+				</div>
+
+				<!-- Table of Contents -->
+				<div class="toc-container rounded-2xl p-6 mb-10">
+					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
+					<nav class="space-y-1">
+						<a href="#unicode" class="toc-item">
+							<span class="toc-number">1</span>
+							<span class="toc-link">The Only System You Need: Unicode</span>
+						</a>
+						<a href="#computer" class="toc-item">
+							<span class="toc-number">2</span>
+							<span class="toc-link">Setting Up: Your Computer (Windows & Mac)</span>
+						</a>
+						<a href="#phone" class="toc-item">
+							<span class="toc-number">3</span>
+							<span class="toc-link">Setting Up: Your Phone (Android & iPhone)</span>
+						</a>
+						<a href="#broken-text" class="toc-item">
+							<span class="toc-number">4</span>
+							<span class="toc-link">Fixing the "Broken Text" Problem</span>
+						</a>
+						<a href="#drills" class="toc-item">
+							<span class="toc-number">5</span>
+							<span class="toc-link">Real-World Practice Drills</span>
+						</a>
+						<a href="#faq" class="toc-item">
+							<span class="toc-number">6</span>
+							<span class="toc-link">Common Questions & Annoying Problems</span>
+						</a>
+					</nav>
+				</div>
+
+				<!-- Article Body -->
+				<div class="article-content">
+					<h2 id="unicode">The Only System You Need: Unicode</h2>
+					<p>For modern typing, there's only one system that matters: <strong>Unicode</strong>.</p>
+					<p>Think of Unicode as a universal agreement. It's a standard that gives every single letter and symbol in every writing system its own unique code. Before Unicode, sending a Tibetan email was a gamble. The recipient would see gibberish unless they had the exact same font. Unicode fixed that.</p>
+					<p>When you type in Unicode, you're using this universal code. It means the Tibetan you type on your laptop in New York will show up correctly on your friend's phone in Dharamshala, on a website, in a Word document, or in a text message. It just works.</p>
+					<p><strong>The goal is to get your device to use a Tibetan Unicode keyboard. That's it.</strong></p>
+
+					<h2 id="computer">Setting Up: Your Computer (Windows & Mac)</h2>
+					<p>You don't need to buy anything. The keyboard is already built into your system. You just need to turn it on.</p>
+
+					<h3>On Windows (10 & 11):</h3>
+					<div class="steps-box rounded-2xl p-6 my-6">
+						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
+							<li>Open <strong>Settings</strong> (the gear icon).</li>
+							<li>Go to <strong>Time & Language > Language & Region</strong>.</li>
+							<li>Click <strong>"Add a language"</strong>.</li>
+							<li>In the search bar, type <strong>"Tibetan"</strong>.</li>
+							<li>Select <strong>"Tibetan (བོད་ཡིག)"</strong> and click Next.</li>
+							<li>On the next screen, uncheck "Set as my Windows display language" (unless you want your whole system in Tibetan!). Just install the basic language pack.</li>
+							<li>Click <strong>Install</strong>.</li>
+						</ol>
+						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Once installed, you can switch keyboards. Look for a toolbar near your system clock that says something like "ENG" or "ENG/US". Click it. You'll now see "བོད་ཡིག" as an option. Click to select it.</p>
+					</div>
+
+					<h3>On Mac:</h3>
+					<div class="steps-box rounded-2xl p-6 my-6">
+						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
+							<li>Open <strong>System Settings</strong> (Apple menu > System Settings).</li>
+							<li>Go to <strong>Keyboard > Text Input</strong> (or Input Sources on older versions).</li>
+							<li>Click the <strong>"Edit..."</strong> or <strong>"+"</strong> button.</li>
+							<li>In the left list, select <strong>"Tibetan"</strong>.</li>
+							<li>In the right panel, choose <strong>"Tibetan - QWERTY"</strong> (this is the most straightforward).</li>
+							<li>Click <strong>Add</strong>.</li>
+						</ol>
+						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch, you'll see a flag or language icon in your menu bar. Click it and select "Tibetan."</p>
+					</div>
+
+					<h2 id="phone">Setting Up: Your Phone (Android & iPhone)</h2>
+					<p>This is even easier.</p>
+
+					<h3>On Android:</h3>
+					<div class="steps-box rounded-2xl p-6 my-6">
+						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
+							<li>Go to <strong>Settings > System > Languages & input > On-screen keyboard</strong>.</li>
+							<li>Tap <strong>Gboard</strong> (Google's keyboard, which is usually pre-installed).</li>
+							<li>Go to <strong>Languages > Add keyboard</strong>.</li>
+							<li>Scroll or search for <strong>"Tibetan."</strong> Select it.</li>
+							<li>You may be asked to download a language pack. Do it.</li>
+						</ol>
+						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To use it, open any app where you type (like Messages). Tap the spacebar to cycle languages, or tap the globe/emoji icon to select Tibetan.</p>
+					</div>
+
+					<h3>On iPhone:</h3>
+					<div class="steps-box rounded-2xl p-6 my-6">
+						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
+							<li>Go to <strong>Settings > General > Keyboard > Keyboards</strong>.</li>
+							<li>Tap <strong>"Add New Keyboard..."</strong>.</li>
+							<li>Scroll and select <strong>"Tibetan."</strong> There's only one option.</li>
+						</ol>
+						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch while typing, tap the globe icon next to the space bar.</p>
+					</div>
+
+					<h2 id="broken-text">Fixing the "Broken Text" Problem</h2>
+					<p>You've set it up, typed something, and it looks like a series of separate, broken letters or boxes. <strong>This is a font issue, not a typing issue.</strong></p>
+					<p>Your computer has the keyboard to input the Unicode codes, but it might not have a font that can display the Tibetan letters properly.</p>
+					<p>The fix is simple: <strong>Install a Unicode Tibetan font.</strong> One excellent, free, and widely used font is <strong>"Jomolhari."</strong></p>
+
+					<div class="steps-box rounded-2xl p-6 my-6">
+						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
+							<li>Search online for <strong>"Jomolhari font download."</strong></li>
+							<li>Download the .ttf file from a reputable site (like fonts.google.com or the University of Virginia's Tibetan site).</li>
+							<li>Open the downloaded file and click <strong>"Install"</strong> (Windows) or drag it to your Font Book (Mac).</li>
+						</ol>
+						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Now, when you type in an app (like Word, a browser, or a text editor), select the Jomolhari font from the font menu. Your Tibetan text should render perfectly, with correct stacking and vowel placement.</p>
+					</div>
+
+					<h2 id="drills" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+						</span>
+						Real-World Practice Drills
+					</h2>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: The Name Drill</h4>
+						<p>Type your name. Sound it out in Tibetan and try to spell it. <span class="tibetan-text">ཇོན་</span> (John)? <span class="tibetan-text">མེར་ཡི་</span> (Mary)? This makes it personal.</p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: The 5-Word Daily</h4>
+						<p>Every day, type 5 vocabulary words you know. <span class="tibetan-text">མི</span> (person), <span class="tibetan-text">ཆུ</span> (water), <span class="tibetan-text">ཁ་པར</span> (phone). Muscle memory builds here.</p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Copy a Line</h4>
+						<p>Find a simple Tibetan sentence online. Open a notepad app and copy it, letter by letter. This trains you to find keys without thinking.</p>
+					</div>
+
+					<h2 id="faq" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
+						</span>
+						Common Questions & Annoying Problems
+					</h2>
+
+					<div class="my-6">
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Can I use this to type in social media or Google Docs?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Yes. Anywhere you can type text and select a font, you can type Tibetan. In Google Docs, you may need to select "More fonts" and search for/add "Jomolhari."
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									What if I need to type old, rare characters?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									For 99% of users, the standard keyboard has everything. For scholars, there are specialized keyboards and tools, but start here.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									My phone keyboard doesn't show the Tibetan letters on the keys.
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									That's normal. It will show the English QWERTY layout. You have to remember which English key corresponds to which Tibetan letter. Use a layout image as a reference.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									How does this connect to what I'm learning?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Directly. Now you can type your vocabulary lists, make digital flashcards, and look up words you hear. Start by typing the words from our <a href="/resources/family-in-tibetan/" class="text-[#CF4D21] hover:underline">Family Vocabulary guide</a>.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- CTA Cards -->
+				<div class="mt-12 space-y-6">
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Today</h3>
+					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you can type in Tibetan, continue building your skills with our courses.</p>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<a href="/self-paced/beginner/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Self-Paced Beginner Course</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Master the alphabet and your first phrases on your own schedule.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+						<a href="/live/beginner/101/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Beginner 101 Live Class</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Practice speaking with a native instructor in our weekly online meetup.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Back to Resources -->
+				<div class="mt-12 pt-8 border-t border-[#CF4D21]/10">
+					<a href="/resources/" class="inline-flex items-center gap-2 text-[#CF4D21] font-medium hover:gap-3 transition-all" style="font-family: 'Work Sans', Arial, sans-serif;">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+						</svg>
+						Back to Resources
+					</a>
+				</div>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16" style="background-color: #9F6A33;">
+			<div class="max-w-6xl mx-auto px-6 md:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+					<div class="flex flex-col items-center md:items-start">
+						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-28 h-28 mb-4">
+						<p class="text-white font-bold text-xl mb-2 text-center md:text-left" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-base text-center md:text-left" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/resources" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+									Email Us
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script is:inline>
+			// FAQ toggle function
+			function toggleFAQ(button) {
+				const answer = button.nextElementSibling;
+				const icon = button.querySelector('.faq-icon');
+
+				// Close all other FAQs
+				document.querySelectorAll('.faq-answer').forEach(item => {
+					if (item !== answer) {
+						item.classList.remove('active');
+					}
+				});
+				document.querySelectorAll('.faq-icon').forEach(item => {
+					if (item !== icon) {
+						item.classList.remove('rotated');
+					}
+				});
+
+				// Toggle current FAQ
+				answer.classList.toggle('active');
+				icon.classList.toggle('rotated');
+			}
+
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			mobileMenuBtn?.addEventListener('click', () => {
+				mobileMenu?.classList.remove('hidden');
+			});
+
+			closeMobileMenu?.addEventListener('click', () => {
+				mobileMenu?.classList.add('hidden');
+			});
+
+			// Smooth scroll for TOC links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				});
+			});
+		</script>
+
+		<Analytics />
+		<SpeedInsights />
+	</body>
+</html>

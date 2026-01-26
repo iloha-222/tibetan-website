@@ -1,0 +1,904 @@
+---
+import '../../../styles/global.css';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+
+const article = {
+	title: "The Colors in Tibetan: A Complete Vocabulary Guide",
+	excerpt: "Ready to describe the world in Tibetan? Master the names of colors with our free downloadable PDF and practical examples.",
+	category: "Vocabulary",
+	readTime: "6 min read",
+	date: "January 2025"
+};
+---
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{article.title} | Heart of Tibetan Language</title>
+		<meta name="description" content={article.excerpt} />
+		<meta name="keywords" content="tibetan colors, colors in tibetan, tibetan vocabulary, learn tibetan, tibetan words, tibetan language" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/colors-in-tibetan/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/colors-in-tibetan/" />
+		<meta property="og:title" content={article.title} />
+		<meta property="og:description" content={article.excerpt} />
+		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Article -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": "The Colors in Tibetan: A Complete Vocabulary Guide",
+			"description": "Ready to describe the world in Tibetan? Master the names of colors with our free downloadable PDF and practical examples.",
+			"author": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png"
+				}
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://www.heartoftibetanlanguage.com/resources/colors-in-tibetan/"
+			}
+		}
+		</script>
+
+		<!-- BreadcrumbList structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Resources",
+					"item": "https://www.heartoftibetanlanguage.com/resources/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Colors in Tibetan",
+					"item": "https://www.heartoftibetanlanguage.com/resources/colors-in-tibetan/"
+				}
+			]
+		}
+		</script>
+
+		<style>
+			.article-content h2 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #1a1a1a;
+				margin-top: 2rem;
+				margin-bottom: 0.75rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid rgba(207, 77, 33, 0.2);
+			}
+			.article-content h3 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.125rem;
+				font-weight: 600;
+				color: #333;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+			.article-content p {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+			}
+			.article-content ul, .article-content ol {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+				padding-left: 1.25rem;
+			}
+			.article-content li {
+				margin-bottom: 0.35rem;
+			}
+			.article-content strong {
+				color: #1a1a1a;
+				font-weight: 600;
+			}
+			/* Enhanced info card */
+			.info-card {
+				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
+				border: 1px solid rgba(207, 77, 33, 0.12);
+				box-shadow: 0 4px 20px rgba(207, 77, 33, 0.06);
+				position: relative;
+				overflow: hidden;
+			}
+			.info-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
+				border-radius: 1rem 1rem 0 0;
+			}
+			.vocab-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+			.vocab-table th {
+				background-color: #CF4D21;
+				color: white;
+				padding: 10px 14px;
+				text-align: left;
+				font-family: 'Work Sans', Arial, sans-serif;
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+			.vocab-table td {
+				padding: 10px 14px;
+				border-bottom: 1px solid #e8dccf;
+				font-family: 'DM Sans', sans-serif;
+			}
+			.vocab-table tr:nth-child(even) {
+				background-color: #FFF8EE;
+			}
+			.vocab-table tr:hover {
+				background-color: #F4E6D6;
+			}
+			.tibetan-text {
+				font-size: 1.1em;
+			}
+			/* Table of contents */
+			.toc-container {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			.toc-item {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				padding: 0.5rem 0;
+				transition: all 0.2s ease;
+			}
+			.toc-item:hover {
+				padding-left: 0.25rem;
+			}
+			.toc-number {
+				font-size: 0.9rem;
+				font-weight: 600;
+				font-family: 'Work Sans', sans-serif;
+				color: #CF4D21;
+				min-width: 1.25rem;
+			}
+			.toc-link {
+				transition: all 0.2s ease;
+				font-family: 'DM Sans', sans-serif;
+				color: #444;
+			}
+			.toc-link:hover {
+				color: #CF4D21;
+			}
+			/* CTA cards */
+			.cta-card {
+				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
+				border: 1px solid rgba(207, 77, 33, 0.08);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+				transition: all 0.4s ease;
+			}
+			.cta-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
+			}
+			/* Color-coded word pairs - each pair has the same color */
+			.word-pair {
+				display: inline-flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				margin: 0 0.35rem;
+				padding: 0.4rem 0.6rem;
+				border-radius: 0.5rem;
+			}
+			.word-pair .tibetan-word {
+				font-size: 1.1em;
+				font-weight: 600;
+			}
+			.word-pair .english-word {
+				font-size: 0.8em;
+				font-weight: 500;
+				margin-top: 3px;
+			}
+			/* Color classes for word pairs */
+			.color-1 { background-color: rgba(37, 99, 235, 0.1); }
+			.color-1 .tibetan-word, .color-1 .english-word { color: #1d4ed8; }
+			.color-2 { background-color: rgba(207, 77, 33, 0.1); }
+			.color-2 .tibetan-word, .color-2 .english-word { color: #CF4D21; }
+			.color-3 { background-color: rgba(22, 163, 74, 0.1); }
+			.color-3 .tibetan-word, .color-3 .english-word { color: #15803d; }
+			.color-4 { background-color: rgba(147, 51, 234, 0.1); }
+			.color-4 .tibetan-word, .color-4 .english-word { color: #7c3aed; }
+			.sentence-breakdown {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4rem;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 0.75rem 0;
+			}
+			/* FAQ compact styles */
+			.faq-item {
+				border-bottom: 1px solid #E5E7EB;
+			}
+			.faq-question {
+				cursor: pointer;
+			}
+			.faq-question h3 {
+				font-size: 0.95rem;
+				font-weight: 500;
+			}
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease, padding 0.3s ease;
+			}
+			.faq-answer.active {
+				max-height: 500px;
+				padding-bottom: 0.75rem;
+			}
+			.faq-answer p {
+				font-size: 0.9rem;
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+			.faq-icon {
+				transition: transform 0.3s ease;
+			}
+			.faq-icon.rotated {
+				transform: rotate(180deg);
+			}
+			/* Section icon in orange rounded square */
+			.section-icon-box {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				background-color: #CF4D21;
+				border-radius: 8px;
+				flex-shrink: 0;
+			}
+			.section-icon-box img {
+				width: 18px;
+				height: 18px;
+				filter: brightness(0) invert(1);
+			}
+			@media (max-width: 767px) {
+				.article-content h2 {
+					font-size: 1.25rem !important;
+				}
+				.article-content h3 {
+					font-size: 1rem !important;
+				}
+				.article-content p, .article-content ul, .article-content ol {
+					font-size: 0.95rem !important;
+				}
+				.vocab-table {
+					font-size: 0.85rem;
+				}
+				.vocab-table th, .vocab-table td {
+					padding: 8px 10px;
+				}
+				.faq-question h3 {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/resources/" class="text-[#CF4D21] font-medium" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="/#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/resources/" class="block text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="/#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- Breadcrumb -->
+		<div class="px-4 md:px-6 py-4" style="background-color: #fbf9f7;">
+			<div class="max-w-4xl mx-auto">
+				<nav class="flex items-center gap-2 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+					<a href="/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<a href="/resources/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Blog</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<span class="text-[#CF4D21]">Colors in Tibetan</span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Article Header -->
+		<header class="px-4 md:px-6 py-8 md:py-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex flex-wrap items-center gap-3 mb-6">
+					<span class="px-4 py-1.5 rounded-full text-sm font-medium" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">
+						{article.category}
+					</span>
+					<span class="text-sm text-gray-500" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.readTime}
+					</span>
+					<span class="text-sm text-gray-400" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.date}
+					</span>
+				</div>
+
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+					{article.title}
+				</h1>
+
+				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
+					Ready to describe the world in Tibetan? Master the names of colors with our free downloadable PDF and practical examples. This guide will take you from basic vocabulary to using colors like a local, complete with drills, cultural insights, and tips to avoid common mistakes.
+				</p>
+			</div>
+		</header>
+
+		<!-- Article Content -->
+		<article class="px-4 md:px-6 pb-16">
+			<div class="max-w-4xl mx-auto">
+				<!-- Table of Contents -->
+				<div class="toc-container rounded-2xl p-6 mb-10">
+					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
+					<nav class="space-y-1">
+						<a href="#why-learn" class="toc-item">
+							<span class="toc-number">1</span>
+							<span class="toc-link">Why Learn Colors in Tibetan?</span>
+						</a>
+						<a href="#vocabulary" class="toc-item">
+							<span class="toc-number">2</span>
+							<span class="toc-link">Foundational Color Vocabulary</span>
+						</a>
+						<a href="#sentences" class="toc-item">
+							<span class="toc-number">3</span>
+							<span class="toc-link">Using Colors in Sentences</span>
+						</a>
+						<a href="#cultural" class="toc-item">
+							<span class="toc-number">4</span>
+							<span class="toc-link">Cultural Meaning of Colors</span>
+						</a>
+						<a href="#mistakes" class="toc-item">
+							<span class="toc-number">5</span>
+							<span class="toc-link">Common Mistakes to Avoid</span>
+						</a>
+						<a href="#drills" class="toc-item">
+							<span class="toc-number">6</span>
+							<span class="toc-link">Practice Drills & Mini-Tasks</span>
+						</a>
+						<a href="#faq" class="toc-item">
+							<span class="toc-number">7</span>
+							<span class="toc-link">FAQ: Your Questions Answered</span>
+						</a>
+						<a href="#next-steps" class="toc-item">
+							<span class="toc-number">8</span>
+							<span class="toc-link">Next Steps in Your Journey</span>
+						</a>
+					</nav>
+				</div>
+
+				<!-- Article Body -->
+				<div class="article-content">
+					<h2 id="why-learn">Why Learn Colors in Tibetan?</h2>
+					<p>Colors are everywhere. Learning them boosts your daily vocabulary instantly.</p>
+					<p>You will describe objects, clothing, and art with ease.</p>
+					<p>It is a simple step that makes your Tibetan much more descriptive and practical.</p>
+
+					<h2 id="vocabulary">Foundational Color Vocabulary</h2>
+					<p>Here are the essential colors. Focus on the Tibetan script and the standard Wylie transliteration.</p>
+
+					<div class="overflow-x-auto my-6 rounded-2xl border-2 border-[#e8dccf]">
+						<table class="vocab-table">
+							<thead>
+								<tr>
+									<th>Tibetan (Uchen Script)</th>
+									<th>Transliteration (Wylie)</th>
+									<th>English</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="tibetan-text">སེར་པོ།</td>
+									<td>ser po</td>
+									<td>Yellow</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">དམར་པོ།</td>
+									<td>dmar po</td>
+									<td>Red</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">སྔོན་པོ།</td>
+									<td>sngon po</td>
+									<td>Blue</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">ལྗང་ཁུ།</td>
+									<td>ljang khu</td>
+									<td>Green</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">དཀར་པོ།</td>
+									<td>dkar po</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">ནག་པོ།</td>
+									<td>nag po</td>
+									<td>Black</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">བ་ལུ།</td>
+									<td>ba lu</td>
+									<td>Gray</td>
+								</tr>
+								<tr>
+									<td class="tibetan-text">མུ་ཏིག</td>
+									<td>mutig</td>
+									<td>Brown</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="info-card rounded-2xl p-5 my-6">
+						<p class="mb-0"><strong>Tip:</strong> Practice repeating each color.</p>
+					</div>
+
+					<h2 id="sentences">Using Colors in Sentences</h2>
+					<p>Colors are adjectives. In Tibetan, they typically come after the noun they describe.</p>
+					<p class="text-sm text-gray-500 italic">Below, matching colors show which Tibetan word corresponds to which English word.</p>
+
+					<h3>Sentence Pattern Example:</h3>
+					<p><strong>Noun + Color</strong></p>
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<div class="sentence-breakdown">
+							<div class="word-pair color-1">
+								<span class="tibetan-word tibetan-text">ཤོག་བུ་</span>
+								<span class="english-word">paper</span>
+							</div>
+							<div class="word-pair color-2">
+								<span class="tibetan-word tibetan-text">དམར་པོ</span>
+								<span class="english-word">red</span>
+							</div>
+						</div>
+						<p class="text-sm text-gray-600 text-center mb-2">(shog bu dmar po)</p>
+						<p class="text-center text-gray-700">= <strong>a red paper</strong></p>
+					</div>
+
+					<h3>Asking "What Color?" Examples:</h3>
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<div class="sentence-breakdown">
+							<div class="word-pair color-1">
+								<span class="tibetan-word tibetan-text">ཚོན་མདོག</span>
+								<span class="english-word">color</span>
+							</div>
+							<div class="word-pair color-2">
+								<span class="tibetan-word tibetan-text">ག་རེ</span>
+								<span class="english-word">what</span>
+							</div>
+							<div class="word-pair color-3">
+								<span class="tibetan-word tibetan-text">རེད</span>
+								<span class="english-word">is</span>
+							</div>
+						</div>
+						<p class="text-center text-gray-700">= <strong>What color is it?</strong></p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<div class="sentence-breakdown">
+							<div class="word-pair color-4">
+								<span class="tibetan-word tibetan-text">འདི</span>
+								<span class="english-word">this</span>
+							</div>
+							<div class="word-pair color-1">
+								<span class="tibetan-word tibetan-text">ཚོན་མདོག</span>
+								<span class="english-word">color</span>
+							</div>
+							<div class="word-pair color-2">
+								<span class="tibetan-word tibetan-text">ག་རེ</span>
+								<span class="english-word">what</span>
+							</div>
+							<div class="word-pair color-3">
+								<span class="tibetan-word tibetan-text">རེད</span>
+								<span class="english-word">is</span>
+							</div>
+						</div>
+						<p class="text-center text-gray-700">= <strong>What color is this?</strong></p>
+					</div>
+
+					<h2 id="cultural">Cultural Meaning of Colors in Tibet</h2>
+					<p>Colors in Tibetan culture carry deep significance, often tied to Buddhism and nature.</p>
+
+					<ul>
+						<li><strong>White (དཀར་པོ | dkar po):</strong> Purity, peace, and healing. Associated with the medicine Buddha.</li>
+						<li><strong>Red (དམར་པོ | dmar po):</strong> Power, sacredness, and life force. Monks' robes are often maroon-red.</li>
+						<li><strong>Blue (སྔོན་པོ | sngon po):</strong> The sky, infinity, and the divine. Represents compassion.</li>
+						<li><strong>Yellow/Gold (སེར་པོ | ser po):</strong> The color of the Buddha's robes, representing humility and renunciation.</li>
+						<li><strong>Green (ལྗང་ཁུ | ljang khu):</strong> Nature, harmony, and activity. Associated with the Buddha Amoghasiddhi.</li>
+					</ul>
+
+					<h2 id="mistakes" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-exclamation-mark-4303781-FF751F.svg" alt="">
+						</span>
+						Common Mistakes to Avoid
+					</h2>
+					<ul>
+						<li><strong>Word Order:</strong> Saying "red house" instead of the Tibetan order "house red."</li>
+						<li><strong>Forgetting -པོ (-po):</strong> Many basic colors need the suffix "-po." Do not say "dmar" for red, say "dmar po."</li>
+					</ul>
+
+					<h2 id="drills" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+						</span>
+						Practice Drills & Mini-Tasks
+					</h2>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: Spot the Color</h4>
+						<p>Look around you now. Name 5 objects in Tibetan using the structure "[Object] + [Color]."</p>
+						<p class="text-sm text-gray-600">Example: Book white = དེབ་དཀར་པོ (deb dkar po).</p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: Memory Quiz</h4>
+						<p>Cover the English column in our PDF. Read the Tibetan and recall the color.</p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Culture Connect</h4>
+						<p>Look at a traditional Tibetan painting (thangka). Can you identify the main colors and guess their symbolic meaning?</p>
+					</div>
+
+					<h2 id="faq" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
+						</span>
+						FAQ: Your Questions Answered
+					</h2>
+
+					<div class="my-6">
+						<div class="faq-item border-b border-gray-200">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									How do you say "orange" (the fruit) vs. "orange" (the color)?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									The fruit is ཚ་ལུ་མ (tsha lu ma). The color is usually described as "ser po dang dmar po 'dres ma" (a mix of yellow and red).
+								</p>
+							</div>
+						</div>
+						<div class="faq-item border-b border-gray-200">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Is there a word for "pink"?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Yes, it is དམར་སྐྱ (dmar skya), which literally means "pale red."
+								</p>
+							</div>
+						</div>
+						<div class="faq-item border-b border-gray-200">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Why do some colors end in "-po" and others like "ljang khu" don't?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Most basic colors use "-po" as an adjective suffix. "Ljang khu" is a unique compound word. For consistency, think of them all as fixed terms.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item border-b border-gray-200">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Where can I hear native Tibetan pronunciation?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									For reliable audio, use resources like the University of Virginia's Tibetan Dictionary. You can also practice with our Tibetan pronunciation guide.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item border-b border-gray-200">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Are colors used differently in spoken vs. written Tibetan?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									The core vocabulary is the same. In casual Lhasa dialect, you might hear slight pronunciation shifts.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<h2 id="next-steps">Next Steps in Your Tibetan Journey</h2>
+					<p>Now that you know your colors, continue building your vocabulary and putting it into practice with our courses.</p>
+				</div>
+
+				<!-- CTA Cards -->
+				<div class="mt-12 space-y-6">
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Today</h3>
+					<div class="grid md:grid-cols-2 gap-6">
+						<a href="/self-paced/beginner/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Self-Paced Beginner Course</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Master the alphabet and your first phrases on your own schedule.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+						<a href="/live/beginner/101/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Beginner 101 Live Class</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Practice speaking with a native instructor in our weekly online meetup.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Back to Resources -->
+				<div class="mt-12 pt-8 border-t border-[#CF4D21]/10">
+					<a href="/resources/" class="inline-flex items-center gap-2 text-[#CF4D21] font-medium hover:gap-3 transition-all" style="font-family: 'Work Sans', Arial, sans-serif;">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+						</svg>
+						Back to Resources
+					</a>
+				</div>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16" style="background-color: #9F6A33;">
+			<div class="max-w-6xl mx-auto px-6 md:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+					<div class="flex flex-col items-center md:items-start">
+						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-28 h-28 mb-4">
+						<p class="text-white font-bold text-xl mb-2 text-center md:text-left" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-base text-center md:text-left" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/resources" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+									Email Us
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script is:inline>
+			// FAQ toggle function
+			function toggleFAQ(button) {
+				const answer = button.nextElementSibling;
+				const icon = button.querySelector('.faq-icon');
+
+				// Close all other FAQs
+				document.querySelectorAll('.faq-answer').forEach(item => {
+					if (item !== answer) {
+						item.classList.remove('active');
+					}
+				});
+				document.querySelectorAll('.faq-icon').forEach(item => {
+					if (item !== icon) {
+						item.classList.remove('rotated');
+					}
+				});
+
+				// Toggle current FAQ
+				answer.classList.toggle('active');
+				icon.classList.toggle('rotated');
+			}
+
+			// Mobile menu
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			mobileMenuBtn?.addEventListener('click', () => {
+				mobileMenu?.classList.remove('hidden');
+			});
+
+			closeMobileMenu?.addEventListener('click', () => {
+				mobileMenu?.classList.add('hidden');
+			});
+
+			// Smooth scroll for TOC links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				});
+			});
+		</script>
+
+		<Analytics />
+		<SpeedInsights />
+	</body>
+</html>

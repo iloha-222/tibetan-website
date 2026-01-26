@@ -1,0 +1,851 @@
+---
+import '../../../styles/global.css';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+
+const article = {
+	title: "Honorific Speech in Tibetan: When and How to Use It",
+	excerpt: "Want to show genuine respect in Tibetan? Learning honorific speech is your key. Master these polite forms to connect deeply with elders, monks, and new acquaintances.",
+	category: "Grammar",
+	readTime: "6 min read",
+	date: "January 2025"
+};
+---
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{article.title} | Heart of Tibetan Language</title>
+		<meta name="description" content={article.excerpt} />
+		<meta name="keywords" content="tibetan honorific speech, polite tibetan, tibetan grammar, respectful tibetan, tibetan language, learn tibetan" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/honorific-speech-in-tibetan/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/honorific-speech-in-tibetan/" />
+		<meta property="og:title" content={article.title} />
+		<meta property="og:description" content={article.excerpt} />
+		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/honorific-speech-in-tibetan/" />
+		<meta name="twitter:title" content={article.title} />
+		<meta name="twitter:description" content={article.excerpt} />
+		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Article -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": "Honorific Speech in Tibetan: When and How to Use It",
+			"description": "Want to show genuine respect in Tibetan? Learning honorific speech is your key. Master these polite forms to connect deeply with elders, monks, and new acquaintances.",
+			"author": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png"
+				}
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://www.heartoftibetanlanguage.com/resources/honorific-speech-in-tibetan/"
+			}
+		}
+		</script>
+
+		<!-- BreadcrumbList structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Resources",
+					"item": "https://www.heartoftibetanlanguage.com/resources/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Honorific Speech in Tibetan",
+					"item": "https://www.heartoftibetanlanguage.com/resources/honorific-speech-in-tibetan/"
+				}
+			]
+		}
+		</script>
+
+		<style>
+			.article-content h2 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #1a1a1a;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid rgba(207, 77, 33, 0.15);
+			}
+			.article-content h3 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.125rem;
+				font-weight: 600;
+				color: #333;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+			.article-content p {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+			}
+			.article-content ul, .article-content ol {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+				padding-left: 1.25rem;
+			}
+			.article-content li {
+				margin-bottom: 0.35rem;
+			}
+			.article-content strong {
+				color: #1a1a1a;
+				font-weight: 600;
+			}
+			/* Enhanced info card */
+			.info-card {
+				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
+				border: 1px solid rgba(207, 77, 33, 0.12);
+				box-shadow: 0 4px 20px rgba(207, 77, 33, 0.06);
+				position: relative;
+				overflow: hidden;
+			}
+			.info-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
+				border-radius: 1rem 1rem 0 0;
+			}
+			/* Vocabulary table */
+			.vocab-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+			.vocab-table th {
+				background-color: #CF4D21;
+				color: white;
+				padding: 10px 14px;
+				text-align: left;
+				font-family: 'Work Sans', Arial, sans-serif;
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+			.vocab-table td {
+				padding: 10px 14px;
+				border-bottom: 1px solid #e8dccf;
+				font-family: 'DM Sans', sans-serif;
+			}
+			.vocab-table tr:nth-child(even) {
+				background-color: #FFF8EE;
+			}
+			.vocab-table tr:hover {
+				background-color: #F4E6D6;
+			}
+			.tibetan-text {
+				font-size: 1.1em;
+			}
+			/* Table of contents */
+			.toc-container {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			.toc-item {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				padding: 0.5rem 0;
+				transition: all 0.2s ease;
+			}
+			.toc-item:hover {
+				padding-left: 0.25rem;
+			}
+			.toc-number {
+				font-size: 0.9rem;
+				font-weight: 600;
+				font-family: 'Work Sans', sans-serif;
+				color: #CF4D21;
+				min-width: 1.25rem;
+			}
+			.toc-link {
+				transition: all 0.2s ease;
+				font-family: 'DM Sans', sans-serif;
+				color: #444;
+			}
+			.toc-link:hover {
+				color: #CF4D21;
+			}
+			/* Example box */
+			.example-box {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			/* CTA cards */
+			.cta-card {
+				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
+				border: 1px solid rgba(207, 77, 33, 0.08);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+				transition: all 0.4s ease;
+			}
+			.cta-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
+			}
+			/* FAQ compact styles */
+			.faq-item {
+				border-bottom: 1px solid #E5E7EB;
+			}
+			.faq-question {
+				cursor: pointer;
+			}
+			.faq-question h3 {
+				font-size: 0.95rem;
+				font-weight: 500;
+			}
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease, padding 0.3s ease;
+			}
+			.faq-answer.active {
+				max-height: 500px;
+				padding-bottom: 0.75rem;
+			}
+			.faq-answer p {
+				font-size: 0.9rem;
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+			.faq-icon {
+				transition: transform 0.3s ease;
+			}
+			.faq-icon.rotated {
+				transform: rotate(180deg);
+			}
+			/* Section icon in orange rounded square */
+			.section-icon-box {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				background-color: #CF4D21;
+				border-radius: 8px;
+				flex-shrink: 0;
+			}
+			.section-icon-box img {
+				width: 18px;
+				height: 18px;
+				filter: brightness(0) invert(1);
+			}
+			@media (max-width: 767px) {
+				.article-content h2 {
+					font-size: 1.25rem !important;
+				}
+				.article-content h3 {
+					font-size: 1rem !important;
+				}
+				.article-content p, .article-content ul, .article-content ol {
+					font-size: 0.95rem !important;
+				}
+				.vocab-table {
+					font-size: 0.85rem;
+				}
+				.vocab-table th, .vocab-table td {
+					padding: 8px 10px;
+				}
+				.faq-question h3 {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/resources/" class="text-[#CF4D21] font-medium" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="/#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/resources/" class="block text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="/#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- Breadcrumb -->
+		<div class="px-4 md:px-6 py-4" style="background-color: #fbf9f7;">
+			<div class="max-w-4xl mx-auto">
+				<nav class="flex items-center gap-2 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+					<a href="/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<a href="/resources/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Blog</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<span class="text-[#CF4D21]">Honorific Speech in Tibetan</span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Article Header -->
+		<header class="px-4 md:px-6 py-8 md:py-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex flex-wrap items-center gap-3 mb-6">
+					<span class="px-4 py-1.5 rounded-full text-sm font-medium" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">
+						{article.category}
+					</span>
+					<span class="text-sm text-gray-500" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.readTime}
+					</span>
+					<span class="text-sm text-gray-400" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.date}
+					</span>
+				</div>
+
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+					{article.title}
+				</h1>
+
+				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
+					{article.excerpt}
+				</p>
+			</div>
+		</header>
+
+		<!-- Article Content -->
+		<article class="px-4 md:px-6 pb-16">
+			<div class="max-w-4xl mx-auto">
+				<!-- What you'll learn -->
+				<div class="info-card rounded-2xl p-5 mb-8">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+						</span>
+						In this guide, you'll discover:
+					</h3>
+					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Practical honorific phrases for everyday situations
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Audio clips to perfect your pronunciation
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Simple rules to avoid common mistakes
+						</li>
+					</ul>
+				</div>
+
+				<!-- Table of Contents -->
+				<div class="toc-container rounded-2xl p-6 mb-10">
+					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
+					<nav class="space-y-1">
+						<a href="#what-is" class="toc-item">
+							<span class="toc-number">1</span>
+							<span class="toc-link">What is Honorific Speech?</span>
+						</a>
+						<a href="#when-to-use" class="toc-item">
+							<span class="toc-number">2</span>
+							<span class="toc-link">When You Must Use Honorifics</span>
+						</a>
+						<a href="#core-words" class="toc-item">
+							<span class="toc-number">3</span>
+							<span class="toc-link">Core Honorific Words</span>
+						</a>
+						<a href="#building-sentences" class="toc-item">
+							<span class="toc-number">4</span>
+							<span class="toc-link">Building Polite Sentences</span>
+						</a>
+						<a href="#pronunciation" class="toc-item">
+							<span class="toc-number">5</span>
+							<span class="toc-link">Pronunciation Practice</span>
+						</a>
+						<a href="#mistakes" class="toc-item">
+							<span class="toc-number">6</span>
+							<span class="toc-link">Common Mistakes to Avoid</span>
+						</a>
+						<a href="#faq" class="toc-item">
+							<span class="toc-number">7</span>
+							<span class="toc-link">Honorific Speech FAQs</span>
+						</a>
+						<a href="#next-steps" class="toc-item">
+							<span class="toc-number">8</span>
+							<span class="toc-link">Your Next Steps</span>
+						</a>
+					</nav>
+				</div>
+
+				<!-- Article Body -->
+				<div class="article-content">
+					<h2 id="what-is">What is Honorific Speech?</h2>
+					<p>Honorific speech shows respect through special words and grammar. Think of it as a linguistic bow.</p>
+					<p>In Tibetan, you change regular words for special polite versions when speaking to respected people. It's not about being formal — it's about showing genuine consideration.</p>
+
+					<h2 id="when-to-use">When You Must Use Honorifics</h2>
+					<p>Use honorifics with:</p>
+					<ul>
+						<li>Monks and nuns</li>
+						<li>Elders and grandparents</li>
+						<li>Teachers and mentors</li>
+						<li>People you've just met</li>
+						<li>Government officials</li>
+					</ul>
+					<p>With friends and children, regular speech is fine. When in doubt, err on the side of politeness.</p>
+
+					<h2 id="core-words">Core Honorific Words</h2>
+					<p>Start with these essential swaps:</p>
+
+					<div class="overflow-x-auto my-6">
+						<table class="vocab-table rounded-xl overflow-hidden">
+							<thead>
+								<tr>
+									<th>Regular</th>
+									<th>Honorific</th>
+									<th>Meaning</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="tibetan-text">ལུས་</span> (lü)</td>
+									<td><span class="tibetan-text">སྐུ་</span> (ku)</td>
+									<td>Body</td>
+								</tr>
+								<tr>
+									<td><span class="tibetan-text">འགྲོ་</span> (dro)</td>
+									<td><span class="tibetan-text">ཕེབས་</span> (pheb)</td>
+									<td>To go</td>
+								</tr>
+								<tr>
+									<td><span class="tibetan-text">ཟ་</span> (za)</td>
+									<td><span class="tibetan-text">གསོལ་ཇ་</span> (sol ja)</td>
+									<td>To eat / tea</td>
+								</tr>
+								<tr>
+									<td><span class="tibetan-text">ལབ་</span> (lab)</td>
+									<td><span class="tibetan-text">གསུང་</span> (sung)</td>
+									<td>To say</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h2 id="building-sentences">Building Polite Sentences</h2>
+					<p>Honorifics follow simple patterns. You don't need to change the whole sentence.</p>
+
+					<h2 id="pronunciation">Pronunciation Practice</h2>
+					<p>Honorific words often have subtle sounds. Listen carefully:</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Audio Samples:</h4>
+						<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+							<li><strong>Pheb</strong> (<span class="tibetan-text">ཕེབས་</span>) - say "pep" softly</li>
+							<li><strong>Shuq</strong> (<span class="tibetan-text">བཞུགས་</span>) - like "shook" but shorter</li>
+							<li><strong>Sol ja</strong> (<span class="tibetan-text">གསོལ་ཇ་</span>) - "sol-jah"</li>
+						</ul>
+					</div>
+
+					<h2 id="mistakes" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-exclamation-mark-4303781-FF751F.svg" alt="">
+						</span>
+						Common Mistakes to Avoid
+					</h2>
+					<ul>
+						<li>Mixing regular and honorific speech in the same sentence</li>
+						<li>Using honorific for self</li>
+						<li>Using honorifics with close friends (can create distance)</li>
+					</ul>
+
+					<h2 id="faq" class="flex items-center gap-3">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
+						</span>
+						Honorific Speech FAQs
+					</h2>
+
+					<div class="my-6">
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									What if I use the wrong form?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Most Tibetans will appreciate your effort and gently correct you. Don't let fear of mistakes stop you from trying.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Are honorifics the same in all dialects?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									The concepts are similar, but specific words may differ between Lhasa, Kham, and Amdo dialects.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									How do I know if someone deserves honorific speech?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									When meeting someone new who appears older than you or in a respected position, start with honorifics. They may tell you to speak casually.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Can I practice honorifics without offending anyone?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Yes! Practice with shopkeepers, taxi drivers, or anyone in service positions where polite speech is always appropriate.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Do I need to use honorifics with Tibetan friends my age?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Usually not, unless you want to show special respect or are meeting their parents.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Where can I learn more honorific vocabulary?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									The Tibetan & Himalayan Library offers extensive word lists for serious learners.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									Are there honorific nouns as well as verbs?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									Yes - like "ku" (<span class="tibetan-text">སྐུ་</span>) for body instead of "lü" (<span class="tibetan-text">ལུས་</span>). Start with verbs, then add nouns gradually.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<h2 id="next-steps">Your Next Steps</h2>
+					<p>You've taken the first step toward respectful communication. These polite forms will open doors and warm hearts in Tibetan communities.</p>
+					<p>Ready to practice with others? Our guide to Tibetan greetings helps you make a great first impression.</p>
+					<p><strong>Remember:</strong> Your effort to speak respectfully shows more than perfect grammar ever could.</p>
+				</div>
+
+				<!-- CTA Cards -->
+				<div class="mt-12 space-y-6">
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Properly</h3>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<a href="/self-paced/beginner/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Self-Paced Tibetan Course</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Master honorifics and everyday conversation at your own pace.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+						<a href="/live/beginner/101/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Live Tibetan Classes</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Practice polite speech with native teachers in our weekly sessions.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Back to Resources -->
+				<div class="mt-12 pt-8 border-t border-[#CF4D21]/10">
+					<a href="/resources/" class="inline-flex items-center gap-2 text-[#CF4D21] font-medium hover:gap-3 transition-all" style="font-family: 'Work Sans', Arial, sans-serif;">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+						</svg>
+						Back to Resources
+					</a>
+				</div>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16" style="background-color: #9F6A33;">
+			<div class="max-w-6xl mx-auto px-6 md:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+					<div class="flex flex-col items-center md:items-start">
+						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-28 h-28 mb-4">
+						<p class="text-white font-bold text-xl mb-2 text-center md:text-left" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-base text-center md:text-left" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/resources" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+									Email Us
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script is:inline>
+			// FAQ toggle function
+			function toggleFAQ(button) {
+				const answer = button.nextElementSibling;
+				const icon = button.querySelector('.faq-icon');
+
+				// Close all other FAQs
+				document.querySelectorAll('.faq-answer').forEach(item => {
+					if (item !== answer) {
+						item.classList.remove('active');
+					}
+				});
+				document.querySelectorAll('.faq-icon').forEach(item => {
+					if (item !== icon) {
+						item.classList.remove('rotated');
+					}
+				});
+
+				// Toggle current FAQ
+				answer.classList.toggle('active');
+				icon.classList.toggle('rotated');
+			}
+
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			mobileMenuBtn?.addEventListener('click', () => {
+				mobileMenu?.classList.remove('hidden');
+			});
+
+			closeMobileMenu?.addEventListener('click', () => {
+				mobileMenu?.classList.add('hidden');
+			});
+
+			// Smooth scroll for TOC links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				});
+			});
+		</script>
+
+		<Analytics />
+		<SpeedInsights />
+	</body>
+</html>

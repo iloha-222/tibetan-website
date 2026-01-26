@@ -1,0 +1,365 @@
+---
+import '../../styles/global.css';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+
+// Articles data - add new articles here
+const articles = [
+	{
+		slug: "classical-vs-colloquial-tibetan",
+		title: "Classical vs Colloquial Tibetan: Which Should You Learn?",
+		excerpt: "Confused about where to start with Tibetan? This guide will help you choose the right path with clear examples and a practical roadmap tailored to your goals.",
+		category: "Getting Started",
+		readTime: "5 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-question-mark-4303782-FF751F.svg"
+	},
+	{
+		slug: "colors-in-tibetan",
+		title: "The Colors in Tibetan: A Complete Vocabulary Guide",
+		excerpt: "Ready to describe the world in Tibetan? Master the names of colors with our free downloadable PDF and practical examples.",
+		category: "Vocabulary",
+		readTime: "4 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-colors-7991815.svg"
+	},
+	{
+		slug: "family-in-tibetan",
+		title: "Family in Tibetan: Learn the Words That Really Matter",
+		excerpt: "The Tibetan language holds a beautiful, intricate map of family ties, where respect and social bonds shape every word. This isn't just a list of translations; it's your key to understanding relationships the Tibetan way.",
+		category: "Vocabulary",
+		readTime: "4 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-family-7870781.svg"
+	},
+	{
+		slug: "honorific-speech-in-tibetan",
+		title: "Honorific Speech in Tibetan: When and How to Use It",
+		excerpt: "Want to show genuine respect in Tibetan? Learning honorific speech is your key. Master these polite forms to connect deeply with elders, monks, and new acquaintances.",
+		category: "Grammar",
+		readTime: "3 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-speech-8149138.svg"
+	},
+	{
+		slug: "how-to-type-in-tibetan",
+		title: "How to Type in Tibetan",
+		excerpt: "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+		category: "Getting Started",
+		readTime: "5 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-keyboard-3985613.svg"
+	},
+	{
+		slug: "tibetan-greetings",
+		title: "Tibetan Greetings: Hello, How Are You, Goodbye",
+		excerpt: "Ready to add a touch of Himalayan warmth to your conversations? Learning a few Tibetan greetings is the perfect way to connect more deeply with the culture and its people.",
+		category: "Vocabulary",
+		readTime: "3 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-greeting-6168412.svg"
+	},
+	{
+		slug: "tibetan-days-months",
+		title: "Tibetan Days & Months: It's Not Just a Calendar",
+		excerpt: "Learning days and months in Tibetan isn't about memorizing a dry list. It's about stumbling into a hidden solar and lunar system, where a \"Monday\" is literally \"Moon Day\".",
+		category: "Vocabulary",
+		readTime: "4 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-calendar-8045634.svg"
+	},
+	{
+		slug: "tibetan-numbers",
+		title: "Tibetan Numbers: The Logic That Actually Makes Sense",
+		excerpt: "Once you see the pattern, you don't just learn numbers, you unlock the ability to count, bargain, give your phone number, and talk about dates.",
+		category: "Vocabulary",
+		readTime: "5 min read",
+		date: "January 2025",
+		icon: "/assets/design-assets/noun-number-7178330.svg"
+	}
+];
+---
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Resources - Learn Tibetan | Heart of Tibetan Language</title>
+		<meta name="description" content="Explore our collection of guides, tips, and insights to support your Tibetan language learning journey. From beginner guides to advanced techniques." />
+		<meta name="keywords" content="learn tibetan, tibetan language tips, tibetan learning resources, tibetan guides, classical tibetan, colloquial tibetan" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/" />
+		<meta property="og:title" content="Resources - Learn Tibetan | Heart of Tibetan Language" />
+		<meta property="og:description" content="Explore our collection of guides, tips, and insights to support your Tibetan language learning journey." />
+		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "CollectionPage",
+			"name": "Tibetan Learning Resources",
+			"description": "Guides, tips, and insights to support your Tibetan language learning journey",
+			"url": "https://www.heartoftibetanlanguage.com/resources/"
+		}
+		</script>
+
+		<!-- BreadcrumbList structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Resources",
+					"item": "https://www.heartoftibetanlanguage.com/resources/"
+				}
+			]
+		}
+		</script>
+
+		<style>
+			.article-card {
+				transition: all 0.3s ease;
+			}
+			.article-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+			}
+			.line-clamp-4 {
+				display: -webkit-box;
+				-webkit-line-clamp: 4;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/resources/" class="text-[#CF4D21] font-medium" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="/#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/resources/" class="block text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="/#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="py-16 md:py-24 min-h-screen">
+			<div class="max-w-7xl mx-auto px-6">
+				<!-- Header -->
+				<div class="mb-12">
+					<div class="text-xs font-bold tracking-[0.2em] text-[#CF4D21] uppercase mb-4" style="font-family: 'Work Sans', Arial, sans-serif;">
+						Learning Resources
+					</div>
+					<h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+						Guides & Articles
+					</h1>
+					<p class="text-base opacity-80 max-w-2xl" style="font-family: 'DM Sans', sans-serif; color: #1a1a1a;">
+						Tips, insights, and guides to support your Tibetan language journey.
+					</p>
+				</div>
+
+				<!-- Articles Grid -->
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+					{articles.map((article) => (
+						<article class="group h-full">
+							<a href={`/resources/${article.slug}/`} class="block h-full">
+								<div class="article-card bg-white rounded-xl overflow-hidden border border-[#e8dccf] h-full flex flex-col">
+									<!-- Small icon area -->
+									<div class="py-6 bg-[#FFF8EE] flex items-center justify-center border-b border-[#e8dccf]">
+										<img src={article.icon} alt="" class="w-10 h-10" />
+									</div>
+									<div class="p-5 flex-grow flex flex-col">
+										<div class="flex items-center justify-between text-xs mb-3">
+											<span class="text-[#CF4D21] font-bold uppercase tracking-[0.1em]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 0.65rem;">
+												{article.category}
+											</span>
+											<span class="text-gray-400" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 0.65rem;">
+												{article.readTime}
+											</span>
+										</div>
+										<h2 class="text-base font-bold mb-3 group-hover:text-[#CF4D21] transition-colors leading-snug" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+											{article.title}
+										</h2>
+										<p class="text-sm leading-relaxed mb-4 flex-grow line-clamp-4" style="font-family: 'DM Sans', sans-serif; color: #555;">
+											{article.excerpt}
+										</p>
+										<span class="inline-flex items-center gap-1 text-[#CF4D21] font-semibold text-xs uppercase tracking-[0.08em] mt-auto" style="font-family: 'Work Sans', Arial, sans-serif;">
+											Read More
+											<span>→</span>
+										</span>
+									</div>
+								</div>
+							</a>
+						</article>
+					))}
+				</div>
+
+				{articles.length === 0 && (
+					<div class="text-center py-12">
+						<p class="text-gray-500">No articles yet. Check back soon!</p>
+					</div>
+				)}
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16" style="background-color: #9F6A33;">
+			<div class="max-w-6xl mx-auto px-6 md:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+					<div class="flex flex-col items-center md:items-start">
+						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-28 h-28 mb-4">
+						<p class="text-white font-bold text-xl mb-2 text-center md:text-left" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-base text-center md:text-left" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/resources" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+									Email Us
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+									</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			mobileMenuBtn?.addEventListener('click', () => {
+				mobileMenu?.classList.remove('hidden');
+			});
+
+			closeMobileMenu?.addEventListener('click', () => {
+				mobileMenu?.classList.add('hidden');
+			});
+		</script>
+
+		<Analytics />
+		<SpeedInsights />
+	</body>
+</html>
