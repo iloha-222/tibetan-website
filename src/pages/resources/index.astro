@@ -6,6 +6,33 @@ import Analytics from "@vercel/analytics/astro";
 // Articles data - add new articles here
 const articles = [
 	{
+		slug: "losar-traditions-tibetan-new-year",
+		title: "Losar Traditions: A Day-by-Day Guide to the Tibetan New Year",
+		excerpt: "As the first Tibetan month approaches, the air fills with excitement because it is time for Losar. Walk through the beautiful rituals that connect daily life to auspiciousness, from Gu-thuk soup to prayer flags.",
+		category: "Culture",
+		readTime: "5 min read",
+		date: "February 2026",
+		icon: "/assets/design-assets/noun-losar-celebration-6090511.svg"
+	},
+	{
+		slug: "express-desires-needs-abilities-tibetan",
+		title: "How to Express Desires, Needs, and Abilities in Tibetan",
+		excerpt: "Ever wished you could say \"I want to go to Tibet\" or \"She knows how to write in Tibetan\"? Explore modal verbs in Tibetan and learn to express wants, needs, abilities, and experiences.",
+		category: "Grammar",
+		readTime: "5 min read",
+		date: "February 2026",
+		icon: "/assets/design-assets/noun-wish-6629758.svg"
+	},
+	{
+		slug: "white-wednesday-lhag-kar",
+		title: "How to Celebrate Lhag-kar: The Significance of \"White Wednesday\" in Tibetan Culture",
+		excerpt: "If you have spent any time in Tibetan communities, you may have noticed that on Wednesdays, the streets bloom with the beautiful colors of traditional Chupas. Discover the meaning of Lhag-kar and how you can participate.",
+		category: "Culture",
+		readTime: "5 min read",
+		date: "February 2026",
+		icon: "/assets/design-assets/noun-incense-8229125.svg"
+	},
+	{
 		slug: "classical-vs-colloquial-tibetan",
 		title: "Classical vs Colloquial Tibetan: Which Should You Learn?",
 		excerpt: "Confused about where to start with Tibetan? This guide will help you choose the right path with clear examples and a practical roadmap tailored to your goals.",
@@ -263,7 +290,7 @@ const articles = [
 								<div class="article-card bg-white rounded-xl overflow-hidden border border-[#e8dccf] h-full flex flex-col">
 									<!-- Small icon area -->
 									<div class="py-6 bg-[#FFF8EE] flex items-center justify-center border-b border-[#e8dccf]">
-										<img src={article.icon} alt="" class="w-10 h-10" />
+										<img src={article.icon} alt="" class="w-10 h-10" style="filter: brightness(0) opacity(0.75);" />
 									</div>
 									<div class="p-5 flex-grow flex flex-col">
 										<div class="flex items-center justify-between text-xs mb-3">

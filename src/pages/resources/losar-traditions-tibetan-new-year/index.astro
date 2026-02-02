@@ -4,11 +4,11 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
 const article = {
-	title: "How to Type in Tibetan",
-	excerpt: "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
-	category: "Getting Started",
-	readTime: "8 min read",
-	date: "January 2025"
+	title: "Losar Traditions: A Day-by-Day Guide to the Tibetan New Year",
+	excerpt: "As the first Tibetan month approaches, the air fills with a special kind of excitement because it is time for Losar, our New Year. Let's walk through these traditions together, from preparation rituals to prayer flags on the rooftops.",
+	category: "Culture",
+	readTime: "5 min read",
+	date: "February 2026"
 };
 ---
 
@@ -20,21 +20,21 @@ const article = {
 		<meta name="generator" content={Astro.generator} />
 		<title>{article.title} | Heart of Tibetan Language</title>
 		<meta name="description" content={article.excerpt} />
-		<meta name="keywords" content="type tibetan, tibetan keyboard, tibetan unicode, tibetan typing, tibetan on computer, tibetan on phone, learn tibetan" />
+		<meta name="keywords" content="losar, tibetan new year, tibetan traditions, gu-thuk, tibetan culture, prayer flags, sang-sol, tibetan celebrations, learn tibetan" />
 
 		<!-- Canonical URL -->
-		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/losar-traditions-tibetan-new-year/" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/losar-traditions-tibetan-new-year/" />
 		<meta property="og:title" content={article.title} />
 		<meta property="og:description" content={article.excerpt} />
 		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/losar-traditions-tibetan-new-year/" />
 		<meta name="twitter:title" content={article.title} />
 		<meta name="twitter:description" content={article.excerpt} />
 		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
@@ -49,8 +49,8 @@ const article = {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			"headline": "How to Type in Tibetan",
-			"description": "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+			"headline": "Losar Traditions: A Day-by-Day Guide to the Tibetan New Year",
+			"description": "A day-by-day guide to Losar, the Tibetan New Year, covering preparation rituals, Gu-thuk soup, family celebrations, and prayer flag ceremonies.",
 			"author": {
 				"@type": "Organization",
 				"name": "Heart of Tibetan Language"
@@ -65,7 +65,7 @@ const article = {
 			},
 			"mainEntityOfPage": {
 				"@type": "WebPage",
-				"@id": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+				"@id": "https://www.heartoftibetanlanguage.com/resources/losar-traditions-tibetan-new-year/"
 			}
 		}
 		</script>
@@ -91,8 +91,8 @@ const article = {
 				{
 					"@type": "ListItem",
 					"position": 3,
-					"name": "How to Type in Tibetan",
-					"item": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+					"name": "Losar Traditions",
+					"item": "https://www.heartoftibetanlanguage.com/resources/losar-traditions-tibetan-new-year/"
 				}
 			]
 		}
@@ -139,7 +139,6 @@ const article = {
 				color: #1a1a1a;
 				font-weight: 600;
 			}
-			/* Enhanced info card */
 			.info-card {
 				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
 				border: 1px solid rgba(207, 77, 33, 0.12);
@@ -157,7 +156,35 @@ const article = {
 				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
 				border-radius: 1rem 1rem 0 0;
 			}
-			/* Table of contents */
+			.vocab-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+			.vocab-table th {
+				background-color: #CF4D21;
+				color: white;
+				padding: 10px 14px;
+				text-align: left;
+				font-family: 'Work Sans', Arial, sans-serif;
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+			.vocab-table td {
+				padding: 10px 14px;
+				border-bottom: 1px solid #e8dccf;
+				font-family: 'DM Sans', sans-serif;
+			}
+			.vocab-table tr:nth-child(even) {
+				background-color: #FFF8EE;
+			}
+			.vocab-table tr:hover {
+				background-color: #F4E6D6;
+			}
+			.tibetan-text {
+				font-family: "Noto Serif Tibetan", sans-serif;
+				font-size: 1.1em;
+			}
 			.toc-container {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
@@ -188,20 +215,11 @@ const article = {
 			.toc-link:hover {
 				color: #CF4D21;
 			}
-			/* Steps box */
-			.steps-box {
+			.example-box {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 			}
-			.steps-box ol {
-				list-style: decimal;
-				padding-left: 1.5rem;
-			}
-			.steps-box li {
-				margin-bottom: 0.5rem;
-			}
-			/* CTA cards */
 			.cta-card {
 				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
 				border: 1px solid rgba(207, 77, 33, 0.08);
@@ -212,7 +230,6 @@ const article = {
 				transform: translateY(-4px);
 				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
 			}
-			/* FAQ compact styles */
 			.faq-item {
 				border-bottom: 1px solid #E5E7EB;
 			}
@@ -243,7 +260,6 @@ const article = {
 			.faq-icon.rotated {
 				transform: rotate(180deg);
 			}
-			/* Section icon in orange rounded square */
 			.section-icon-box {
 				display: inline-flex;
 				align-items: center;
@@ -259,10 +275,6 @@ const article = {
 				height: 18px;
 				filter: brightness(0) invert(1);
 			}
-			.tibetan-text {
-				font-family: "Noto Serif Tibetan", sans-serif;
-				font-size: 1.1em;
-			}
 			@media (max-width: 767px) {
 				.article-content h2 {
 					font-size: 1.25rem !important;
@@ -272,6 +284,12 @@ const article = {
 				}
 				.article-content p, .article-content ul, .article-content ol {
 					font-size: 0.95rem !important;
+				}
+				.vocab-table {
+					font-size: 0.85rem;
+				}
+				.vocab-table th, .vocab-table td {
+					padding: 8px 10px;
 				}
 				.faq-question h3 {
 					font-size: 0.9rem;
@@ -290,14 +308,12 @@ const article = {
 					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
 				</a>
 
-				<!-- Mobile Menu Button -->
 				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
 				</button>
 
-				<!-- Navigation Links -->
 				<div class="hidden lg:flex items-center space-x-8 ml-auto">
 					<div class="flex space-x-8">
 						<div class="relative group">
@@ -376,7 +392,7 @@ const article = {
 					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 					</svg>
-					<span class="text-[#CF4D21]">How to Type in Tibetan</span>
+					<span class="text-[#CF4D21]">Losar Traditions</span>
 				</nav>
 			</div>
 		</div>
@@ -401,7 +417,7 @@ const article = {
 				</h1>
 
 				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
-					Here's the thing you quickly discover: you can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. You can't text a friend, look up a word online, or write down a note properly. This guide won't give you a confusing list of software options. You'll be typing <span class="tibetan-text">བོད་སྐད་</span> on your own computer or phone by the end of this article.
+					Dear respected and appreciated Tibetan language learners, a very warm welcome to this guide! As the first Tibetan month approaches, the air fills with a special kind of excitement because it is time for Losar, our New Year. While a Tibetan proverb reminds us that every Losar inches us closer to death, we choose to welcome it with a smile and a joyful heart. Celebrating Losar is about more than just a date; it is a series of beautiful rituals that connect our daily lives to a sense of auspiciousness (<em>rten-'brel</em>). Let's walk through these traditions together with the patience of our friend Mr. Sloth!
 				</p>
 			</div>
 		</header>
@@ -410,37 +426,29 @@ const article = {
 		<article class="px-4 md:px-6 pb-16">
 			<div class="max-w-4xl mx-auto">
 				<!-- What you'll learn -->
-				<div class="info-card rounded-2xl p-5 mb-8">
-					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+				<div class="info-card rounded-2xl p-6 mb-10">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
 						</span>
-						What you'll get here:
+						What you'll learn
 					</h3>
 					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							The one system you need: Unicode (and what that actually means for you)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>How Tibetan families prepare for the New Year</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							How to set it up on Windows, Mac, Android, and iPhone in under 3 minutes
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>The meaning behind Gu-thuk soup and its hidden symbols</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							What to do when your text looks wrong (the "broken font" problem)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>Day-by-day traditions from Day 1 through Day 3</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							Real-world practice drills
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>Prayer flag and smoke offering rituals</span>
 						</li>
 					</ul>
 				</div>
@@ -449,144 +457,100 @@ const article = {
 				<div class="toc-container rounded-2xl p-6 mb-10">
 					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
 					<nav class="space-y-1">
-						<a href="#unicode" class="toc-item">
+						<a href="#preparation" class="toc-item">
 							<span class="toc-number">1</span>
-							<span class="toc-link">The Only System You Need: Unicode</span>
+							<span class="toc-link">The Busy Preparation: The 28th and 30th Days</span>
 						</a>
-						<a href="#computer" class="toc-item">
+						<a href="#gu-thuk" class="toc-item">
 							<span class="toc-number">2</span>
-							<span class="toc-link">Setting Up: Your Computer (Windows & Mac)</span>
+							<span class="toc-link">The 29th Day: Ritual Dances and "Gu-thuk" Soup</span>
 						</a>
-						<a href="#phone" class="toc-item">
+						<a href="#day-1" class="toc-item">
 							<span class="toc-number">3</span>
-							<span class="toc-link">Setting Up: Your Phone (Android & iPhone)</span>
+							<span class="toc-link">Day 1: The Family and the Three Jewels</span>
 						</a>
-						<a href="#broken-text" class="toc-item">
+						<a href="#day-2" class="toc-item">
 							<span class="toc-number">4</span>
-							<span class="toc-link">Fixing the "Broken Text" Problem</span>
+							<span class="toc-link">Day 2: Visiting and Dancing</span>
 						</a>
-						<a href="#drills" class="toc-item">
+						<a href="#day-3" class="toc-item">
 							<span class="toc-number">5</span>
-							<span class="toc-link">Real-World Practice Drills</span>
+							<span class="toc-link">Day 3: Prayer Flags and Smoke Offerings</span>
 						</a>
 						<a href="#faq" class="toc-item">
 							<span class="toc-number">6</span>
-							<span class="toc-link">Common Questions & Annoying Problems</span>
+							<span class="toc-link">Frequently Asked Questions</span>
 						</a>
 					</nav>
 				</div>
 
 				<!-- Article Body -->
 				<div class="article-content">
-					<h2 id="unicode">The Only System You Need: Unicode</h2>
-					<p>For modern typing, there's only one system that matters: <strong>Unicode</strong>.</p>
-					<p>Think of Unicode as a universal agreement. It's a standard that gives every single letter and symbol in every writing system its own unique code. Before Unicode, sending a Tibetan email was a gamble. The recipient would see gibberish unless they had the exact same font. Unicode fixed that.</p>
-					<p>When you type in Unicode, you're using this universal code. It means the Tibetan you type on your laptop in New York will show up correctly on your friend's phone in Dharamshala, on a website, in a Word document, or in a text message. It just works.</p>
-					<p><strong>The goal is to get your device to use a Tibetan Unicode keyboard. That's it.</strong></p>
+					<h2 id="preparation">1. The Busy Preparation: The 28th and 30th Days</h2>
+					<p>The end of the 12th Tibetan month is a very busy time for every household. Families perform a thorough cleaning of their homes (<em>nang gtsang-ma bzo-yag</em>) to sweep away the old year's obstacles. There is a special tradition of purification through bathing; it is customary for the men to bathe on the 29th day, followed by the women on the 30th. This practice dates back to times when Losar was one of the few occasions for a full bath!</p>
 
-					<h2 id="computer">Setting Up: Your Computer (Windows & Mac)</h2>
-					<p>You don't need to buy anything. The keyboard is already built into your system. You just need to turn it on.</p>
+					<h2 id="gu-thuk">2. The 29th Day: Ritual Dances and "Gu-thuk" Soup</h2>
+					<p>On the 28th and 29th days, many people visit monasteries to watch <strong>Cham</strong>, the sacred ritual dances performed by monks wearing impressive and sometimes scary masks.</p>
+					<p>The highlight of the 29th evening is <strong>Gu-thuk</strong>, a soup made with nine ingredients. Inside the dough balls, we hide symbols that act like "fortune cookies" to reveal a person's character. For example:</p>
 
-					<h3>On Windows (10 & 11):</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>Settings</strong> (the gear icon).</li>
-							<li>Go to <strong>Time & Language > Language & Region</strong>.</li>
-							<li>Click <strong>"Add a language"</strong>.</li>
-							<li>In the search bar, type <strong>"Tibetan"</strong>.</li>
-							<li>Select <strong>"Tibetan (བོད་ཡིག)"</strong> and click Next.</li>
-							<li>On the next screen, uncheck "Set as my Windows display language" (unless you want your whole system in Tibetan!). Just install the basic language pack.</li>
-							<li>Click <strong>Install</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Once installed, you can switch keyboards. Look for a toolbar near your system clock that says something like "ENG" or "ENG/US". Click it. You'll now see "བོད་ཡིག" as an option. Click to select it.</p>
+					<div class="overflow-x-auto my-6">
+						<table class="vocab-table rounded-xl overflow-hidden">
+							<thead>
+								<tr>
+									<th>Symbol</th>
+									<th>Tibetan</th>
+									<th>Meaning</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Wool</strong></td>
+									<td><em>bal</em></td>
+									<td>Represents a gentle character</td>
+								</tr>
+								<tr>
+									<td><strong>Sun</strong></td>
+									<td><em>nyi-ma</em></td>
+									<td>Represents a radiant person</td>
+								</tr>
+								<tr>
+									<td><strong>Salt</strong></td>
+									<td><em>tshwa</em></td>
+									<td>Playfully indicates a lazy person</td>
+								</tr>
+								<tr>
+									<td><strong>Thief</strong></td>
+									<td><em>nang-rku</em></td>
+									<td>A person with "long fingers" who might take things</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 
-					<h3>On Mac:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>System Settings</strong> (Apple menu > System Settings).</li>
-							<li>Go to <strong>Keyboard > Text Input</strong> (or Input Sources on older versions).</li>
-							<li>Click the <strong>"Edit..."</strong> or <strong>"+"</strong> button.</li>
-							<li>In the left list, select <strong>"Tibetan"</strong>.</li>
-							<li>In the right panel, choose <strong>"Tibetan - QWERTY"</strong> (this is the most straightforward).</li>
-							<li>Click <strong>Add</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch, you'll see a flag or language icon in your menu bar. Click it and select "Tibetan."</p>
-					</div>
+					<p>This evening is also about dispelling obstacles (<em>bar-chad sel-wa</em>) for the coming year.</p>
 
-					<h2 id="phone">Setting Up: Your Phone (Android & iPhone)</h2>
-					<p>This is even easier.</p>
+					<h2 id="day-1">3. Day 1: The Family and the Three Jewels</h2>
+					<p>On the first day of Losar (<em>Tshe-pa Chik</em>), we wake up very early. The day begins by making offerings to the Three Jewels (<em>dkon-mchog</em>) at the house shrine, which has been beautifully decorated with items like "donkey ear" pastries (<em>bong-bu'i a-mchog</em>).</p>
+					<p>We celebrate within the family by drinking <strong>Chang-kol</strong> (boiled rice beer) and eating <strong>Dresi</strong> (sweet rice with wild sweet potato). It is also the day to wear your brand-new <strong>Chupa</strong>. Around 8:00 or 9:00 AM, many Tibetans visit their lamas and local monasteries for <strong>Chok-jal</strong>. Interestingly, some believe it is inauspicious to spend money on this first day!</p>
 
-					<h3>On Android:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > System > Languages & input > On-screen keyboard</strong>.</li>
-							<li>Tap <strong>Gboard</strong> (Google's keyboard, which is usually pre-installed).</li>
-							<li>Go to <strong>Languages > Add keyboard</strong>.</li>
-							<li>Scroll or search for <strong>"Tibetan."</strong> Select it.</li>
-							<li>You may be asked to download a language pack. Do it.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To use it, open any app where you type (like Messages). Tap the spacebar to cycle languages, or tap the globe/emoji icon to select Tibetan.</p>
-					</div>
+					<h2 id="day-2">4. Day 2: Visiting and Dancing</h2>
+					<p>The second day is for social connection. We visit neighbors and friends to share food and drinks of all kinds. This is the time for <strong>Zhab-dro</strong>, our traditional Tibetan dances. It is a time when people spend the whole day and night singing, dancing, and sometimes even playing cards (<em>tog-se</em>).</p>
 
-					<h3>On iPhone:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > General > Keyboard > Keyboards</strong>.</li>
-							<li>Tap <strong>"Add New Keyboard..."</strong>.</li>
-							<li>Scroll and select <strong>"Tibetan."</strong> There's only one option.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch while typing, tap the globe icon next to the space bar.</p>
-					</div>
-
-					<h2 id="broken-text">Fixing the "Broken Text" Problem</h2>
-					<p>You've set it up, typed something, and it looks like a series of separate, broken letters or boxes. <strong>This is a font issue, not a typing issue.</strong></p>
-					<p>Your computer has the keyboard to input the Unicode codes, but it might not have a font that can display the Tibetan letters properly.</p>
-					<p>The fix is simple: <strong>Install a Unicode Tibetan font.</strong> One excellent, free, and widely used font is <strong>"Jomolhari."</strong></p>
-
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Search online for <strong>"Jomolhari font download."</strong></li>
-							<li>Download the .ttf file from a reputable site (like fonts.google.com or the University of Virginia's Tibetan site).</li>
-							<li>Open the downloaded file and click <strong>"Install"</strong> (Windows) or drag it to your Font Book (Mac).</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Now, when you type in an app (like Word, a browser, or a text editor), select the Jomolhari font from the font menu. Your Tibetan text should render perfectly, with correct stacking and vowel placement.</p>
-					</div>
-
-					<h2 id="drills" class="flex items-center gap-3">
-						<span class="section-icon-box">
-							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
-						</span>
-						Real-World Practice Drills
-					</h2>
-
-					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: The Name Drill</h4>
-						<p>Type your name. Sound it out in Tibetan and try to spell it. <span class="tibetan-text">ཇོན་</span> (John)? <span class="tibetan-text">མེར་ཡི་</span> (Mary)? This makes it personal.</p>
-					</div>
-
-					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: The 5-Word Daily</h4>
-						<p>Every day, type 5 vocabulary words you know. <span class="tibetan-text">མི</span> (person), <span class="tibetan-text">ཆུ</span> (water), <span class="tibetan-text">ཁ་པར</span> (phone). Muscle memory builds here.</p>
-					</div>
-
-					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Copy a Line</h4>
-						<p>Find a simple Tibetan sentence online. Open a notepad app and copy it, letter by letter. This trains you to find keys without thinking.</p>
-					</div>
+					<h2 id="day-3">5. Day 3: Prayer Flags and Smoke Offerings</h2>
+					<p>On the third day, the celebration moves to the rooftops. Families raise new prayer flags (<em>dar-chok</em>) and wind horses (<em>rlung-rta</em>) on their houses. We perform <strong>Sang-sol</strong>, a smoke offering ritual using burnt herbs for purification. During this ritual, it is tradition to throw tsampa into the air while shouting, "So so! Happy, happy! May the gods win!".</p>
 
 					<h2 id="faq" class="flex items-center gap-3">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
 						</span>
-						Common Questions & Annoying Problems
+						6. Frequently Asked Questions
 					</h2>
 
 					<div class="my-6">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									Can I use this to type in social media or Google Docs?
+									How long does Losar actually last?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -594,14 +558,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Yes. Anywhere you can type text and select a font, you can type Tibetan. In Google Docs, you may need to select "More fonts" and search for/add "Jomolhari."
+									In exile communities, the main celebrations usually last three days, though in Tibet they traditionally continued until the 15th day (the full moon).
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									What if I need to type old, rare characters?
+									What is the significance of the "Donkey Ears" pastry?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -609,14 +573,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									For 99% of users, the standard keyboard has everything. For scholars, there are specialized keyboards and tools, but start here.
+									Called <em>bong-bu'i a-mchog</em>, these are large, hollow fried pastries (khapse) used primarily to decorate the house shrine (<em>mchok-shem</em>).
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									My phone keyboard doesn't show the Tibetan letters on the keys.
+									Why do Tibetans use "auxiliaries of probability" when talking about the future?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -624,14 +588,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									That's normal. It will show the English QWERTY layout. You have to remember which English key corresponds to which Tibetan letter. Use a layout image as a reference.
+									This might have its basis in the Buddhist principle of impermanence; because the future is always uncertain, we often use endings like <em>sa-ma-red</em> (most likely) instead of a definite "will".
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									How does this connect to what I'm learning?
+									Is it okay to mix languages during Losar?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -639,7 +603,7 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Directly. Now you can type your vocabulary lists, make digital flashcards, and look up words you hear. Start by typing the words from our <a href="/resources/family-in-tibetan/" class="text-[#CF4D21] hover:underline">Family Vocabulary guide</a>.
+									While we aim for "pure Tibetan," we often joke that a beginner is allowed to speak <em>Ra-ma-luk</em> (neither goat nor sheep) while learning.
 								</p>
 							</div>
 						</div>
@@ -648,8 +612,8 @@ const article = {
 
 				<!-- CTA Cards -->
 				<div class="mt-12 space-y-6">
-					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Today</h3>
-					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you can type in Tibetan, continue building your skills with our courses.</p>
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Continue Your Journey</h3>
+					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you know about Losar traditions, continue building your Tibetan skills with our courses.</p>
 
 					<div class="grid md:grid-cols-2 gap-6">
 						<a href="/self-paced/beginner/" class="block group">
@@ -738,12 +702,10 @@ const article = {
 		</footer>
 
 		<script is:inline>
-			// FAQ toggle function
 			function toggleFAQ(button) {
 				const answer = button.nextElementSibling;
 				const icon = button.querySelector('.faq-icon');
 
-				// Close all other FAQs
 				document.querySelectorAll('.faq-answer').forEach(item => {
 					if (item !== answer) {
 						item.classList.remove('active');
@@ -755,12 +717,10 @@ const article = {
 					}
 				});
 
-				// Toggle current FAQ
 				answer.classList.toggle('active');
 				icon.classList.toggle('rotated');
 			}
 
-			// Mobile menu toggle
 			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 			const closeMobileMenu = document.getElementById('closeMobileMenu');
 			const mobileMenu = document.getElementById('mobileMenu');
@@ -773,7 +733,6 @@ const article = {
 				mobileMenu?.classList.add('hidden');
 			});
 
-			// Smooth scroll for TOC links
 			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 				anchor.addEventListener('click', function (e) {
 					e.preventDefault();

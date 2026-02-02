@@ -4,11 +4,11 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
 const article = {
-	title: "How to Type in Tibetan",
-	excerpt: "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
-	category: "Getting Started",
-	readTime: "8 min read",
-	date: "January 2025"
+	title: "How to Celebrate Lhag-kar: The Significance of \"White Wednesday\" in Tibetan Culture",
+	excerpt: "If you have spent any time in Tibetan communities, you may have noticed that on Wednesdays, the streets bloom with the beautiful colors of traditional Chupas. Discover the meaning of Lhag-kar and how you can participate in this weekly celebration of Tibetan identity.",
+	category: "Culture",
+	readTime: "5 min read",
+	date: "February 2026"
 };
 ---
 
@@ -20,21 +20,21 @@ const article = {
 		<meta name="generator" content={Astro.generator} />
 		<title>{article.title} | Heart of Tibetan Language</title>
 		<meta name="description" content={article.excerpt} />
-		<meta name="keywords" content="type tibetan, tibetan keyboard, tibetan unicode, tibetan typing, tibetan on computer, tibetan on phone, learn tibetan" />
+		<meta name="keywords" content="lhag-kar, white wednesday, tibetan culture, tibetan traditions, chupa, sang-sol, dalai lama soul day, tibetan identity, learn tibetan" />
 
 		<!-- Canonical URL -->
-		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/white-wednesday-lhag-kar/" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/white-wednesday-lhag-kar/" />
 		<meta property="og:title" content={article.title} />
 		<meta property="og:description" content={article.excerpt} />
 		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/white-wednesday-lhag-kar/" />
 		<meta name="twitter:title" content={article.title} />
 		<meta name="twitter:description" content={article.excerpt} />
 		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
@@ -49,8 +49,8 @@ const article = {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			"headline": "How to Type in Tibetan",
-			"description": "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+			"headline": "How to Celebrate Lhag-kar: The Significance of White Wednesday in Tibetan Culture",
+			"description": "If you have spent any time in Tibetan communities, you may have noticed that on Wednesdays, the streets bloom with the beautiful colors of traditional Chupas. Discover the meaning of Lhag-kar and how you can participate.",
 			"author": {
 				"@type": "Organization",
 				"name": "Heart of Tibetan Language"
@@ -65,7 +65,7 @@ const article = {
 			},
 			"mainEntityOfPage": {
 				"@type": "WebPage",
-				"@id": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+				"@id": "https://www.heartoftibetanlanguage.com/resources/white-wednesday-lhag-kar/"
 			}
 		}
 		</script>
@@ -91,8 +91,8 @@ const article = {
 				{
 					"@type": "ListItem",
 					"position": 3,
-					"name": "How to Type in Tibetan",
-					"item": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+					"name": "White Wednesday (Lhag-kar)",
+					"item": "https://www.heartoftibetanlanguage.com/resources/white-wednesday-lhag-kar/"
 				}
 			]
 		}
@@ -139,7 +139,6 @@ const article = {
 				color: #1a1a1a;
 				font-weight: 600;
 			}
-			/* Enhanced info card */
 			.info-card {
 				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
 				border: 1px solid rgba(207, 77, 33, 0.12);
@@ -157,7 +156,35 @@ const article = {
 				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
 				border-radius: 1rem 1rem 0 0;
 			}
-			/* Table of contents */
+			.vocab-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+			.vocab-table th {
+				background-color: #CF4D21;
+				color: white;
+				padding: 10px 14px;
+				text-align: left;
+				font-family: 'Work Sans', Arial, sans-serif;
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+			.vocab-table td {
+				padding: 10px 14px;
+				border-bottom: 1px solid #e8dccf;
+				font-family: 'DM Sans', sans-serif;
+			}
+			.vocab-table tr:nth-child(even) {
+				background-color: #FFF8EE;
+			}
+			.vocab-table tr:hover {
+				background-color: #F4E6D6;
+			}
+			.tibetan-text {
+				font-family: "Noto Serif Tibetan", sans-serif;
+				font-size: 1.1em;
+			}
 			.toc-container {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
@@ -188,20 +215,11 @@ const article = {
 			.toc-link:hover {
 				color: #CF4D21;
 			}
-			/* Steps box */
-			.steps-box {
+			.example-box {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 			}
-			.steps-box ol {
-				list-style: decimal;
-				padding-left: 1.5rem;
-			}
-			.steps-box li {
-				margin-bottom: 0.5rem;
-			}
-			/* CTA cards */
 			.cta-card {
 				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
 				border: 1px solid rgba(207, 77, 33, 0.08);
@@ -212,7 +230,6 @@ const article = {
 				transform: translateY(-4px);
 				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
 			}
-			/* FAQ compact styles */
 			.faq-item {
 				border-bottom: 1px solid #E5E7EB;
 			}
@@ -243,7 +260,6 @@ const article = {
 			.faq-icon.rotated {
 				transform: rotate(180deg);
 			}
-			/* Section icon in orange rounded square */
 			.section-icon-box {
 				display: inline-flex;
 				align-items: center;
@@ -259,10 +275,6 @@ const article = {
 				height: 18px;
 				filter: brightness(0) invert(1);
 			}
-			.tibetan-text {
-				font-family: "Noto Serif Tibetan", sans-serif;
-				font-size: 1.1em;
-			}
 			@media (max-width: 767px) {
 				.article-content h2 {
 					font-size: 1.25rem !important;
@@ -272,6 +284,12 @@ const article = {
 				}
 				.article-content p, .article-content ul, .article-content ol {
 					font-size: 0.95rem !important;
+				}
+				.vocab-table {
+					font-size: 0.85rem;
+				}
+				.vocab-table th, .vocab-table td {
+					padding: 8px 10px;
 				}
 				.faq-question h3 {
 					font-size: 0.9rem;
@@ -376,7 +394,7 @@ const article = {
 					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 					</svg>
-					<span class="text-[#CF4D21]">How to Type in Tibetan</span>
+					<span class="text-[#CF4D21]">White Wednesday (Lhag-kar)</span>
 				</nav>
 			</div>
 		</div>
@@ -401,7 +419,7 @@ const article = {
 				</h1>
 
 				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
-					Here's the thing you quickly discover: you can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. You can't text a friend, look up a word online, or write down a note properly. This guide won't give you a confusing list of software options. You'll be typing <span class="tibetan-text">བོད་སྐད་</span> on your own computer or phone by the end of this article.
+					Dear respected and appreciated Tibetan language learners, a very warm welcome to this guide! If you have spent any time in Tibetan communities, you may have noticed that on Wednesdays, the streets often bloom with the beautiful colors of traditional <strong>Chupas</strong>. This is <strong>Lhag-kar</strong> (<span class="tibetan-text">ལྷག་དཀར།</span>), or "White Wednesday," a day dedicated to the preservation of Tibetan identity and the honoring of His Holiness the XIV Dalai Lama. Grab a cup of tea, remember the patience of our friend Mr. Sloth, and let us explore how you can participate in this weekly auspiciousness!
 				</p>
 			</div>
 		</header>
@@ -410,37 +428,29 @@ const article = {
 		<article class="px-4 md:px-6 pb-16">
 			<div class="max-w-4xl mx-auto">
 				<!-- What you'll learn -->
-				<div class="info-card rounded-2xl p-5 mb-8">
-					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+				<div class="info-card rounded-2xl p-6 mb-10">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
 						</span>
-						What you'll get here:
+						What you'll learn
 					</h3>
 					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							The one system you need: Unicode (and what that actually means for you)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>The meaning and origin of Lhag-kar (White Wednesday)</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							How to set it up on Windows, Mac, Android, and iPhone in under 3 minutes
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>Why Wednesday is the Dalai Lama's "soul day"</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							What to do when your text looks wrong (the "broken font" problem)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>The four sacred actions to honor this day</span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							Real-world practice drills
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>Rituals, vocabulary, and practical ways to participate</span>
 						</li>
 					</ul>
 				</div>
@@ -449,144 +459,123 @@ const article = {
 				<div class="toc-container rounded-2xl p-6 mb-10">
 					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
 					<nav class="space-y-1">
-						<a href="#unicode" class="toc-item">
+						<a href="#what-is-lhag-kar" class="toc-item">
 							<span class="toc-number">1</span>
-							<span class="toc-link">The Only System You Need: Unicode</span>
+							<span class="toc-link">What is Lhag-kar?</span>
 						</a>
-						<a href="#computer" class="toc-item">
+						<a href="#soul-day" class="toc-item">
 							<span class="toc-number">2</span>
-							<span class="toc-link">Setting Up: Your Computer (Windows & Mac)</span>
+							<span class="toc-link">The "Soul Day" of the Dalai Lama</span>
 						</a>
-						<a href="#phone" class="toc-item">
+						<a href="#four-actions" class="toc-item">
 							<span class="toc-number">3</span>
-							<span class="toc-link">Setting Up: Your Phone (Android & iPhone)</span>
+							<span class="toc-link">The Four Sacred Actions of White Wednesday</span>
 						</a>
-						<a href="#broken-text" class="toc-item">
+						<a href="#rituals" class="toc-item">
 							<span class="toc-number">4</span>
-							<span class="toc-link">Fixing the "Broken Text" Problem</span>
+							<span class="toc-link">Rituals and Symbols: Smoke and Song</span>
 						</a>
 						<a href="#drills" class="toc-item">
 							<span class="toc-number">5</span>
-							<span class="toc-link">Real-World Practice Drills</span>
+							<span class="toc-link">Mini Tasks & Drills</span>
 						</a>
 						<a href="#faq" class="toc-item">
 							<span class="toc-number">6</span>
-							<span class="toc-link">Common Questions & Annoying Problems</span>
+							<span class="toc-link">Frequently Asked Questions</span>
 						</a>
 					</nav>
 				</div>
 
 				<!-- Article Body -->
 				<div class="article-content">
-					<h2 id="unicode">The Only System You Need: Unicode</h2>
-					<p>For modern typing, there's only one system that matters: <strong>Unicode</strong>.</p>
-					<p>Think of Unicode as a universal agreement. It's a standard that gives every single letter and symbol in every writing system its own unique code. Before Unicode, sending a Tibetan email was a gamble. The recipient would see gibberish unless they had the exact same font. Unicode fixed that.</p>
-					<p>When you type in Unicode, you're using this universal code. It means the Tibetan you type on your laptop in New York will show up correctly on your friend's phone in Dharamshala, on a website, in a Word document, or in a text message. It just works.</p>
-					<p><strong>The goal is to get your device to use a Tibetan Unicode keyboard. That's it.</strong></p>
+					<h2 id="what-is-lhag-kar">1. What is Lhag-kar?</h2>
+					<p>The word <strong>Lhag-kar</strong> is a contraction of two Tibetan words: <strong>Lhag-pa</strong> (<span class="tibetan-text">གཟའ་ལྷག་པེ།</span>), meaning Wednesday, and <strong>Kar-po</strong> (<span class="tibetan-text">དཀར་པོེ།</span>), meaning white. In Tibetan culture, white is a color that symbolizes purity and auspiciousness. This movement began as a grassroots effort to keep the Tibetan language and culture alive through small, intentional acts every week.</p>
 
-					<h2 id="computer">Setting Up: Your Computer (Windows & Mac)</h2>
-					<p>You don't need to buy anything. The keyboard is already built into your system. You just need to turn it on.</p>
+					<h2 id="soul-day">2. The "Soul Day" of the Dalai Lama</h2>
+					<p>Every person in Tibetan astrology has a <strong>bla-gza'</strong> (<span class="tibetan-text">བླ་གཟའོ།</span>), or "soul day," based on the day of the week they were born. Wednesday is the soul day of <strong>His Holiness the XIV Dalai Lama</strong>. Because of this, Wednesdays are considered exceptionally sacred for performing virtuous deeds and focusing on the preservation of the Tibetan heritage.</p>
 
-					<h3>On Windows (10 & 11):</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>Settings</strong> (the gear icon).</li>
-							<li>Go to <strong>Time & Language > Language & Region</strong>.</li>
-							<li>Click <strong>"Add a language"</strong>.</li>
-							<li>In the search bar, type <strong>"Tibetan"</strong>.</li>
-							<li>Select <strong>"Tibetan (བོད་ཡིག)"</strong> and click Next.</li>
-							<li>On the next screen, uncheck "Set as my Windows display language" (unless you want your whole system in Tibetan!). Just install the basic language pack.</li>
-							<li>Click <strong>Install</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Once installed, you can switch keyboards. Look for a toolbar near your system clock that says something like "ENG" or "ENG/US". Click it. You'll now see "བོད་ཡིག" as an option. Click to select it.</p>
+					<h2 id="four-actions">3. The Four Sacred Actions of White Wednesday</h2>
+					<p>According to the popular song "Auspicious White Wednesday," there are four specific ways to honor this day:</p>
+
+					<div class="overflow-x-auto my-6">
+						<table class="vocab-table rounded-xl overflow-hidden">
+							<thead>
+								<tr>
+									<th>Practice</th>
+									<th>Tibetan Term</th>
+									<th>Significance</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Prostration</strong></td>
+									<td><span class="tibetan-text">ཕྱིག་འཚལ།</span> (phyag-'tshal)</td>
+									<td>Offering three prostrations to His Holiness the Dalai Lama.</td>
+								</tr>
+								<tr>
+									<td><strong>Pure Speech</strong></td>
+									<td><span class="tibetan-text">བོད་སྐད་གཙང་མ།</span> (bod-skad gtsang-ma)</td>
+									<td>Making an effort to speak "pure Tibetan" without mixing in other languages.</td>
+								</tr>
+								<tr>
+									<td><strong>Traditional Food</strong></td>
+									<td><span class="tibetan-text">བོད་ཀྱི་རྩམ་པེ།</span> (bod-kyi rtsam-pa)</td>
+									<td>Ingesting traditional foods like tsampa to stay connected to the land.</td>
+								</tr>
+								<tr>
+									<td><strong>Traditional Dress</strong></td>
+									<td><span class="tibetan-text">བོད་ཆས།</span> (bod-chas)</td>
+									<td>Wearing the <strong>Chupa</strong> to ensure traditional clothing remains a living practice.</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 
-					<h3>On Mac:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>System Settings</strong> (Apple menu > System Settings).</li>
-							<li>Go to <strong>Keyboard > Text Input</strong> (or Input Sources on older versions).</li>
-							<li>Click the <strong>"Edit..."</strong> or <strong>"+"</strong> button.</li>
-							<li>In the left list, select <strong>"Tibetan"</strong>.</li>
-							<li>In the right panel, choose <strong>"Tibetan - QWERTY"</strong> (this is the most straightforward).</li>
-							<li>Click <strong>Add</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch, you'll see a flag or language icon in your menu bar. Click it and select "Tibetan."</p>
-					</div>
+					<h2 id="rituals">4. Rituals and Symbols: Smoke and Song</h2>
+					<p>Beyond the four actions, two rituals are very common on Lhag-kar:</p>
 
-					<h2 id="phone">Setting Up: Your Phone (Android & iPhone)</h2>
-					<p>This is even easier.</p>
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Sang-sol (<span class="tibetan-text">བསང་གཏོང་བ།</span>)</h4>
+						<p class="text-gray-600 mb-4">It is a tradition to perform smoke offering rituals on Wednesdays. This involves burning aromatic herbs for purification and to invoke protective deities.</p>
 
-					<h3>On Android:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > System > Languages & input > On-screen keyboard</strong>.</li>
-							<li>Tap <strong>Gboard</strong> (Google's keyboard, which is usually pre-installed).</li>
-							<li>Go to <strong>Languages > Add keyboard</strong>.</li>
-							<li>Scroll or search for <strong>"Tibetan."</strong> Select it.</li>
-							<li>You may be asked to download a language pack. Do it.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To use it, open any app where you type (like Messages). Tap the spacebar to cycle languages, or tap the globe/emoji icon to select Tibetan.</p>
-					</div>
-
-					<h3>On iPhone:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > General > Keyboard > Keyboards</strong>.</li>
-							<li>Tap <strong>"Add New Keyboard..."</strong>.</li>
-							<li>Scroll and select <strong>"Tibetan."</strong> There's only one option.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch while typing, tap the globe icon next to the space bar.</p>
-					</div>
-
-					<h2 id="broken-text">Fixing the "Broken Text" Problem</h2>
-					<p>You've set it up, typed something, and it looks like a series of separate, broken letters or boxes. <strong>This is a font issue, not a typing issue.</strong></p>
-					<p>Your computer has the keyboard to input the Unicode codes, but it might not have a font that can display the Tibetan letters properly.</p>
-					<p>The fix is simple: <strong>Install a Unicode Tibetan font.</strong> One excellent, free, and widely used font is <strong>"Jomolhari."</strong></p>
-
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Search online for <strong>"Jomolhari font download."</strong></li>
-							<li>Download the .ttf file from a reputable site (like fonts.google.com or the University of Virginia's Tibetan site).</li>
-							<li>Open the downloaded file and click <strong>"Install"</strong> (Windows) or drag it to your Font Book (Mac).</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Now, when you type in an app (like Word, a browser, or a text editor), select the Jomolhari font from the font menu. Your Tibetan text should render perfectly, with correct stacking and vowel placement.</p>
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Melody and Devotion</h4>
+						<p class="text-gray-600">Many Tibetans listen to songs dedicated to the day, such as the one by K.N. Khentse, which reminds learners that even if they are in "foreign lands," they should never forget the kindness of their root teachers.</p>
 					</div>
 
 					<h2 id="drills" class="flex items-center gap-3">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
 						</span>
-						Real-World Practice Drills
+						5. Mini Tasks & Drills
 					</h2>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: The Name Drill</h4>
-						<p>Type your name. Sound it out in Tibetan and try to spell it. <span class="tibetan-text">ཇོན་</span> (John)? <span class="tibetan-text">མེར་ཡི་</span> (Mary)? This makes it personal.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: Vocabulary Match</h4>
+						<p>Which term refers to the Dalai Lama's "soul day"? (a) <em>Sang-sol</em> (b) <em>Bla-gza'</em> (c) <em>Chupa</em>. (Answer: b).</p>
 					</div>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: The 5-Word Daily</h4>
-						<p>Every day, type 5 vocabulary words you know. <span class="tibetan-text">མི</span> (person), <span class="tibetan-text">ཆུ</span> (water), <span class="tibetan-text">ཁ་པར</span> (phone). Muscle memory builds here.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: Sentence Build</h4>
+						<p>How would you say "Because it is Wednesday, I am wearing a Chupa"? (Hint: Use the connector <span class="tibetan-text">ཙང་།</span> from our previous lessons).</p>
 					</div>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Copy a Line</h4>
-						<p>Find a simple Tibetan sentence online. Open a notepad app and copy it, letter by letter. This trains you to find keys without thinking.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Practice</h4>
+						<p>This Wednesday, try to eat one meal of <strong>tsampa</strong> and speak five sentences of <strong>pure Tibetan</strong>!</p>
 					</div>
 
 					<h2 id="faq" class="flex items-center gap-3">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
 						</span>
-						Common Questions & Annoying Problems
+						6. Frequently Asked Questions
 					</h2>
 
 					<div class="my-6">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									Can I use this to type in social media or Google Docs?
+									Do I have to wear a Chupa every Wednesday?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -594,14 +583,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Yes. Anywhere you can type text and select a font, you can type Tibetan. In Google Docs, you may need to select "More fonts" and search for/add "Jomolhari."
+									While encouraged by His Holiness to keep the tradition alive, the most important part is the intentional effort to support Tibetan culture.
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									What if I need to type old, rare characters?
+									What is the "White" in White Wednesday?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -609,14 +598,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									For 99% of users, the standard keyboard has everything. For scholars, there are specialized keyboards and tools, but start here.
+									It comes from <em>Kar-po</em> (<span class="tibetan-text">དཀར་པོེ།</span>), signifying purity and the auspiciousness of the Dalai Lama's soul day.
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									My phone keyboard doesn't show the Tibetan letters on the keys.
+									Can I perform Sang-sol if I live in an apartment?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -624,14 +613,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									That's normal. It will show the English QWERTY layout. You have to remember which English key corresponds to which Tibetan letter. Use a layout image as a reference.
+									Many Tibetans perform a small incense offering (<em>spos</em>) at their house shrine if they cannot perform a full smoke offering on a roof or mountain.
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									How does this connect to what I'm learning?
+									Is Lhag-kar only for Tibetans?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -639,7 +628,22 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Directly. Now you can type your vocabulary lists, make digital flashcards, and look up words you hear. Start by typing the words from our <a href="/resources/family-in-tibetan/" class="text-[#CF4D21] hover:underline">Family Vocabulary guide</a>.
+									Not at all! Appreciated language learners are encouraged to "befriend the Tibetan language" and participate in its preservation.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									What if I don't know "pure" Tibetan yet?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									It is okay to be a beginner! Just try your best to use the words you have learned without hesitating.
 								</p>
 							</div>
 						</div>
@@ -648,8 +652,8 @@ const article = {
 
 				<!-- CTA Cards -->
 				<div class="mt-12 space-y-6">
-					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Today</h3>
-					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you can type in Tibetan, continue building your skills with our courses.</p>
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Continue Your Journey</h3>
+					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you know about Lhag-kar, continue building your Tibetan skills with our courses.</p>
 
 					<div class="grid md:grid-cols-2 gap-6">
 						<a href="/self-paced/beginner/" class="block group">

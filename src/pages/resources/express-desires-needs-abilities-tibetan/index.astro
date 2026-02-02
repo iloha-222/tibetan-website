@@ -4,11 +4,11 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
 const article = {
-	title: "How to Type in Tibetan",
-	excerpt: "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
-	category: "Getting Started",
-	readTime: "8 min read",
-	date: "January 2025"
+	title: "How to Express Desires, Needs, and Abilities in Tibetan: A Complete Guide to Modal Verbs",
+	excerpt: "Ever wished you could say \"I want to go to Tibet\" or \"She knows how to write in Tibetan very well\"? Today, we are going to explore modal verbs, which in Tibetan are called བྱ་ཚིག་གཉིས་པ། or \"secondary verbs\" because they always follow the action verb.",
+	category: "Grammar",
+	readTime: "5 min read",
+	date: "February 2026"
 };
 ---
 
@@ -20,21 +20,21 @@ const article = {
 		<meta name="generator" content={Astro.generator} />
 		<title>{article.title} | Heart of Tibetan Language</title>
 		<meta name="description" content={article.excerpt} />
-		<meta name="keywords" content="type tibetan, tibetan keyboard, tibetan unicode, tibetan typing, tibetan on computer, tibetan on phone, learn tibetan" />
+		<meta name="keywords" content="tibetan modal verbs, tibetan grammar, want in tibetan, need in tibetan, ability in tibetan, thub-pa, shey-pa, dö-pa, gö-pa, learn tibetan" />
 
 		<!-- Canonical URL -->
-		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/express-desires-needs-abilities-tibetan/" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/express-desires-needs-abilities-tibetan/" />
 		<meta property="og:title" content={article.title} />
 		<meta property="og:description" content={article.excerpt} />
 		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/express-desires-needs-abilities-tibetan/" />
 		<meta name="twitter:title" content={article.title} />
 		<meta name="twitter:description" content={article.excerpt} />
 		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
@@ -49,8 +49,8 @@ const article = {
 		{
 			"@context": "https://schema.org",
 			"@type": "Article",
-			"headline": "How to Type in Tibetan",
-			"description": "You can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. This is the practical, step-by-step method that actually works right now, today.",
+			"headline": "How to Express Desires, Needs, and Abilities in Tibetan: A Complete Guide to Modal Verbs",
+			"description": "Explore modal verbs in Tibetan and learn to express wants, needs, abilities, and experiences.",
 			"author": {
 				"@type": "Organization",
 				"name": "Heart of Tibetan Language"
@@ -65,7 +65,7 @@ const article = {
 			},
 			"mainEntityOfPage": {
 				"@type": "WebPage",
-				"@id": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+				"@id": "https://www.heartoftibetanlanguage.com/resources/express-desires-needs-abilities-tibetan/"
 			}
 		}
 		</script>
@@ -91,8 +91,8 @@ const article = {
 				{
 					"@type": "ListItem",
 					"position": 3,
-					"name": "How to Type in Tibetan",
-					"item": "https://www.heartoftibetanlanguage.com/resources/how-to-type-in-tibetan/"
+					"name": "Modal Verbs in Tibetan",
+					"item": "https://www.heartoftibetanlanguage.com/resources/express-desires-needs-abilities-tibetan/"
 				}
 			]
 		}
@@ -139,7 +139,6 @@ const article = {
 				color: #1a1a1a;
 				font-weight: 600;
 			}
-			/* Enhanced info card */
 			.info-card {
 				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
 				border: 1px solid rgba(207, 77, 33, 0.12);
@@ -157,7 +156,35 @@ const article = {
 				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
 				border-radius: 1rem 1rem 0 0;
 			}
-			/* Table of contents */
+			.vocab-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+			.vocab-table th {
+				background-color: #CF4D21;
+				color: white;
+				padding: 10px 14px;
+				text-align: left;
+				font-family: 'Work Sans', Arial, sans-serif;
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+			.vocab-table td {
+				padding: 10px 14px;
+				border-bottom: 1px solid #e8dccf;
+				font-family: 'DM Sans', sans-serif;
+			}
+			.vocab-table tr:nth-child(even) {
+				background-color: #FFF8EE;
+			}
+			.vocab-table tr:hover {
+				background-color: #F4E6D6;
+			}
+			.tibetan-text {
+				font-family: "Noto Serif Tibetan", sans-serif;
+				font-size: 1.1em;
+			}
 			.toc-container {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
@@ -188,20 +215,11 @@ const article = {
 			.toc-link:hover {
 				color: #CF4D21;
 			}
-			/* Steps box */
-			.steps-box {
+			.example-box {
 				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
 				border: 1px solid rgba(207, 77, 33, 0.1);
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 			}
-			.steps-box ol {
-				list-style: decimal;
-				padding-left: 1.5rem;
-			}
-			.steps-box li {
-				margin-bottom: 0.5rem;
-			}
-			/* CTA cards */
 			.cta-card {
 				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
 				border: 1px solid rgba(207, 77, 33, 0.08);
@@ -212,7 +230,6 @@ const article = {
 				transform: translateY(-4px);
 				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
 			}
-			/* FAQ compact styles */
 			.faq-item {
 				border-bottom: 1px solid #E5E7EB;
 			}
@@ -243,7 +260,6 @@ const article = {
 			.faq-icon.rotated {
 				transform: rotate(180deg);
 			}
-			/* Section icon in orange rounded square */
 			.section-icon-box {
 				display: inline-flex;
 				align-items: center;
@@ -259,10 +275,6 @@ const article = {
 				height: 18px;
 				filter: brightness(0) invert(1);
 			}
-			.tibetan-text {
-				font-family: "Noto Serif Tibetan", sans-serif;
-				font-size: 1.1em;
-			}
 			@media (max-width: 767px) {
 				.article-content h2 {
 					font-size: 1.25rem !important;
@@ -272,6 +284,12 @@ const article = {
 				}
 				.article-content p, .article-content ul, .article-content ol {
 					font-size: 0.95rem !important;
+				}
+				.vocab-table {
+					font-size: 0.85rem;
+				}
+				.vocab-table th, .vocab-table td {
+					padding: 8px 10px;
 				}
 				.faq-question h3 {
 					font-size: 0.9rem;
@@ -290,14 +308,12 @@ const article = {
 					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
 				</a>
 
-				<!-- Mobile Menu Button -->
 				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
 					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
 				</button>
 
-				<!-- Navigation Links -->
 				<div class="hidden lg:flex items-center space-x-8 ml-auto">
 					<div class="flex space-x-8">
 						<div class="relative group">
@@ -376,7 +392,7 @@ const article = {
 					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 					</svg>
-					<span class="text-[#CF4D21]">How to Type in Tibetan</span>
+					<span class="text-[#CF4D21]">Modal Verbs in Tibetan</span>
 				</nav>
 			</div>
 		</div>
@@ -401,7 +417,7 @@ const article = {
 				</h1>
 
 				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
-					Here's the thing you quickly discover: you can learn all the vocabulary in the world, but if you can't type a single word of it, you're stuck. You can't text a friend, look up a word online, or write down a note properly. This guide won't give you a confusing list of software options. You'll be typing <span class="tibetan-text">བོད་སྐད་</span> on your own computer or phone by the end of this article.
+					Dear respected and appreciated Tibetan language learners, a very warm welcome to this guide! Have you ever wished you could say "I want to go to Tibet" or "She knows how to write in Tibetan very well"? If so, you are in the right place. Today, we are going to explore modal verbs, which in Tibetan are called <span class="tibetan-text">བྱ་ཚིག་གཉིས་པ།</span> or "secondary verbs" because they always follow the action verb. Grab a cup of tea, and as I often say, remember that review is the mother of learning!
 				</p>
 			</div>
 		</header>
@@ -410,37 +426,29 @@ const article = {
 		<article class="px-4 md:px-6 pb-16">
 			<div class="max-w-4xl mx-auto">
 				<!-- What you'll learn -->
-				<div class="info-card rounded-2xl p-5 mb-8">
-					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+				<div class="info-card rounded-2xl p-6 mb-10">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
 						</span>
-						What you'll get here:
+						What you'll learn
 					</h3>
 					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							The one system you need: Unicode (and what that actually means for you)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>How to express ability and skills with <span class="tibetan-text">ཐུབ་པ།</span> and <span class="tibetan-text">ཤེས་པ།</span></span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							How to set it up on Windows, Mac, Android, and iPhone in under 3 minutes
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>How to express desires and wishes with <span class="tibetan-text">འདོད་པ།</span></span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							What to do when your text looks wrong (the "broken font" problem)
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>How to express needs and obligations with <span class="tibetan-text">དགོས་པ།</span></span>
 						</li>
 						<li class="flex items-start gap-2">
-							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-							</svg>
-							Real-world practice drills
+							<svg class="w-5 h-5 text-[#CF4D21] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							<span>How to talk about experience with <span class="tibetan-text">མྱོང་བ།</span></span>
 						</li>
 					</ul>
 				</div>
@@ -449,144 +457,208 @@ const article = {
 				<div class="toc-container rounded-2xl p-6 mb-10">
 					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
 					<nav class="space-y-1">
-						<a href="#unicode" class="toc-item">
+						<a href="#what-are-modal-verbs" class="toc-item">
 							<span class="toc-number">1</span>
-							<span class="toc-link">The Only System You Need: Unicode</span>
+							<span class="toc-link">What are Modal Verbs?</span>
 						</a>
-						<a href="#computer" class="toc-item">
+						<a href="#worldview" class="toc-item">
 							<span class="toc-number">2</span>
-							<span class="toc-link">Setting Up: Your Computer (Windows & Mac)</span>
+							<span class="toc-link">The Tibetan Worldview: Why These Verbs are Non-Volitional</span>
 						</a>
-						<a href="#phone" class="toc-item">
+						<a href="#ability-skill" class="toc-item">
 							<span class="toc-number">3</span>
-							<span class="toc-link">Setting Up: Your Phone (Android & iPhone)</span>
+							<span class="toc-link">Expressing Ability and Skills</span>
 						</a>
-						<a href="#broken-text" class="toc-item">
+						<a href="#desires" class="toc-item">
 							<span class="toc-number">4</span>
-							<span class="toc-link">Fixing the "Broken Text" Problem</span>
+							<span class="toc-link">Expressing Desires and Wishes</span>
+						</a>
+						<a href="#needs" class="toc-item">
+							<span class="toc-number">5</span>
+							<span class="toc-link">Expressing Needs and Obligations</span>
+						</a>
+						<a href="#experience" class="toc-item">
+							<span class="toc-number">6</span>
+							<span class="toc-link">Expressing Experience</span>
+						</a>
+						<a href="#common-mistakes" class="toc-item">
+							<span class="toc-number">7</span>
+							<span class="toc-link">Common Mistakes to Avoid</span>
 						</a>
 						<a href="#drills" class="toc-item">
-							<span class="toc-number">5</span>
-							<span class="toc-link">Real-World Practice Drills</span>
+							<span class="toc-number">8</span>
+							<span class="toc-link">Mini Tasks & Drills</span>
 						</a>
 						<a href="#faq" class="toc-item">
-							<span class="toc-number">6</span>
-							<span class="toc-link">Common Questions & Annoying Problems</span>
+							<span class="toc-number">9</span>
+							<span class="toc-link">Frequently Asked Questions</span>
 						</a>
 					</nav>
 				</div>
 
 				<!-- Article Body -->
 				<div class="article-content">
-					<h2 id="unicode">The Only System You Need: Unicode</h2>
-					<p>For modern typing, there's only one system that matters: <strong>Unicode</strong>.</p>
-					<p>Think of Unicode as a universal agreement. It's a standard that gives every single letter and symbol in every writing system its own unique code. Before Unicode, sending a Tibetan email was a gamble. The recipient would see gibberish unless they had the exact same font. Unicode fixed that.</p>
-					<p>When you type in Unicode, you're using this universal code. It means the Tibetan you type on your laptop in New York will show up correctly on your friend's phone in Dharamshala, on a website, in a Word document, or in a text message. It just works.</p>
-					<p><strong>The goal is to get your device to use a Tibetan Unicode keyboard. That's it.</strong></p>
+					<h2 id="what-are-modal-verbs">1. What are Modal Verbs?</h2>
+					<p>In English, we call them "helping verbs". In Tibetan, they are secondary because they follow the main action verb, which remains in the infinitive while the modal verb itself gets conjugated.</p>
 
-					<h2 id="computer">Setting Up: Your Computer (Windows & Mac)</h2>
-					<p>You don't need to buy anything. The keyboard is already built into your system. You just need to turn it on.</p>
-
-					<h3>On Windows (10 & 11):</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>Settings</strong> (the gear icon).</li>
-							<li>Go to <strong>Time & Language > Language & Region</strong>.</li>
-							<li>Click <strong>"Add a language"</strong>.</li>
-							<li>In the search bar, type <strong>"Tibetan"</strong>.</li>
-							<li>Select <strong>"Tibetan (བོད་ཡིག)"</strong> and click Next.</li>
-							<li>On the next screen, uncheck "Set as my Windows display language" (unless you want your whole system in Tibetan!). Just install the basic language pack.</li>
-							<li>Click <strong>Install</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Once installed, you can switch keyboards. Look for a toolbar near your system clock that says something like "ENG" or "ENG/US". Click it. You'll now see "བོད་ཡིག" as an option. Click to select it.</p>
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Example:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ང་སྲྱུ་གུ་ཉོ་ དགོས་ (ཀྱིི་) འདུག</span></p>
+						<p class="text-gray-600 mb-4">I need to buy a pen.</p>
+						<ul class="list-disc pl-5 text-gray-600">
+							<li>Action: <span class="tibetan-text">ཉོ་བ།</span> (to buy)</li>
+							<li>Modal: <span class="tibetan-text">དགོས་པ།</span> (to need)</li>
+						</ul>
 					</div>
 
-					<h3>On Mac:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Open <strong>System Settings</strong> (Apple menu > System Settings).</li>
-							<li>Go to <strong>Keyboard > Text Input</strong> (or Input Sources on older versions).</li>
-							<li>Click the <strong>"Edit..."</strong> or <strong>"+"</strong> button.</li>
-							<li>In the left list, select <strong>"Tibetan"</strong>.</li>
-							<li>In the right panel, choose <strong>"Tibetan - QWERTY"</strong> (this is the most straightforward).</li>
-							<li>Click <strong>Add</strong>.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch, you'll see a flag or language icon in your menu bar. Click it and select "Tibetan."</p>
+					<h2 id="worldview">2. The Tibetan Worldview: Non-Volitional Verbs</h2>
+					<p>Here is a fascinating point: in "Tibet World," our wants, needs, and abilities are considered non-volitional (<span class="tibetan-text">བྱེད་མེད་ལས་ཚིག་</span>). Why? Because feelings like "wanting" or "needing" are seen as emotions arising from tendencies rather than intentional choices.</p>
+
+					<div class="info-card rounded-2xl p-5 my-6">
+						<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+							<span class="section-icon-box">
+								<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+							</span>
+							Important
+						</h3>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;">Because they are non-volitional, you must use <span class="tibetan-text">བདག་</span> (self) perspective auxiliaries (like <span class="tibetan-text">བྱུང་།</span> in the past) even when talking about your own desires.</p>
 					</div>
 
-					<h2 id="phone">Setting Up: Your Phone (Android & iPhone)</h2>
-					<p>This is even easier.</p>
+					<h2 id="ability-skill">3. Ability and Skill: <span class="tibetan-text">ཐུབ་པ།</span> vs <span class="tibetan-text">ཤེས་པ།</span></h2>
 
-					<h3>On Android:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > System > Languages & input > On-screen keyboard</strong>.</li>
-							<li>Tap <strong>Gboard</strong> (Google's keyboard, which is usually pre-installed).</li>
-							<li>Go to <strong>Languages > Add keyboard</strong>.</li>
-							<li>Scroll or search for <strong>"Tibetan."</strong> Select it.</li>
-							<li>You may be asked to download a language pack. Do it.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To use it, open any app where you type (like Messages). Tap the spacebar to cycle languages, or tap the globe/emoji icon to select Tibetan.</p>
+					<h3><span class="tibetan-text">ཐུབ་པ།</span> (Thub-pa) — To be able to</h3>
+					<p>This refers to physical, technical, or emotional ability.</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Present:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ང་ཕྱག་འཚལ་ ཐུབ་ཀྱི་མེད།</span></p>
+						<p class="text-gray-600 mb-4">I am unable to do prostrations.</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Past:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">མདང་དགོང་ང་ཚོགས་འདུ་ལ་ཡོང་ ཐུབ་མ་བྱུང་།</span></p>
+						<p class="text-gray-600">Last night, I could not come to the meeting.</p>
 					</div>
 
-					<h3>On iPhone:</h3>
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Go to <strong>Settings > General > Keyboard > Keyboards</strong>.</li>
-							<li>Tap <strong>"Add New Keyboard..."</strong>.</li>
-							<li>Scroll and select <strong>"Tibetan."</strong> There's only one option.</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">To switch while typing, tap the globe icon next to the space bar.</p>
+					<h3><span class="tibetan-text">ཤེས་པ།</span> (Shey-pa) — To know how to</h3>
+					<p>This refers specifically to having the knowledge or skill to do something.</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Present:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ངས་བོད་སྐད་ ཤེས་ཀྱི་མེད།</span></p>
+						<p class="text-gray-600 mb-4">I do not know [how to speak] Tibetan.</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Future:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ཁྱེད་རང་གིས་འཁྱུག་ཡིག་ཀློག་ ཤེས་ཀྱི་རེད།</span></p>
+						<p class="text-gray-600">You will know how to read cursive script.</p>
 					</div>
 
-					<h2 id="broken-text">Fixing the "Broken Text" Problem</h2>
-					<p>You've set it up, typed something, and it looks like a series of separate, broken letters or boxes. <strong>This is a font issue, not a typing issue.</strong></p>
-					<p>Your computer has the keyboard to input the Unicode codes, but it might not have a font that can display the Tibetan letters properly.</p>
-					<p>The fix is simple: <strong>Install a Unicode Tibetan font.</strong> One excellent, free, and widely used font is <strong>"Jomolhari."</strong></p>
+					<h2 id="desires">4. Desires and Wishes: <span class="tibetan-text">འདོད་པ།</span> (Dö-pa)</h2>
+					<p>This verb means "to want to" or "would like to".</p>
 
-					<div class="steps-box rounded-2xl p-6 my-6">
-						<ol style="font-family: 'DM Sans', sans-serif; color: #444;">
-							<li>Search online for <strong>"Jomolhari font download."</strong></li>
-							<li>Download the .ttf file from a reputable site (like fonts.google.com or the University of Virginia's Tibetan site).</li>
-							<li>Open the downloaded file and click <strong>"Install"</strong> (Windows) or drag it to your Font Book (Mac).</li>
-						</ol>
-						<p class="mt-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Now, when you type in an app (like Word, a browser, or a text editor), select the Jomolhari font from the font menu. Your Tibetan text should render perfectly, with correct stacking and vowel placement.</p>
+					<div class="info-card rounded-2xl p-5 my-6">
+						<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+							<span class="section-icon-box">
+								<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+							</span>
+							Grammar Quirk
+						</h3>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;"><span class="tibetan-text">འདོད་པ།</span> has no future form. We use present auxiliaries for the future because the wish is happening now.</p>
+					</div>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Present:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ང་བོད་ལ་འགྲོ་ འདོད་ཡོད།</span></p>
+						<p class="text-gray-600 mb-4">I want to go to Tibet.</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Past:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ཁ་སང་ང་ཁྲོམ་ལ་འགྲོ་ འདོད་བྱུང་།</span></p>
+						<p class="text-gray-600">Yesterday I wanted to go to the market.</p>
+					</div>
+
+					<h2 id="needs">5. Needs and Obligations: <span class="tibetan-text">དགོས་པ།</span> (Gö-pa)</h2>
+					<p>This means "must," "have to," or "should".</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Future:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">སང་ཉིཎ་ང་ལས་ཀ་བྱེད་ དགོས་ (ཀྱི་) རེད།</span></p>
+						<p class="text-gray-600 mb-4">Tomorrow I will have to work.</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Past:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ཁ་སེ་ང་ཕྱི་ལོགས་ལ་སྒུག་ དགོས་བྱུང་།</span></p>
+						<p class="text-gray-600 mb-4">Yesterday I had to wait outside.</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Negative ("Should not"):</h4>
+						<p class="text-gray-600 mb-2">To say "should not," use <span class="tibetan-text">རྒྱུ་ཡོད་མ་རེད།</span></p>
+						<p class="text-xl mb-2"><span class="tibetan-text">སེམས་ཅན་ལ་གནོད་པ་སྐྱེལ་ རྒྱུ་ཡོད་མ་རེད།</span></p>
+						<p class="text-gray-600">One should not harm sentient beings.</p>
+					</div>
+
+					<h2 id="experience">6. Experience: <span class="tibetan-text">མྱོང་བ།</span> (Nyong-wa)</h2>
+					<p>Used to ask if someone has "ever done X." Literally means "to experience".</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Question:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">ཁྱེད་རང་བོད་ལ་ཕེབས་ མྱོང་ངས།</span></p>
+						<p class="text-gray-600 mb-4">Have you ever been to Tibet?</p>
+
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Answers:</h4>
+						<p class="text-xl mb-2"><span class="tibetan-text">འགྲོ་ མྱོང་།</span></p>
+						<p class="text-gray-600 mb-3">Yes, I have.</p>
+						<p class="text-xl mb-2"><span class="tibetan-text">འགྲོ་ མ་མྱོང་།</span></p>
+						<p class="text-gray-600">No, I haven't.</p>
+					</div>
+
+					<h2 id="common-mistakes">7. Common Mistakes to Avoid</h2>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Overusing <span class="tibetan-text">ཐུབ་པ།</span></h4>
+						<p>Don't use it to ask for permission like "Can I open the door?". Instead, use the conditional: <span class="tibetan-text">ངས་སྒོ་ཕྱེ་ན་འགྲིག་གི་རེད་པེས།</span></p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Using <span class="tibetan-text">པ་ཡིཎ།</span></h4>
+						<p>Never use the volitional past auxiliary <span class="tibetan-text">པ་ཡིཎ།</span> with these verbs, as they are non-volitional. Use <span class="tibetan-text">བྱུང་།</span> for yourself.</p>
+					</div>
+
+					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">The "Want X" Trap</h4>
+						<p><span class="tibetan-text">འདོད་པ།</span> is for "wanting to do X." If you just want an object (like "I want momos"), use <span class="tibetan-text">དགོས།</span> as a full verb: <span class="tibetan-text">ང་ལ་མོག་མོག་དགོས།</span></p>
 					</div>
 
 					<h2 id="drills" class="flex items-center gap-3">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
 						</span>
-						Real-World Practice Drills
+						8. Mini Tasks & Drills
 					</h2>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: The Name Drill</h4>
-						<p>Type your name. Sound it out in Tibetan and try to spell it. <span class="tibetan-text">ཇོན་</span> (John)? <span class="tibetan-text">མེར་ཡི་</span> (Mary)? This makes it personal.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 1: Translate</h4>
+						<p>"I know how to drive, but today I am unable to drive" (Hint: Use <span class="tibetan-text">ཤེས་པ།</span> then <span class="tibetan-text">ཐུབ་པ།</span>).</p>
 					</div>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: The 5-Word Daily</h4>
-						<p>Every day, type 5 vocabulary words you know. <span class="tibetan-text">མི</span> (person), <span class="tibetan-text">ཆུ</span> (water), <span class="tibetan-text">ཁ་པར</span> (phone). Muscle memory builds here.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 2: Fill in</h4>
+						<p><span class="tibetan-text">ང་བོད་ཇ་འཐུང་</span> _____ (I want to drink Tibetan tea).</p>
 					</div>
 
 					<div class="rounded-2xl p-5 my-4 border border-gray-200" style="background-color: white;">
-						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Copy a Line</h4>
-						<p>Find a simple Tibetan sentence online. Open a notepad app and copy it, letter by letter. This trains you to find keys without thinking.</p>
+						<h4 class="font-bold mb-2" style="font-family: 'Merriweather', serif;">Drill 3: Past Tense</h4>
+						<p>Change "I need to go" to "I had to go".</p>
 					</div>
 
 					<h2 id="faq" class="flex items-center gap-3">
 						<span class="section-icon-box">
 							<img src="/assets/design-assets/noun-question-mark-4303782-FF751F.svg" alt="">
 						</span>
-						Common Questions & Annoying Problems
+						9. Frequently Asked Questions
 					</h2>
 
 					<div class="my-6">
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									Can I use this to type in social media or Google Docs?
+									Why do we sometimes add ཀྱི། to དགོས་པ།?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -594,14 +666,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Yes. Anywhere you can type text and select a font, you can type Tibetan. In Google Docs, you may need to select "More fonts" and search for/add "Jomolhari."
+									Both <span class="tibetan-text">དགོས་ཀྱི་ཡོད།</span> and <span class="tibetan-text">དགོས་ཡོད།</span> are correct. The version with <span class="tibetan-text">ཀྱི།</span> treats it as a verb, while the shorter version treats "need" as a noun you "have".
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									What if I need to type old, rare characters?
+									Can འདོད་པ། be used for the future?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -609,14 +681,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									For 99% of users, the standard keyboard has everything. For scholars, there are specialized keyboards and tools, but start here.
+									Yes, but you use present auxiliaries (like <span class="tibetan-text">ཡོད།</span>) because the desire itself exists in the present moment.
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									My phone keyboard doesn't show the Tibetan letters on the keys.
+									Is མྱོང་བ། used with past tense verbs?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -624,14 +696,14 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									That's normal. It will show the English QWERTY layout. You have to remember which English key corresponds to which Tibetan letter. Use a layout image as a reference.
+									No! The action verb preceding <span class="tibetan-text">མྱོང་བ།</span> is always in the present tense.
 								</p>
 							</div>
 						</div>
 						<div class="faq-item">
 							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
 								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
-									How does this connect to what I'm learning?
+									How do I say "should not"?
 								</h3>
 								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -639,7 +711,22 @@ const article = {
 							</button>
 							<div class="faq-answer">
 								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
-									Directly. Now you can type your vocabulary lists, make digital flashcards, and look up words you hear. Start by typing the words from our <a href="/resources/family-in-tibetan/" class="text-[#CF4D21] hover:underline">Family Vocabulary guide</a>.
+									Use the special construction <span class="tibetan-text">རྒྱུ་ཡོད་མ་རེད།</span> or <span class="tibetan-text">རྒྱུ་མི་འདུག</span>.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<button class="faq-question w-full text-left flex items-center justify-between py-3" onclick="toggleFAQ(this)">
+								<h3 class="font-medium pr-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+									What is the honorific for ཐུབ་པ།?
+								</h3>
+								<svg class="faq-icon w-4 h-4 flex-shrink-0" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							<div class="faq-answer">
+								<p style="font-family: 'DM Sans', sans-serif; color: #666;">
+									The sources note that <span class="tibetan-text">བྱེད་པ།</span> becomes <span class="tibetan-text">གནང་བ།</span> and <span class="tibetan-text">རྒྱག་པ།</span> becomes <span class="tibetan-text">སྐྱོཎ་པ།</span>, but modal verbs themselves often use standard non-volitional endings.
 								</p>
 							</div>
 						</div>
@@ -648,8 +735,8 @@ const article = {
 
 				<!-- CTA Cards -->
 				<div class="mt-12 space-y-6">
-					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Start Learning Today</h3>
-					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you can type in Tibetan, continue building your skills with our courses.</p>
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Continue Your Journey</h3>
+					<p style="font-family: 'DM Sans', sans-serif; color: #555;">Now that you can express desires, needs, and abilities, continue building your Tibetan skills with our courses.</p>
 
 					<div class="grid md:grid-cols-2 gap-6">
 						<a href="/self-paced/beginner/" class="block group">
@@ -738,12 +825,10 @@ const article = {
 		</footer>
 
 		<script is:inline>
-			// FAQ toggle function
 			function toggleFAQ(button) {
 				const answer = button.nextElementSibling;
 				const icon = button.querySelector('.faq-icon');
 
-				// Close all other FAQs
 				document.querySelectorAll('.faq-answer').forEach(item => {
 					if (item !== answer) {
 						item.classList.remove('active');
@@ -755,12 +840,10 @@ const article = {
 					}
 				});
 
-				// Toggle current FAQ
 				answer.classList.toggle('active');
 				icon.classList.toggle('rotated');
 			}
 
-			// Mobile menu toggle
 			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 			const closeMobileMenu = document.getElementById('closeMobileMenu');
 			const mobileMenu = document.getElementById('mobileMenu');
@@ -773,7 +856,6 @@ const article = {
 				mobileMenu?.classList.add('hidden');
 			});
 
-			// Smooth scroll for TOC links
 			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 				anchor.addEventListener('click', function (e) {
 					e.preventDefault();
