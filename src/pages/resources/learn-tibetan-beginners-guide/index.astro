@@ -1,0 +1,764 @@
+---
+import '../../../styles/global.css';
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+
+const article = {
+	title: "Learn Tibetan: A Complete Beginner's Guide",
+	excerpt: "Learning Tibetan is both a linguistic and cultural journey. For many beginners, Tibetan opens the door to Buddhist philosophy, Himalayan history, and a worldview expressed through a uniquely rich language system.",
+	category: "Getting Started",
+	readTime: "8 min read",
+	date: "February 2026"
+};
+---
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{article.title} | Heart of Tibetan Language</title>
+		<meta name="description" content={article.excerpt} />
+		<meta name="keywords" content="learn tibetan, tibetan for beginners, tibetan language, classical tibetan, colloquial tibetan, tibetan script, tibetan pronunciation, tibetan grammar" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://www.heartoftibetanlanguage.com/resources/learn-tibetan-beginners-guide/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.heartoftibetanlanguage.com/resources/learn-tibetan-beginners-guide/" />
+		<meta property="og:title" content={article.title} />
+		<meta property="og:description" content={article.excerpt} />
+		<meta property="og:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://www.heartoftibetanlanguage.com/resources/learn-tibetan-beginners-guide/" />
+		<meta name="twitter:title" content={article.title} />
+		<meta name="twitter:description" content={article.excerpt} />
+		<meta name="twitter:image" content="https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png" />
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Noto+Serif+Tibetan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+		<!-- Structured Data - Article -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": "Learn Tibetan: A Complete Beginner's Guide",
+			"description": "Learning Tibetan is both a linguistic and cultural journey. For many beginners, Tibetan opens the door to Buddhist philosophy, Himalayan history, and a worldview expressed through a uniquely rich language system.",
+			"author": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Heart of Tibetan Language",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://www.heartoftibetanlanguage.com/assets/illustrations/Logo-original.png"
+				}
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://www.heartoftibetanlanguage.com/resources/learn-tibetan-beginners-guide/"
+			}
+		}
+		</script>
+
+		<!-- BreadcrumbList structured data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://www.heartoftibetanlanguage.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Resources",
+					"item": "https://www.heartoftibetanlanguage.com/resources/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Learn Tibetan Beginner's Guide",
+					"item": "https://www.heartoftibetanlanguage.com/resources/learn-tibetan-beginners-guide/"
+				}
+			]
+		}
+		</script>
+
+		<style>
+			.article-content h2 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #1a1a1a;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid rgba(207, 77, 33, 0.15);
+			}
+			.article-content h3 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.125rem;
+				font-weight: 600;
+				color: #333;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+			.article-content p {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+			}
+			.article-content ul, .article-content ol {
+				font-family: 'DM Sans', sans-serif;
+				font-size: 1rem;
+				line-height: 1.7;
+				color: #444;
+				margin-bottom: 1rem;
+				padding-left: 1.25rem;
+			}
+			.article-content li {
+				margin-bottom: 0.35rem;
+			}
+			.article-content strong {
+				color: #1a1a1a;
+				font-weight: 600;
+			}
+			/* Enhanced info card */
+			.info-card {
+				background: linear-gradient(180deg, #FEFBF7 0%, #FFF9F2 100%);
+				border: 1px solid rgba(207, 77, 33, 0.12);
+				box-shadow: 0 4px 20px rgba(207, 77, 33, 0.06);
+				position: relative;
+				overflow: hidden;
+			}
+			.info-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: linear-gradient(90deg, #CF4D21 0%, #e85a2c 100%);
+				border-radius: 1rem 1rem 0 0;
+			}
+			/* Table of contents */
+			.toc-container {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			.toc-item {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				padding: 0.5rem 0;
+				transition: all 0.2s ease;
+			}
+			.toc-item:hover {
+				padding-left: 0.25rem;
+			}
+			.toc-number {
+				font-size: 0.9rem;
+				font-weight: 600;
+				font-family: 'Work Sans', sans-serif;
+				color: #CF4D21;
+				min-width: 1.25rem;
+			}
+			.toc-link {
+				transition: all 0.2s ease;
+				font-family: 'DM Sans', sans-serif;
+				color: #444;
+			}
+			.toc-link:hover {
+				color: #CF4D21;
+			}
+			/* Example box */
+			.example-box {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.1);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+			}
+			/* CTA cards */
+			.cta-card {
+				background: linear-gradient(180deg, #F4E6D6 0%, #f0dcc8 100%);
+				border: 1px solid rgba(207, 77, 33, 0.08);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+				transition: all 0.4s ease;
+			}
+			.cta-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 32px rgba(207, 77, 33, 0.12);
+			}
+			/* FAQ compact styles */
+			.faq-item {
+				border-bottom: 1px solid #E5E7EB;
+			}
+			.faq-question {
+				cursor: pointer;
+			}
+			.faq-question h3 {
+				font-size: 0.95rem;
+				font-weight: 500;
+			}
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease, padding 0.3s ease;
+			}
+			.faq-answer.active {
+				max-height: 500px;
+				padding-bottom: 0.75rem;
+			}
+			.faq-answer p {
+				font-size: 0.9rem;
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+			.faq-icon {
+				transition: transform 0.3s ease;
+			}
+			.faq-icon.rotated {
+				transform: rotate(180deg);
+			}
+			/* Section icon in orange rounded square */
+			.section-icon-box {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 32px;
+				height: 32px;
+				background-color: #CF4D21;
+				border-radius: 8px;
+				flex-shrink: 0;
+			}
+			.section-icon-box img {
+				width: 18px;
+				height: 18px;
+				filter: brightness(0) invert(1);
+			}
+			/* Topic card */
+			.topic-card {
+				background: linear-gradient(180deg, #FFFFFF 0%, #FEFBF7 100%);
+				border: 1px solid rgba(207, 77, 33, 0.12);
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+			}
+			.topic-card h4 {
+				font-family: 'Merriweather', serif;
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #1a1a1a;
+			}
+			.topic-number {
+				font-family: "Noto Serif Tibetan", sans-serif;
+				font-size: 1.3rem;
+				color: #CF4D21;
+			}
+			@media (max-width: 767px) {
+				.article-content h2 {
+					font-size: 1.25rem !important;
+				}
+				.article-content h3 {
+					font-size: 1rem !important;
+				}
+				.article-content p, .article-content ul, .article-content ol {
+					font-size: 0.95rem !important;
+				}
+				.faq-question h3 {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color: #FFF8EE;">
+		<!-- Navigation -->
+		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
+			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+				<a href="/" class="flex items-center gap-6">
+					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+					</div>
+					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
+				</a>
+
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<div class="hidden lg:flex items-center space-x-8 ml-auto">
+					<div class="flex space-x-8">
+						<div class="relative group">
+							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Self-Paced Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="relative group">
+							<a href="/live/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+								Live Courses
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</a>
+							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+								<div class="py-3">
+									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+									<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
+									<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
+									<a href="/live/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/resources/" class="text-[#CF4D21] font-medium" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
+						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
+						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
+					</div>
+					<a href="/#course-levels" class="px-4 py-2 md:px-6 rounded-full border-2 hover:bg-orange-50 font-bold text-[10pt] md:text-[12pt]" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; border-color: #CF4D21; color: #FFFFFF; text-decoration: none;">
+						Start Learning
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div id="mobileMenu" class="lg:hidden hidden fixed top-0 left-0 right-0 bg-white border-b shadow-lg z-50 max-h-screen overflow-y-auto">
+			<div class="flex justify-end px-4 pt-4">
+				<button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full" aria-label="Close menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="px-6 pb-4 space-y-4">
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+				<a href="/resources/" class="block text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
+				<a href="/#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
+			</div>
+		</div>
+
+		<!-- Breadcrumb -->
+		<div class="px-4 md:px-6 py-4" style="background-color: #fbf9f7;">
+			<div class="max-w-4xl mx-auto">
+				<nav class="flex items-center gap-2 text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+					<a href="/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<a href="/resources/" class="text-gray-500 hover:text-[#CF4D21] transition-colors">Blog</a>
+					<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+					<span class="text-[#CF4D21]">Beginner's Guide</span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Article Header -->
+		<header class="px-4 md:px-6 py-8 md:py-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex flex-wrap items-center gap-3 mb-6">
+					<span class="px-4 py-1.5 rounded-full text-sm font-medium" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; background-color: rgba(207, 77, 33, 0.1);">
+						{article.category}
+					</span>
+					<span class="text-sm text-gray-500" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.readTime}
+					</span>
+					<span class="text-sm text-gray-400" style="font-family: 'Work Sans', Arial, sans-serif;">
+						{article.date}
+					</span>
+				</div>
+
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+					{article.title}
+				</h1>
+
+				<p class="text-lg md:text-xl leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #555;">
+					{article.excerpt}
+				</p>
+			</div>
+		</header>
+
+		<!-- Article Content -->
+		<article class="px-4 md:px-6 pb-16">
+			<div class="max-w-4xl mx-auto">
+				<!-- What you'll learn -->
+				<div class="info-card rounded-2xl p-5 mb-8">
+					<h3 class="flex items-center gap-3 text-base font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">
+						<span class="section-icon-box">
+							<img src="/assets/design-assets/noun-star-8057482-FF751F.svg" alt="">
+						</span>
+						In this guide, you'll discover:
+					</h3>
+					<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							The difference between Classical and Colloquial Tibetan
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							How the Tibetan script works and why spelling differs from pronunciation
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Essential grammar concepts and sentence structure
+						</li>
+						<li class="flex items-start gap-2">
+							<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+							</svg>
+							Practical tips for daily practice and cultural context
+						</li>
+					</ul>
+				</div>
+
+				<!-- Table of Contents -->
+				<div class="toc-container rounded-2xl p-6 mb-10">
+					<h3 class="text-base font-bold mb-4" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Table of Contents</h3>
+					<nav class="space-y-1">
+						<a href="#what-is" class="toc-item">
+							<span class="toc-number">1</span>
+							<span class="toc-link">What is Tibetan Language?</span>
+						</a>
+						<a href="#why-learn" class="toc-item">
+							<span class="toc-number">2</span>
+							<span class="toc-link">Why Learning Tibetan?</span>
+						</a>
+						<a href="#script" class="toc-item">
+							<span class="toc-number">3</span>
+							<span class="toc-link">The Tibetan Script</span>
+						</a>
+						<a href="#pronunciation" class="toc-item">
+							<span class="toc-number">4</span>
+							<span class="toc-link">Pronunciation and Listening</span>
+						</a>
+						<a href="#grammar" class="toc-item">
+							<span class="toc-number">5</span>
+							<span class="toc-link">Basic Grammar and Sentence Structure</span>
+						</a>
+						<a href="#vocabulary" class="toc-item">
+							<span class="toc-number">6</span>
+							<span class="toc-link">Vocabulary and Daily Practice</span>
+						</a>
+						<a href="#culture" class="toc-item">
+							<span class="toc-number">7</span>
+							<span class="toc-link">Cultural Context Matters</span>
+						</a>
+					</nav>
+				</div>
+
+				<!-- Article Body -->
+				<div class="article-content">
+					<p>While it may seem challenging at first, a structured and patient approach makes Tibetan not only learnable but deeply rewarding.</p>
+
+					<h2 id="what-is">1. What is Tibetan Language?</h2>
+					<p>Prior to start learning Tibetan, contemplate your goals and interests. Is your goal to talk to native speakers in a field research? Are you interested in Buddhist philosophy and historiographical research? Or would you like to understand the oral teachings of modern Buddhist masters? Or maybe you'd like to study Tibetan just for fun?</p>
+
+					<p>It is vital to determine your goals before starting learning "Tibetan". The reason is, the term "Tibetan language" includes several languages that are often confused with one another:</p>
+
+					<ul>
+						<li><strong>Classical Tibetan language</strong> was developed in 8th-11th centuries A.D.</li>
+						<li><strong>Pre-modern written language</strong> is what can be with caution defined as a mixture between Classical and spoken Tibetan language which was in use in 19th-20th centuries A.D.</li>
+						<li><strong>Spoken, or colloquial Tibetan</strong> keeps changing every decade.</li>
+					</ul>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Key Insight:</h4>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;">
+							Colloquial Tibetan language and classical (plus modern written) Tibetan are different languages. They use similar script, some words and grammar overlap, the word order in a sentence is the same. But this is where their similarity ends. The vocabulary in use, grammatical structures and rules are totally different from one another.
+						</p>
+					</div>
+
+					<h2 id="why-learn">2. Why Learning Tibetan?</h2>
+
+					<p>If you are interested in Buddhist philosophy and want to comprehend Tibetan Buddhist canon and commentaries, learn Classical Tibetan. For a field researcher or someone who is interested in Himalayan language and culture, focus modern colloquial Tibetan. If you'd like to be an oral interpreter at Buddhist teachings, learn both languages (which is not an easy task).</p>
+
+					<p>If you decided to go for Colloquial Tibetan, you should be aware that there are several dialects, again, completely different from one another. Most learners begin with Standard Spoken Tibetan used in Exile Tibetan communities (it is based on the Lhasa dialect, but different from it) while also studying Classical Tibetan, which is used in religious and historical texts.</p>
+
+					<p>Good news is, you still have some time to contemplate your goals while learning how to read Tibetan script. Reading rules are the same for classical and modern texts written in Tibetan. One of the first surprises for beginners is that written Tibetan preserves ancient spellings, while pronunciation has evolved over time. This means that spelling and speaking are learned together—but not always pronounced as written. The difference depends on the dialect of the colloquial Tibetan.</p>
+
+					<h2 id="script">3. The Tibetan Script</h2>
+					<p>Tibetan uses its own alphabet, derived historically from Indic scripts. Learning the script is essential and should be done early.</p>
+
+					<div class="info-card rounded-2xl p-5 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Getting Started with the Script:</h4>
+						<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								Start with the <strong>30 consonants</strong> and <strong>4 vowels</strong>
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								Then move on to <strong>stacked letters</strong> and <strong>suffixes</strong>
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Writing by hand</strong>—even briefly—greatly improves recognition and memory
+							</li>
+						</ul>
+					</div>
+
+					<p>At first, this may feel slow, but regular reading practice quickly builds familiarity.</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Important Note:</h4>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;">
+							One of the first surprises for beginners is that <strong>written Tibetan preserves ancient spellings</strong>, while pronunciation has evolved over time. This means that spelling and speaking are learned together—but not always pronounced as written. The difference depends on the dialect of the colloquial Tibetan.
+						</p>
+					</div>
+
+					<p>You may consider taking our <a href="/self-paced/learning-to-read/" style="color: #CF4D21; text-decoration: underline;">Tibetan Reading course</a> to master the script efficiently.</p>
+
+					<h2 id="pronunciation">4. Pronunciation and Listening in Colloquial Tibetan Learning</h2>
+					<p>Tibetan pronunciation varies by region, so beginners should choose one model and stick to it. Listening practice is crucial: tones are subtle, and meaning often depends on context rather than strict grammar.</p>
+
+					<div class="info-card rounded-2xl p-5 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Tips for Better Pronunciation:</h4>
+						<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Shadowing native speakers</strong> — repeat what you hear immediately
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Repeating short phrases</strong> until they feel natural
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Working with audio recordings</strong> will help your ear adjust naturally
+							</li>
+						</ul>
+					</div>
+
+					<h2 id="grammar">5. Basic Grammar and Sentence Structure</h2>
+					<p>Tibetan grammar is logical but different from English. Here are the key points:</p>
+
+					<ul>
+						<li>Sentences typically follow a <strong>subject–object–verb</strong> order</li>
+						<li>Verbs do not conjugate for person (for example, "I go", but "He goes" in English — Tibetan doesn't make this distinction)</li>
+						<li>Tibetan relies heavily on <strong>particles</strong> and <strong>honorific and humilific forms</strong> of verbs or nouns to express meaning, politeness, and nuance</li>
+					</ul>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Beginner's Advice:</h4>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;">
+							Focus on <strong>core sentence patterns</strong> before worrying about complexity. Master the basics, and the rest will come naturally.
+						</p>
+					</div>
+
+					<h2 id="vocabulary">6. Vocabulary and Daily Practice</h2>
+					<p>Consistent vocabulary study is key. Using spaced-repetition tools such as flashcards helps retain new words efficiently.</p>
+
+					<div class="info-card rounded-2xl p-5 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">What to Focus On First:</h4>
+						<ul class="space-y-2" style="font-family: 'DM Sans', sans-serif; color: #555;">
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>High-frequency verbs</strong>
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Everyday nouns</strong>
+							</li>
+							<li class="flex items-start gap-2">
+								<svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #CF4D21;" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								<strong>Common expressions</strong>
+							</li>
+						</ul>
+					</div>
+
+					<p><strong>Even 20–30 minutes of daily practice</strong> is far more effective than occasional long sessions. Consistency beats intensity.</p>
+
+					<h2 id="culture">7. Cultural Context Matters</h2>
+					<p>Language and culture are inseparable in Tibetan. Concepts such as <strong>respect</strong>, <strong>humility</strong>, and <strong>interdependence</strong> are embedded in speech.</p>
+
+					<p>Learning when and why honorifics are used will deepen both your linguistic skill and cultural understanding.</p>
+
+					<div class="example-box rounded-2xl p-6 my-6">
+						<h4 class="font-bold mb-3" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Final Thoughts</h4>
+						<p style="font-family: 'DM Sans', sans-serif; color: #555; margin-bottom: 0;">
+							Learning Tibetan as a complete beginner requires patience, curiosity, and consistency. Progress may feel gradual, but each step builds a strong foundation. With regular practice and thoughtful study, Tibetan becomes not just a language you learn, but a perspective you grow into.
+						</p>
+					</div>
+				</div>
+
+				<!-- CTA Cards -->
+				<div class="mt-12 space-y-6">
+					<h3 class="text-xl font-bold" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Ready to Start Your Tibetan Journey?</h3>
+
+					<div class="grid md:grid-cols-2 gap-6">
+						<a href="/self-paced/learning-to-read/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Learn to Read Tibetan</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Master the Tibetan script with our structured self-paced course. Perfect for absolute beginners.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+						<a href="/live/beginner/101/" class="block group">
+							<div class="cta-card rounded-2xl p-6 h-full">
+								<h4 class="font-bold mb-2 group-hover:text-[#CF4D21] transition-colors" style="font-family: 'Merriweather', serif; color: #1a1a1a;">Live Tibetan Classes</h4>
+								<p class="text-sm mb-4" style="font-family: 'DM Sans', sans-serif; color: #555;">Learn with native Tibetan teachers in interactive live sessions. Get real-time feedback and practice.</p>
+								<span class="inline-flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21;">
+									Learn more
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Back to Resources -->
+				<div class="mt-12 pt-8 border-t border-[#CF4D21]/10">
+					<a href="/resources/" class="inline-flex items-center gap-2 text-[#CF4D21] font-medium hover:gap-3 transition-all" style="font-family: 'Work Sans', Arial, sans-serif;">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+						</svg>
+						Back to Blog
+					</a>
+				</div>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16" style="background-color: #9F6A33;">
+			<div class="max-w-6xl mx-auto px-6 md:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
+					<div class="flex flex-col items-center md:items-start">
+						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-28 h-28 mb-4">
+						<p class="text-white font-bold text-xl mb-2 text-center md:text-left" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-base text-center md:text-left" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/resources" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col items-center md:items-start">
+						<h3 class="text-white font-bold text-base uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+									</svg>
+									Email Us
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-base" style="font-family: 'Work Sans', Arial, sans-serif;">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+								</svg>
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script is:inline>
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+			const closeMobileMenu = document.getElementById('closeMobileMenu');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			mobileMenuBtn?.addEventListener('click', () => {
+				mobileMenu?.classList.remove('hidden');
+			});
+
+			closeMobileMenu?.addEventListener('click', () => {
+				mobileMenu?.classList.add('hidden');
+			});
+
+			// Smooth scroll for TOC links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute('href'));
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				});
+			});
+		</script>
+
+		<Analytics />
+		<SpeedInsights />
+	</body>
+</html>
