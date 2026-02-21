@@ -8,7 +8,9 @@ import Analytics from "@vercel/analytics/astro";
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Advanced 301 – Live Course (Lower Advanced) | Tibetan Learning</title>
@@ -34,7 +36,7 @@ import Analytics from "@vercel/analytics/astro";
 		<!-- Preconnect to Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather:wght@400;700;900&family=Work+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400..700&display=swap" rel="stylesheet">
 
 		<!-- Structured Data - BreadcrumbList -->
 		<script type="application/ld+json">
@@ -108,102 +110,101 @@ import Analytics from "@vercel/analytics/astro";
 			}
 		</style>
 	</head>
-	<body style="background-color: #FFF8EE;">
+	<body style="background-color: #f9f2e6;">
 		<!-- Navigation -->
 		<nav class="border-b border-[#f0e1ca] overflow-visible relative z-10" style="background-color: #fbf9f7;">
 			<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
-				<a href="/" class="flex items-center gap-6">
-					<!-- SINI Logo - larger to extend past the header border -->
-					<div class="relative" style="margin-top: -2rem; margin-bottom: -2rem;">
-						<img src="/assets/SINI orange.webp" alt="SINI Logo" class="h-32 w-auto">
+				<a href="https://www.sinibridge.org" class="back-to-sini" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4em; padding: 12px 22px; border: 2px solid #d45c26; border-radius: 50px; color: #d45c26; font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.1px; text-decoration: none; text-transform: uppercase; line-height: 1; transition: color 300ms ease 0ms, background-color 300ms ease 0ms; white-space: nowrap; background-color: transparent;" onmouseover="this.style.backgroundColor='#d45c26';this.style.color='#fff'" onmouseout="this.style.backgroundColor='transparent';this.style.color='#d45c26'"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to SINI</a>
+				<a href="/" class="flex items-center gap-6" style="margin-left: 1.5rem;">
+					<!-- SINI Logo - with white padding like sinibridge.org -->
+					<div class="relative" style="margin-top: -0.8rem; margin-bottom: -2rem;">
+						<img src="/assets/SINI yellow.webp" alt="SINI Logo" class="h-32 w-auto" style="display: block;">
 					</div>
-					<!-- Sloth Logo -->
-					<img src="/assets/illustrations/Logo-original.png" alt="Tibetan Course Logo" class="h-18 w-auto">
 				</a>
 
-		<!-- Mobile Menu Button -->
-		<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
-		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-		</svg>
-		</button>
+				<!-- Mobile Menu Button -->
+				<button id="mobileMenuBtn" class="lg:hidden ml-auto p-2 text-black hover:text-[#CF4D21]" aria-label="Toggle menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
 
 				<!-- Navigation Links and Button Container -->
-				<div class="hidden lg:flex items-center space-x-8 ml-auto">
-					<div class="flex space-x-8">
+				<div class="hidden lg:flex items-center space-x-10 ml-auto">
+					<div class="flex space-x-10">
 						<!-- Self-Paced Courses Dropdown -->
 						<div class="relative group">
-							<a href="/self-paced/" class="text-black hover:text-[#CF4D21] flex items-center" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
-								Self-Paced Courses
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<a href="/self-paced/" class="flex items-center" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">
+								Self-Paced
+								<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</a>
 							<!-- Dropdown Menu -->
-							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-								<div class="py-3">
-									<a href="/self-paced/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
-									<a href="/self-paced/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Beginner</a>
-									<a href="/self-paced/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Intermediate</a>
-									<a href="/self-paced/advanced" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Advanced</a>
+							<div class="absolute top-full left-0 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: #fbf9f7; border-top: 3px solid #453c36; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); margin-top: 0;">
+								<div class="pt-4 pb-2">
+									<a href="/self-paced/learning-to-read" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Learn to Read</a>
+									<a href="/self-paced/beginner" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Beginner</a>
+									<a href="/self-paced/intermediate" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Intermediate</a>
+									<a href="/self-paced/advanced" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Advanced</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- Live Courses Dropdown -->
 						<div class="relative group">
-							<a href="/live/" class="text-[#CF4D21] flex items-center font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">
+							<a href="/live/" class="flex items-center" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">
 								Live Courses
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 								</svg>
 							</a>
 							<!-- Dropdown Menu -->
-							<div class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-								<div class="py-3">
-									<a href="/live/learning-to-read" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">Learn to Read</a>
+							<div class="absolute top-full left-0 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background: #fbf9f7; border-top: 3px solid #453c36; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); margin-top: 0;">
+								<div class="pt-4 pb-2">
+									<a href="/live/learning-to-read" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Learn to Read</a>
 									<div class="relative beginner-submenu">
-										<a href="/live/beginner" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/beginner" class="block px-5 py-1.5 flex items-center justify-between transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">
 											Beginner
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 											</svg>
 										</a>
 										<!-- Submenu -->
-										<div class="beginner-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
-											<div class="py-3">
-												<a href="/live/beginner/101" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 101</a>
-												<a href="/live/beginner/102" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Beginner 102</a>
+										<div class="beginner-submenu-dropdown absolute opacity-0 invisible transition-all duration-300 z-50" style="background: #fbf9f7; border-top: 3px solid #453c36; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); left: 100%; margin-left: 0; top: 0; width: 160px;">
+											<div class="py-2">
+												<a href="/live/beginner/101" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Beginner 101</a>
+												<a href="/live/beginner/102" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Beginner 102</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative intermediate-submenu">
-										<a href="/live/intermediate" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/intermediate" class="block px-5 py-1.5 flex items-center justify-between transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">
 											Intermediate
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 											</svg>
 										</a>
 										<!-- Submenu -->
-										<div class="intermediate-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
-											<div class="py-3">
-												<a href="/live/intermediate/201" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 201</a>
-												<a href="/live/intermediate/202" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Intermediate 202</a>
+										<div class="intermediate-submenu-dropdown absolute opacity-0 invisible transition-all duration-300 z-50" style="background: #fbf9f7; border-top: 3px solid #453c36; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); left: 100%; margin-left: 0; top: 0; width: 160px;">
+											<div class="py-2">
+												<a href="/live/intermediate/201" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Intermediate 201</a>
+												<a href="/live/intermediate/202" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Intermediate 202</a>
 											</div>
 										</div>
 									</div>
 									<div class="relative advanced-submenu">
-										<a href="/live/advanced" class="block px-4 py-2 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2 flex items-center justify-between" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt;">
+										<a href="/live/advanced" class="block px-5 py-1.5 flex items-center justify-between transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">
 											Advanced
 											<svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 											</svg>
 										</a>
 										<!-- Submenu -->
-										<div class="advanced-submenu-dropdown absolute w-36 opacity-0 invisible transition-all duration-300 z-50" style="background: rgba(255, 248, 238, 0.98); backdrop-filter: blur(10px); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); left: 100%; margin-left: 8px; top: 0; width: 140px;">
-											<div class="py-3">
-												<a href="/live/advanced/301" class="block px-4 py-2 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 301</a>
-												<a href="/live/advanced/302" class="block px-4 py-3 text-gray-700 hover:text-[#CF4D21] transition-colors rounded-lg mx-2" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 10pt; white-space: nowrap;">Advanced 302</a>
+										<div class="advanced-submenu-dropdown absolute opacity-0 invisible transition-all duration-300 z-50" style="background: #fbf9f7; border-top: 3px solid #453c36; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); left: 100%; margin-left: 0; top: 0; width: 160px;">
+											<div class="py-2">
+												<a href="/live/advanced/301" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Advanced 301</a>
+												<a href="/live/advanced/302" class="block px-5 py-1.5 transition-colors" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #453c36; text-decoration: none; white-space: nowrap; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Advanced 302</a>
 											</div>
 										</div>
 									</div>
@@ -211,13 +212,10 @@ import Analytics from "@vercel/analytics/astro";
 							</div>
 						</div>
 
-						<a href="/blog/" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Blog</a>
-						<a href="/resources/" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">Resources</a>
-						<a href="/about" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">About</a>
-						<a href="/faq" class="text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 12pt;">FAQ</a>
-					</div>
-					<div class="px-6 py-2 rounded-lg font-semibold" style="font-family: 'Work Sans', Arial, sans-serif; font-size: 11pt; color: #666;">
-						Next cohort will start in September 2026
+						<a href="/blog/" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Blog</a>
+						<a href="/resources/" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">Resources</a>
+						<a href="/about" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">About</a>
+						<a href="/faq" style="font-family: 'Cabin', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 550; color: #453c36; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#de9d14'" onmouseout="this.style.color='#453c36'">FAQ</a>
 					</div>
 				</div>
 			</div>
@@ -234,38 +232,37 @@ import Analytics from "@vercel/analytics/astro";
 				</button>
 			</div>
 			<div class="px-6 pb-4 space-y-4">
-		<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced Courses</a>
-		<div class="pl-4 space-y-2">
-		<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-		<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-		<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-		<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
-		</div>
-		<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
-		<div class="pl-4 space-y-2">
-		<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Learn to Read</a>
-		<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Beginner</a>
-		<div class="pl-4 space-y-1">
-		<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 101</a>
-		<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Beginner 102</a>
-		</div>
-		<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Intermediate</a>
-		<div class="pl-4 space-y-1">
-		<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 201</a>
-		<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Intermediate 202</a>
-		</div>
-		<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
-		<div class="pl-4 space-y-1">
-		<a href="/live/advanced/301" class="block text-[#CF4D21] hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 301</a>
-		<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">→ Advanced 302</a>
-		</div>
-		</div>
-		<a href="/blog/" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Blog</a>
-				<a href="/resources/" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">Resources</a>
-				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">About</a>
-		<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a>
-		<a href="#course-levels" class="block px-4 py-2 md:px-6 md:py-3 rounded-full text-center font-bold text-[11pt] md:text-base" style="background-color: #CF4D21; font-family: 'Work Sans', Arial, sans-serif; color: #FFFFFF;">Start Learning</a>
-			</div>
+				<a href="/self-paced/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Self-Paced Courses</a>
+				<div class="pl-4 space-y-2">
+					<a href="/self-paced/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Learn to Read</a>
+					<a href="/self-paced/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Beginner</a>
+					<a href="/self-paced/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Intermediate</a>
+					<a href="/self-paced/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Advanced</a>
+				</div>
+				<a href="/live/" class="block text-black hover:text-[#CF4D21] font-semibold" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Live Courses</a>
+				<div class="pl-4 space-y-2">
+					<a href="/live/learning-to-read" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Learn to Read</a>
+					<a href="/live/beginner" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Beginner</a>
+					<div class="pl-4 space-y-1">
+						<a href="/live/beginner/101" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Beginner 101</a>
+						<a href="/live/beginner/102" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Beginner 102</a>
+					</div>
+					<a href="/live/intermediate" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Intermediate</a>
+					<div class="pl-4 space-y-1">
+						<a href="/live/intermediate/201" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Intermediate 201</a>
+						<a href="/live/intermediate/202" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Intermediate 202</a>
+					</div>
+					<a href="/live/advanced" class="block text-gray-700 hover:text-[#CF4D21] text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Advanced</a>
+					<div class="pl-4 space-y-1">
+						<a href="/live/advanced/301" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Advanced 301</a>
+						<a href="/live/advanced/302" class="block text-gray-600 hover:text-[#CF4D21] text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">→ Advanced 302</a>
+					</div>
+				</div>
+				<a href="/blog/" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Blog</a>
+				<a href="/resources/" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Resources</a>
+				<a href="/about" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">About</a>
+				<a href="/faq" class="block text-black hover:text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">FAQ</a>
+				</div>
 		</div>
 
 		<!-- Hero Section -->
@@ -273,26 +270,26 @@ import Analytics from "@vercel/analytics/astro";
 			<div class="max-w-7xl mx-auto">
 				<!-- Breadcrumb -->
 				<nav class="mb-8">
-					<a href="/live/" class="text-[#CF4D21] hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a>
+					<a href="/live/" class="text-[#CF4D21] hover:underline" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Live Courses</a>
 					<span class="mx-2 text-gray-500">/</span>
-					<a href="/live/advanced" class="text-[#CF4D21] hover:underline" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced</a>
+					<a href="/live/advanced" class="text-[#CF4D21] hover:underline" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Advanced</a>
 					<span class="mx-2 text-gray-500">/</span>
-					<span class="text-gray-700" style="font-family: 'Work Sans', Arial, sans-serif;">Advanced 301</span>
+					<span class="text-gray-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Advanced 301</span>
 				</nav>
 
 				<!-- Hero Content -->
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
 					<!-- Left Content -->
 					<div>
-						<h1 class="text-3xl md:text-4xl lg:text-5xl font-normal mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+						<h1 class="text-3xl md:text-4xl lg:text-5xl font-normal mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Advanced 301
 						</h1>
 
-						<h2 class="text-xl md:text-2xl lg:text-2xl font-normal mb-6" style="font-family: 'Merriweather', serif; color: #666;">
+						<h2 class="text-xl md:text-2xl lg:text-2xl font-normal mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 							Lower Advanced
 						</h2>
 
-						<p class="text-lg leading-relaxed mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+						<p class="text-lg leading-relaxed mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000; font-size: 14pt;">
 							བོད་སྐད་སྙིང་པོ། The Heart of Tibetan Online Colloquial Tibetan Lower Advanced Language Course is a student-centered program that blends live and recorded learning across six engaging Modules. Advanced 301 guides you through Lessons 21–25 of the forthcoming Volume 3 and a short Review Module. You will begin working with essential dharma vocabulary in a colloquial context while refining advanced grammar.
 						</p>
 
@@ -303,11 +300,11 @@ import Analytics from "@vercel/analytics/astro";
 									<!-- Modules -->
 									<div class="flex flex-col items-center">
 										<div class="rounded-full flex items-center justify-center mb-2" style="background-color: #CF4D21; width: 2rem; height: 2rem;">
-											<span class="text-white font-bold text-xs" style="font-family: 'Work Sans', Arial, sans-serif;">6</span>
+											<span class="text-white font-bold text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">6</span>
 										</div>
 										<div class="text-center">
-											<h4 class="font-bold text-xs" style="font-family: 'DM Sans', sans-serif; color: #000;">Modules</h4>
-											<p class="text-xs text-gray-600" style="font-family: 'DM Sans', sans-serif;">Lessons 21–25 + review</p>
+											<h4 class="font-bold text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Modules</h4>
+											<p class="text-xs text-gray-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Lessons 21–25 + review</p>
 										</div>
 									</div>
 
@@ -322,8 +319,8 @@ import Analytics from "@vercel/analytics/astro";
 											</svg>
 										</div>
 										<div class="text-center">
-											<h4 class="font-bold text-xs" style="font-family: 'DM Sans', sans-serif; color: #000;">Format</h4>
-											<p class="text-xs text-gray-600" style="font-family: 'DM Sans', sans-serif;">Live + Tutor + Moodle</p>
+											<h4 class="font-bold text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Format</h4>
+											<p class="text-xs text-gray-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Live + Tutor + Moodle</p>
 										</div>
 									</div>
 
@@ -338,8 +335,8 @@ import Analytics from "@vercel/analytics/astro";
 											</svg>
 										</div>
 										<div class="text-center">
-											<h4 class="font-bold text-xs" style="font-family: 'DM Sans', sans-serif; color: #000;">Time Commitment</h4>
-											<p class="text-xs text-gray-600" style="font-family: 'DM Sans', sans-serif;">~11–13 hrs/week</p>
+											<h4 class="font-bold text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Time Commitment</h4>
+											<p class="text-xs text-gray-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">~11–13 hrs/week</p>
 										</div>
 									</div>
 
@@ -354,8 +351,8 @@ import Analytics from "@vercel/analytics/astro";
 											</svg>
 										</div>
 										<div class="text-center">
-											<h4 class="font-bold text-xs" style="font-family: 'DM Sans', sans-serif; color: #000;">Prerequisite</h4>
-											<p class="text-xs text-gray-600" style="font-family: 'DM Sans', sans-serif;">Intermediate 202 or equivalent</p>
+											<h4 class="font-bold text-xs" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Prerequisite</h4>
+											<p class="text-xs text-gray-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Intermediate 202 or equivalent</p>
 										</div>
 									</div>
 								</div>
@@ -375,13 +372,13 @@ import Analytics from "@vercel/analytics/astro";
 
 
 		<!-- Important Note Section -->
-		<section class="py-10 px-6" style="background-color: #FFF8EE;">
+		<section class="py-10 px-6" style="background-color: #f9f2e6;">
 			<div class="max-w-4xl mx-auto">
 				<div class="bg-orange-50 rounded-lg p-8 border-l-4 shadow-sm" style="border-left-color: #CF4D21; background-color: #FFFBF7;">
 					<div class="flex items-center gap-3 mb-4">
-						<h3 class="text-lg font-semibold" style="font-family: 'DM Sans', sans-serif; color: #000;">Important Note</h3>
+						<h3 class="text-lg font-semibold" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Important Note</h3>
 					</div>
-					<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+					<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 						This is the first time we offer Advanced 301 in this student-centered format. The core structure is set, but some details may be adjusted during preparation to best support students.
 					</p>
 				</div>
@@ -394,10 +391,10 @@ import Analytics from "@vercel/analytics/astro";
 		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
 			<div class="max-w-7xl mx-auto">
 				<div class="text-center mb-12">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 						What You'll <span class="font-bold">Achieve</span>
 					</h2>
-					<p class="text-lg mb-6" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+					<p class="text-lg mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000; font-size: 14pt;">
 						By completing Advanced 301, you will:
 					</p>
 				</div>
@@ -408,7 +405,7 @@ import Analytics from "@vercel/analytics/astro";
 						<div class="flex items-center justify-center mx-auto mb-3" style="width: 8rem; height: 8rem;">
 							<img src="/assets/illustrations/u4174158496_woman_studying_tibetan_on_her_bed_--sref_httpss.mj._0fb7174d-d9d2-49c2-b25a-9113583bac3a.webp" alt="Grammar illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
 						</div>
-						<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #000;">Consolidate Intermediate skills and extend them into Lower Advanced Tibetan</p>
+						<p class="text-center text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Consolidate Intermediate skills and extend them into Lower Advanced Tibetan</p>
 					</div>
 
 					<!-- Card 2 -->
@@ -416,7 +413,7 @@ import Analytics from "@vercel/analytics/astro";
 						<div class="flex items-center justify-center mx-auto mb-3" style="width: 8rem; height: 8rem;">
 							<img src="/assets/illustrations/u4174158496_a_man_speaking_with_a_tibetan_monk_in_Dharamshala_n_5685ce2b-6b10-4161-8e71-5d0eed301f97.webp" alt="Vocabulary illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
 						</div>
-						<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #000;">Work with essential dharma vocabulary in colloquial usage (e.g., spread of Buddhism, biography of the Buddha, Three Turnings of the Wheel, how to listen to the dharma, refuge)</p>
+						<p class="text-center text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Work with essential dharma vocabulary in colloquial usage (e.g., spread of Buddhism, biography of the Buddha, Three Turnings of the Wheel, how to listen to the dharma, refuge)</p>
 					</div>
 
 					<!-- Card 3 -->
@@ -424,7 +421,7 @@ import Analytics from "@vercel/analytics/astro";
 						<div class="flex items-center justify-center mx-auto mb-3" style="width: 8rem; height: 8rem;">
 							<img src="/assets/illustrations/u4174158496_a_nerdy_giraffe_wearing_glasses_and_enjoying_her__014c1e37-455a-4538-be73-b1f2330053c8_0.webp" alt="Conversation illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
 						</div>
-						<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #000;">Use new advanced grammar tools: temporal connectives (simultaneity & sequence), additional nominalizers, and modal verbs</p>
+						<p class="text-center text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Use new advanced grammar tools: temporal connectives (simultaneity & sequence), additional nominalizers, and modal verbs</p>
 					</div>
 
 					<!-- Card 4 -->
@@ -432,7 +429,7 @@ import Analytics from "@vercel/analytics/astro";
 						<div class="flex items-center justify-center mx-auto mb-3" style="width: 8rem; height: 8rem;">
 							<img src="/assets/illustrations/u4174158496_a_group_of_people_studying_tibetan_in_a_caf_in_Dhar_71652edd-fdd0-4a77-937d-a7328da288a4.webp" alt="Cultural illustration" class="w-full h-full object-cover rounded-full" loading="lazy">
 						</div>
-						<p class="text-center text-sm" style="font-family: 'DM Sans', sans-serif; color: #000;">Engage more in Tibetan as the classroom language (with English used in the Live Forum for metacognition, logistics, and clarifications)</p>
+						<p class="text-center text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Engage more in Tibetan as the classroom language (with English used in the Live Forum for metacognition, logistics, and clarifications)</p>
 					</div>
 				</div>
 			</div>
@@ -445,7 +442,7 @@ import Analytics from "@vercel/analytics/astro";
 				<!-- Large container card -->
 				<div class="bg-white rounded-3xl p-8 shadow-lg" style="background-color: #FEFCF8;">
 					<div class="text-center mb-8">
-						<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+						<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							A Snippet of our <span class="font-bold">Advanced 301 Webinar</span>
 						</h2>
 					</div>
@@ -468,7 +465,7 @@ import Analytics from "@vercel/analytics/astro";
 
 						<!-- Disclaimer -->
 						<div class="text-center mt-6">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								ℹ️ This is a beta version of the video/webinar. The final version will include the puppets actually talking through voice actors.
 							</p>
 						</div>
@@ -479,10 +476,10 @@ import Analytics from "@vercel/analytics/astro";
 
 
 		<!-- What's Included Section -->
-		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #f9f2e6;">
 			<div class="max-w-6xl mx-auto">
 				<div class="text-center mb-12">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 						What You'll Get in <span class="font-bold">This Course</span>
 					</h2>
 				</div>
@@ -497,10 +494,10 @@ import Analytics from "@vercel/analytics/astro";
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Merriweather', serif; color: #000;">
+								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 									Live Classes
 								</h3>
-								<ul class="space-y-2 text-lg" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+								<ul class="space-y-2 text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 									<li>• Live classes with Tibetan language instructors (e.g., Franziska Oertle, Gen Lhakpa Tsering-la, and assistants)</li>
 									<li>• Zoom classes offered in two time slots (most likely 11:00 and 18:00 CE(S)T); all sessions on Saturdays</li>
 									<li>• Duration: ~1 hour</li>
@@ -519,10 +516,10 @@ import Analytics from "@vercel/analytics/astro";
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Merriweather', serif; color: #000;">
+								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 									Learning Resources
 								</h3>
-								<ul class="space-y-2 text-lg" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+								<ul class="space-y-2 text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 									<li>• One BETA webinar per Lesson explaining grammar via the questions of our non-human students (each question segment ~10–15 minutes)</li>
 									<li>• Live meeting "Discussion Forum" on soft skills (in English)</li>
 									<li>• White Wednesday Talks on Tibetan culture (contemporary female Buddhist teacher)</li>
@@ -541,10 +538,10 @@ import Analytics from "@vercel/analytics/astro";
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Merriweather', serif; color: #000;">
+								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 									Community & Support
 								</h3>
-								<ul class="space-y-2 text-lg" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+								<ul class="space-y-2 text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 									<li>• Small Learning Communities (SLCs) — the backbone of our courses</li>
 									<li>• Weekly 1:1 sessions with Tibetan native-speaking conversation partners</li>
 									<li>• Digital language lab-style speaking practice</li>
@@ -563,10 +560,10 @@ import Analytics from "@vercel/analytics/astro";
 								</svg>
 							</div>
 							<div class="flex-1">
-								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Merriweather', serif; color: #000;">
+								<h3 class="text-lg font-semibold mb-3 transition-colors duration-200 hover:text-gray-800" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 									Practice & Assessment
 								</h3>
-								<ul class="space-y-2 text-lg" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+								<ul class="space-y-2 text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 									<li>• A challenge (final product) at the end of each Module</li>
 									<li>• Rubrics for reflection and self-assessment</li>
 									<li>• Anki flashcards with audio and example sentences</li>
@@ -582,18 +579,18 @@ import Analytics from "@vercel/analytics/astro";
 
 
 		<!-- Auditing Option Note -->
-		<section class="py-10 px-6" style="background-color: #FFF8EE;">
+		<section class="py-10 px-6" style="background-color: #f9f2e6;">
 			<div class="max-w-4xl mx-auto">
 				<!-- Clean bordered box -->
 				<div class="bg-white rounded-lg p-8 border-l-4 border-orange-500 shadow-sm" style="border-left-color: #CF4D21;">
 					<!-- Title with icon -->
 					<div class="flex items-center gap-3 mb-4">
 						<span class="text-2xl">📚</span>
-						<h3 class="text-lg font-semibold" style="font-family: 'DM Sans', sans-serif; color: #000;">Auditing option</h3>
+						<h3 class="text-lg font-semibold" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Auditing option</h3>
 					</div>
 
 					<!-- Description paragraph -->
-					<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+					<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 						Auditing students follow the course pace, join an SLC, and meet weekly with a tutor, but do not attend Saturday live classes (except the Live Forum), do not submit assignments, and therefore do not receive teacher feedback. Auditors still receive full Moodle access, including class recordings.
 					</p>
 				</div>
@@ -606,10 +603,10 @@ import Analytics from "@vercel/analytics/astro";
 			<div class="max-w-6xl mx-auto">
 				<!-- Header -->
 				<div class="text-center mb-12">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+					<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 						What Our Learners Say
 					</h2>
-					<p class="text-lg" style="font-family: 'DM Sans', sans-serif; color: #666;">
+					<p class="text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 						A few words from our Advanced 301 cohort.
 					</p>
 				</div>
@@ -620,7 +617,7 @@ import Analytics from "@vercel/analytics/astro";
 						<!-- Testimonial 1 -->
 						<div class="break-inside-avoid">
 							<span class="text-5xl" style="color: #CF4D21;">❝</span>
-							<p class="text-base leading-relaxed mt-2" style="font-family: 'DM Sans', sans-serif; color: #374151;">
+							<p class="text-base leading-relaxed mt-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #374151;">
 								This has been an excellent learning experience - just as the previous beginner and intermediate courses - thank you so much!
 							</p>
 						</div>
@@ -628,7 +625,7 @@ import Analytics from "@vercel/analytics/astro";
 						<!-- Testimonial 2 -->
 						<div class="break-inside-avoid">
 							<span class="text-5xl" style="color: #CF4D21;">❝</span>
-							<p class="text-base leading-relaxed mt-2" style="font-family: 'DM Sans', sans-serif; color: #374151;">
+							<p class="text-base leading-relaxed mt-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #374151;">
 								Great course, very clear and helpful. Thank you!!
 							</p>
 						</div>
@@ -636,7 +633,7 @@ import Analytics from "@vercel/analytics/astro";
 						<!-- Testimonial 3 -->
 						<div class="break-inside-avoid">
 							<span class="text-5xl" style="color: #CF4D21;">❝</span>
-							<p class="text-base leading-relaxed mt-2" style="font-family: 'DM Sans', sans-serif; color: #374151;">
+							<p class="text-base leading-relaxed mt-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #374151;">
 								Fantastic online tibetan course! Absolutely recommanded - you'll have fun!!!
 							</p>
 						</div>
@@ -644,7 +641,7 @@ import Analytics from "@vercel/analytics/astro";
 						<!-- Testimonial 4 -->
 						<div class="break-inside-avoid">
 							<span class="text-5xl" style="color: #CF4D21;">❝</span>
-							<p class="text-base leading-relaxed mt-2" style="font-family: 'DM Sans', sans-serif; color: #374151;">
+							<p class="text-base leading-relaxed mt-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #374151;">
 								I'd like to express my thanks to Franziska and everyone else for the truly excellent and helpful course, especially for those like me who love studying Tibetan but don't have much time. The text, grammar, and content were top-notch. Thank you. And thanks also to my classmates, whom I hope to meet again.
 							</p>
 						</div>
@@ -652,7 +649,7 @@ import Analytics from "@vercel/analytics/astro";
 						<!-- Testimonial 5 -->
 						<div class="break-inside-avoid">
 							<span class="text-5xl" style="color: #CF4D21;">❝</span>
-							<p class="text-base leading-relaxed mt-2" style="font-family: 'DM Sans', sans-serif; color: #374151;">
+							<p class="text-base leading-relaxed mt-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #374151;">
 								If you are interested in Buddhism then this course may be useful for you. The methods of "teaching" are diverse, which is good if you have struggled to improve with conventional methods. However you need a good internet connection for the recorded vids, online exercises and live class. If you are not interested in Buddhism, then the vocab may not be very useful.
 							</p>
 						</div>
@@ -667,10 +664,10 @@ import Analytics from "@vercel/analytics/astro";
 		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
 			<div class="max-w-7xl mx-auto">
 					<div class="text-center mb-12">
-						<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+						<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Your Learning <span class="font-bold">Team</span>
 						</h2>
-						<p class="text-lg" style="font-family: 'DM Sans', sans-serif; color: #666;">
+						<p class="text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 							Meet the teachers, tutors, and companions who make learning fun.
 						</p>
 					</div>
@@ -680,7 +677,7 @@ import Analytics from "@vercel/analytics/astro";
 
 					<!-- Teachers Card -->
 					<div class="team-section">
-						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'DM Sans', sans-serif;">
+						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 							Teachers
 						</h3>
 						<div class="relative">
@@ -691,9 +688,9 @@ import Analytics from "@vercel/analytics/astro";
 											<div class="flex items-center justify-center mb-6">
 												<img class="w-24 h-24 rounded-full object-cover shadow-md" src="/assets/illustrations/Franziska-Oertle-min.jpg" alt="Franziska Oertle" style="width: 96px; height: 96px; object-fit: cover; object-position: center;">
 											</div>
-											<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">Franziska Oertle</h4>
-											<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Lead teacher</p>
-											<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Sees her work as a personal contribution to preserving Tibetan culture and Dharma.</p>
+											<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Franziska Oertle</h4>
+											<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Lead teacher</p>
+											<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Sees her work as a personal contribution to preserving Tibetan culture and Dharma.</p>
 										</div>
 									</div>
 								</div>
@@ -716,7 +713,7 @@ import Analytics from "@vercel/analytics/astro";
 
 					<!-- Tutors Card -->
 					<div class="team-section">
-						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'DM Sans', sans-serif;">
+						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 							Tutors
 						</h3>
 						<div class="relative">
@@ -727,9 +724,9 @@ import Analytics from "@vercel/analytics/astro";
 											<div class="flex items-center justify-center mb-6">
 												<img class="w-24 h-24 rounded-full object-cover shadow-md" src="/assets/illustrations/u4174158496_a_group_of_young_tibetans_adults_smiling_for_a_grou_402b97cf-8c2a-4f5b-8cb8-15f9845c5ddd.webp" alt="Tutor Team" style="width: 96px; height: 96px; object-fit: cover; object-position: center;" loading="lazy">
 											</div>
-											<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">Tutor Team</h4>
-											<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Native speaker tutors</p>
-											<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Kind, patient speakers in India & Nepal.</p>
+											<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Tutor Team</h4>
+											<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Native speaker tutors</p>
+											<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Kind, patient speakers in India & Nepal.</p>
 										</div>
 									</div>
 								</div>
@@ -752,7 +749,7 @@ import Analytics from "@vercel/analytics/astro";
 
 					<!-- Companions Card -->
 					<div class="team-section">
-						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'DM Sans', sans-serif;">
+						<h3 class="text-sm font-semibold text-[#CF4D21] mb-4 uppercase tracking-wide text-center" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 							Companions
 						</h3>
 						<div class="relative">
@@ -763,9 +760,9 @@ import Analytics from "@vercel/analytics/astro";
 											<div class="flex items-center justify-center mb-6">
 												<img class="w-24 h-24 rounded-full object-cover shadow-md" src="/assets/illustrations/u4174158496_giraffe_wearing_glasses_nerdy_learn_tibetan_--sre_39059cff-bbab-4063-813e-89ce65be1f41_0.webp" alt="Ms. Giraffe" style="width: 96px; height: 96px; object-fit: cover; object-position: center;" loading="lazy">
 											</div>
-											<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">Ms. Giraffe</h4>
-											<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Learning Companion</p>
-											<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">Nerdy grammar scout.</p>
+											<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Ms. Giraffe</h4>
+											<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Learning Companion</p>
+											<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">Nerdy grammar scout.</p>
 										</div>
 									</div>
 								</div>
@@ -801,7 +798,7 @@ import Analytics from "@vercel/analytics/astro";
 								</div>
 
 								<!-- Message -->
-								<p class="text-sm italic leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #6B7280; line-height: 1.4;">
+								<p class="text-sm italic leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280; line-height: 1.4;">
 									Pets are welcome learning buddies too: they're patient listeners who never complain about grammar mistakes!
 								</p>
 							</div>
@@ -985,9 +982,9 @@ import Analytics from "@vercel/analytics/astro";
 								<div class="flex items-center justify-center mb-6">
 									<img class="w-24 h-24 rounded-full object-cover shadow-md" src="${teacher.img}" alt="${teacher.name}" style="width: 96px; height: 96px; object-fit: cover; object-position: center;">
 								</div>
-								<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">${teacher.name}</h4>
-								<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${teacher.role}</p>
-								<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${teacher.blurb}</p>
+								<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">${teacher.name}</h4>
+								<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${teacher.role}</p>
+								<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${teacher.blurb}</p>
 							</div>
 						</div>
 					`;
@@ -1005,9 +1002,9 @@ import Analytics from "@vercel/analytics/astro";
 								<div class="flex items-center justify-center mb-6">
 									<img class="w-24 h-24 rounded-full object-cover shadow-md" src="${companion.img}" alt="${companion.name}" style="width: 96px; height: 96px; object-fit: cover; object-position: center;">
 								</div>
-								<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">${companion.name}</h4>
-								<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${companion.role}</p>
-								<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${companion.blurb}</p>
+								<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">${companion.name}</h4>
+								<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${companion.role}</p>
+								<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${companion.blurb}</p>
 							</div>
 						</div>
 					`;
@@ -1035,9 +1032,9 @@ import Analytics from "@vercel/analytics/astro";
 							<div class="flex items-center justify-center mb-6">
 								<img class="w-24 h-24 rounded-full object-cover shadow-md" src="${tutor.img}" alt="${tutor.name}" style="width: 96px; height: 96px; object-fit: cover; object-position: center;">
 							</div>
-							<h4 class="font-bold text-base mb-2" style="font-family: 'Merriweather', serif; color: #000;">${tutor.name}</h4>
-							<p class="text-sm mb-2" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${tutor.role}</p>
-							<p class="text-sm" style="font-family: 'DM Sans', sans-serif; color: #6B7280;">${tutor.blurb}</p>
+							<h4 class="font-bold text-base mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">${tutor.name}</h4>
+							<p class="text-sm mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${tutor.role}</p>
+							<p class="text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #6B7280;">${tutor.blurb}</p>
 						</div>
 					</div>
 				`;
@@ -1065,7 +1062,7 @@ import Analytics from "@vercel/analytics/astro";
 					content.innerHTML = `
 						<div class="p-6 md:p-8">
 							<div class="flex items-center justify-between mb-6">
-								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Merriweather', serif;">Prerequisites</h3>
+								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Prerequisites</h3>
 								<button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded p-1">
 									<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1074,16 +1071,16 @@ import Analytics from "@vercel/analytics/astro";
 							</div>
 							<div class="space-y-4">
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'DM Sans', sans-serif;">Alumni & auditing students:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Alumni & auditing students:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• If you've completed Intermediate 201, you're ready. A quick review is recommended.</li>
 										<li>• If you audited Intermediate 201 and now want to join as a full student, join the fall review sessions (Oct–Dec 2025) or send a short entrance presentation.</li>
 										<li>• You can also continue auditing. Review sessions are optional but helpful.</li>
 									</ul>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">New students:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">New students:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• You should be comfortable discussing daily life topics with conjugated verbs.</li>
 										<li>• You should know intermediate grammar like reported speech, relative clauses, nominalizers, etc.</li>
 										<li>• Please review: Volumes 1 & 2 of <em>The Heart of Tibetan Language</em>.</li>
@@ -1091,23 +1088,23 @@ import Analytics from "@vercel/analytics/astro";
 									</ul>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Entrance presentation:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Entrance presentation:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• A short video (mostly in Tibetan) talking about various general and intermediate conversational topics and your motivation of learning.</li>
 										<li>• No need to be fluent; this is about showing your comfort level and readiness.</li>
 										<li>• You'll receive full instructions and a rubric.</li>
 									</ul>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Logistics:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Logistics:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• Gmail required (for Drive + YouTube sharing).</li>
 										<li>• WhatsApp required (for tutor classes and group logistics).</li>
 									</ul>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Preparation options:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Preparation options:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• Join 10 weekly Review Sessions (Oct–Dec).</li>
 										<li>• Buy access to Volume 1 videos and webinars ($150).</li>
 										<li>• Buy access to Intermediate 202 resources ($165).</li>
@@ -1121,7 +1118,7 @@ import Analytics from "@vercel/analytics/astro";
 					content.innerHTML = `
 						<div class="p-6 md:p-8">
 							<div class="flex items-center justify-between mb-6">
-								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Merriweather', serif;">Tuition & Financial Support</h3>
+								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Tuition & Financial Support</h3>
 								<button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded p-1">
 									<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1130,31 +1127,31 @@ import Analytics from "@vercel/analytics/astro";
 							</div>
 							<div class="space-y-4">
 								<div>
-									<p class="text-neutral-700 mb-4" style="font-family: 'DM Sans', sans-serif;">
+									<p class="text-neutral-700 mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<strong>SINI's mission:</strong> We keep costs as low as possible to make Tibetan studies accessible worldwide.
 									</p>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'DM Sans', sans-serif;">Sliding scale:</h4>
-									<p class="text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Sliding scale:</h4>
+									<p class="text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										Pay what you can, starting from the listed minimums.
 									</p>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Monastic discount:</h4>
-									<p class="text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Monastic discount:</h4>
+									<p class="text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										30% discount for monastic friends.
 									</p>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Payment in rates:</h4>
-									<p class="text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Payment in rates:</h4>
+									<p class="text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										Pay in installments instead of all at once. Contact us to arrange before registering.
 									</p>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">Sponsor option:</h4>
-									<p class="text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Sponsor option:</h4>
+									<p class="text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										Add $108 to support fellow students and sustain the program.
 									</p>
 								</div>
@@ -1165,7 +1162,7 @@ import Analytics from "@vercel/analytics/astro";
 					content.innerHTML = `
 						<div class="p-6 md:p-8">
 							<div class="flex items-center justify-between mb-6">
-								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Merriweather', serif;">Refund Policy</h3>
+								<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold text-neutral-900" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Refund Policy</h3>
 								<button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded p-1">
 									<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1174,8 +1171,8 @@ import Analytics from "@vercel/analytics/astro";
 							</div>
 							<div class="space-y-4">
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'DM Sans', sans-serif;">If we can replace your spot:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21]" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">If we can replace your spot:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• Module 1: 70%</li>
 										<li>• Module 2: 65%</li>
 										<li>• Module 3: 55%</li>
@@ -1183,8 +1180,8 @@ import Analytics from "@vercel/analytics/astro";
 									</ul>
 								</div>
 								<div>
-									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'DM Sans', sans-serif;">If we cannot replace your spot:</h4>
-									<ul class="space-y-2 text-neutral-700" style="font-family: 'DM Sans', sans-serif;">
+									<h4 class="font-semibold mb-3 text-[#CF4D21] mt-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">If we cannot replace your spot:</h4>
+									<ul class="space-y-2 text-neutral-700" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 										<li>• Module 1: 55%</li>
 										<li>• Module 2: 40%</li>
 										<li>• Module 3: 30%</li>
@@ -1272,10 +1269,10 @@ import Analytics from "@vercel/analytics/astro";
 		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
 			<div class="max-w-7xl mx-auto">
 				<div class="text-center mb-12">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Merriweather', serif; color: #000;">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 						Our Methodology
 					</h2>
-					<p class="text-lg max-w-4xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #666;">
+					<p class="text-lg max-w-4xl mx-auto" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 						Our approach is both <strong>student-centered</strong> and <strong>learning-centered</strong>. We believe that people learn best when they are active, curious, and supported by a caring community.
 					</p>
 				</div>
@@ -1284,47 +1281,47 @@ import Analytics from "@vercel/analytics/astro";
 				<div class="max-w-3xl mx-auto space-y-8">
 					<!-- Dr. Fink's Taxonomy -->
 					<div class="border-l-4 pl-6" style="border-left-color: #CF4D21;">
-						<h3 class="text-xl font-semibold mb-2" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-semibold mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Dr. Fink's Taxonomy
 						</h3>
-						<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+						<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 							We draw on Dr. Fink's 6-fold Taxonomy of Significant Learning, which highlights knowledge, application, integration, the human dimension, caring, and learning how to learn.
 						</p>
 					</div>
 
 					<!-- Soft Skills -->
 					<div class="border-l-4 pl-6" style="border-left-color: #CF4D21;">
-						<h3 class="text-xl font-semibold mb-2" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-semibold mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Soft Skills & Metacognition
 						</h3>
-						<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+						<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 							Special focus is placed on soft skills: reflection, self-awareness, collaboration, and empathy. Students are invited to keep an e-Portfolio and share reflections in forums, helping them grow not only as language learners but as human beings. In addition to Tibetan conversations, the Live Forum helps build metacognitive skills in English.
 						</p>
 					</div>
 
 					<!-- Balanced Pedagogy -->
 					<div class="border-l-4 pl-6" style="border-left-color: #CF4D21;">
-						<h3 class="text-xl font-semibold mb-2" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-semibold mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Balanced Pedagogy
 						</h3>
-						<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+						<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 							Classes blend traditional Tibetan grammar with modern, interactive pedagogy. Grammar and vocabulary are balanced with songs, stories, cultural exchange, and playful activities.
 						</p>
 					</div>
 
 					<!-- Joy and Humor -->
 					<div class="border-l-4 pl-6" style="border-left-color: #CF4D21;">
-						<h3 class="text-xl font-semibold mb-2" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-semibold mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Joy and Humor
 						</h3>
-						<p class="text-base leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #4B5563;">
+						<p class="text-base leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #4B5563;">
 							Joy and humor are essential to our method. A smile, a bit of laughter, and curiosity keep learning light while ensuring deep progress.
 						</p>
 					</div>
 
 					<!-- Methodology Video -->
 					<div class="mt-12 text-center">
-						<h3 class="text-xl font-semibold mb-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-semibold mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Want to Learn More about our Methodology? Here's a Detailed Video
 						</h3>
 						<div class="relative mx-auto" style="max-width: 800px;">
@@ -1346,13 +1343,13 @@ import Analytics from "@vercel/analytics/astro";
 
 
 		<!-- Details at a Glance Section -->
-		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #f9f2e6;">
 			<div class="max-w-7xl mx-auto">
 				<div class="text-center mb-12">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3" style="font-family: 'Merriweather', serif; color: #000;">
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 						Practical Details
 					</h2>
-					<p class="text-lg text-neutral-600" style="font-family: 'DM Sans', sans-serif;">
+					<p class="text-lg text-neutral-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 						Everything you need to know before enrolling
 					</p>
 				</div>
@@ -1360,8 +1357,8 @@ import Analytics from "@vercel/analytics/astro";
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
 					<!-- Prerequisites -->
 					<div>
-						<h3 class="text-xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #000;">Prerequisites</h3>
-						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-bold mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Prerequisites</h3>
+						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							<li>• Alumni of Intermediate 201 & 202 are qualified</li>
 							<li>• Newcomers: must have studied <em>The Heart of Tibetan Language Vol. 1 & 2</em> (or equivalent)</li>
 							<li>• Entrance Presentation required for new and former auditing students</li>
@@ -1370,15 +1367,15 @@ import Analytics from "@vercel/analytics/astro";
 						<button
 							onclick="openModal('prerequisites')"
 							class="text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded"
-							style="font-family: 'DM Sans', sans-serif; color: #CF4D21;">
+							style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #CF4D21;">
 							More details →
 						</button>
 					</div>
 
 					<!-- Tuition & Financial Support -->
 					<div>
-						<h3 class="text-xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #000;">Tuition & Financial Support</h3>
-						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-bold mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Tuition & Financial Support</h3>
+						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							<li>• Sliding scale tuition: $475 minimum ($325 for monastics)</li>
 							<li>• Auditing version: $300 ($225 for monastics)</li>
 							<li>• Scholarships & payment plans available</li>
@@ -1386,15 +1383,15 @@ import Analytics from "@vercel/analytics/astro";
 						<button
 							onclick="openModal('tuition')"
 							class="text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded"
-							style="font-family: 'DM Sans', sans-serif; color: #CF4D21;">
+							style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #CF4D21;">
 							More details →
 						</button>
 					</div>
 
 					<!-- Refund Policy -->
 					<div>
-						<h3 class="text-xl font-bold mb-6" style="font-family: 'Merriweather', serif; color: #000;">Refund Policy</h3>
-						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<h3 class="text-xl font-bold mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">Refund Policy</h3>
+						<ul class="space-y-1.5 text-base mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							<li>• Refund depends on withdrawal timing</li>
 							<li>• Up to 55% refund if leaving during Module 1</li>
 							<li>• Module 2: 40% refund</li>
@@ -1404,7 +1401,7 @@ import Analytics from "@vercel/analytics/astro";
 						<button
 							onclick="openModal('refund')"
 							class="text-lg font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 rounded"
-							style="font-family: 'DM Sans', sans-serif; color: #CF4D21;">
+							style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #CF4D21;">
 							More details →
 						</button>
 					</div>
@@ -1427,7 +1424,7 @@ import Analytics from "@vercel/analytics/astro";
 
 
 		<!-- This Course is based on this Book -->
-		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #FFF8EE;">
+		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" style="background-color: #f9f2e6;">
 			<div class="max-w-5xl mx-auto">
 				<div class="rounded-2xl ring-1 ring-black/5 bg-white p-8 md:p-10 shadow-lg">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center">
@@ -1447,13 +1444,13 @@ import Analytics from "@vercel/analytics/astro";
 						<div class="space-y-6 text-center">
 							<!-- Title block -->
 							<div class="space-y-3">
-								<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold text-neutral-900" style="font-family: 'Merriweather', serif;">
+								<h2 class="text-xl md:text-2xl lg:text-3xl font-semibold text-neutral-900" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 									Textbook for This Course
 								</h2>
-								<h3 class="text-xl md:text-2xl font-medium text-neutral-800" style="font-family: 'Merriweather', serif;">
+								<h3 class="text-xl md:text-2xl font-medium text-neutral-800" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 									བོད་སྐད་སྙིང་པོ། <em>The Heart of Tibetan Language, Volume 3</em>
 								</h3>
-								<p class="text-lg text-neutral-600" style="font-family: 'DM Sans', sans-serif;">
+								<p class="text-lg text-neutral-600" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 									Forthcoming — draft PDF included in course package. This volume blends colloquial grammar with carefully selected dharma terminology and includes dialogues, Buddhist quotes and short prayers, biographies, verses from ལེགས་བཤད་ལྗོན་དབང་།, vocabulary with examples and syllable explanations, songs, detailed grammar, and rubrics. A workbook accompanies the text.
 								</p>
 							</div>
@@ -1468,10 +1465,10 @@ import Analytics from "@vercel/analytics/astro";
 		<!-- Why Choose Section -->
 		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6">
 			<div class="max-w-5xl mx-auto text-center">
-				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Merriweather', serif; color: #000;">
+				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 					Why Choose <span class="font-bold">Advanced 301</span>?
 				</h2>
-				<p class="text-lg leading-relaxed max-w-3xl mx-auto" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 16pt;">
+				<p class="text-lg leading-relaxed max-w-3xl mx-auto" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000; font-size: 16pt;">
 					Advanced 301 blends colloquial Tibetan with core dharma vocabulary in a supportive, joyful environment. With a gentle pace, weekly tutor sessions, SLCs, and thoughtful reflection, you'll grow into advanced conversation while engaging with the cultural and spiritual heart of Tibetan language.
 				</p>
 			</div>
@@ -1481,19 +1478,17 @@ import Analytics from "@vercel/analytics/astro";
 		<!-- CTA Section -->
 		<section class="py-8 md:py-12 lg:py-16 px-4 md:px-6" id="enroll">
 			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-6" style="font-family: 'Merriweather', serif; color: #000;">
+				<h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-6" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 					Ready to Advance Your <span class="font-bold">Tibetan Journey</span>?
 				</h2>
-				<p class="text-lg mb-8" style="font-family: 'DM Sans', sans-serif; color: #000; font-size: 14pt;">
+				<p class="text-lg mb-8" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000; font-size: 14pt;">
 					Join our Advanced 301 cohort and take your Tibetan to the next level.
 				</p>
 				<div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-					<div class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg" style="font-family: 'Work Sans', Arial, sans-serif; color: #666;">
+					<div class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 						Next cohort will start in September 2026
 					</div>
-					<a href="/live/advanced/302" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors border-2 hover:bg-orange-10" style="font-family: 'Work Sans', Arial, sans-serif; color: #CF4D21; text-decoration: none; border-color: #CF4D21;">
-						Explore 302
-					</a>
+					<a href="/live/advanced/302" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4em; padding: 12px 22px; border: 2px solid #d45c26; border-radius: 50px; color: #d45c26; font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.1px; text-decoration: none; text-transform: uppercase; line-height: 1; transition: color 300ms ease 0ms, background-color 300ms ease 0ms; white-space: nowrap; background-color: transparent;" onmouseover="this.style.backgroundColor='#d45c26';this.style.color='#fff'" onmouseout="this.style.backgroundColor='transparent';this.style.color='#d45c26'">Explore 302<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 				</div>
 			</div>
 		</section>
@@ -1503,12 +1498,10 @@ import Analytics from "@vercel/analytics/astro";
 		<section class="py-12 px-6" style="background-color: #FFFBF7;">
 			<div class="max-w-4xl mx-auto text-center">
 				<div class="bg-white rounded-2xl p-8 shadow-md border-l-4" style="border-left-color: #CF4D21;">
-					<p class="text-lg mb-6 leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #333; font-size: 15pt;">
+					<p class="text-lg mb-6 leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #333; font-size: 15pt;">
 						Don't want to wait that long? Check out our self-paced courses and see if you can catch up to join the <strong>Advanced 302 cohort in January 2026</strong>.
 					</p>
-					<a href="/self-paced/advanced" class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-colors hover:opacity-90" style="font-family: 'Work Sans', Arial, sans-serif; background-color: #CF4D21; color: white; text-decoration: none;">
-						Explore Self-Paced Advanced Courses →
-					</a>
+					<a href="/self-paced/advanced" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.4em; padding: 12px 22px; border: 2px solid #d45c26; border-radius: 50px; color: #fff; font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.1px; text-decoration: none; text-transform: uppercase; line-height: 1; transition: color 300ms ease 0ms, background-color 300ms ease 0ms; white-space: nowrap; background-color: #d45c26;" onmouseover="this.style.backgroundColor='transparent';this.style.color='#d45c26'" onmouseout="this.style.backgroundColor='#d45c26';this.style.color='#fff'">Explore Self-Paced Advanced Courses<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 				</div>
 			</div>
 		</section>
@@ -1517,164 +1510,164 @@ import Analytics from "@vercel/analytics/astro";
 		<!-- FAQ Section -->
 		<section class="py-12 px-6">
 			<div class="max-w-4xl mx-auto">
-				<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold mb-8 text-center" style="font-family: 'Merriweather', serif; color: #000;">
+				<h3 class="text-xl md:text-2xl lg:text-2xl font-semibold mb-8 text-center" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 					Advanced 301 FAQ
 				</h3>
 				<div class="space-y-0">
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What is Advanced 301?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Advanced 301 is the Lower Advanced Course. It starts with a review of key Intermediate grammar (modal verbs, conditionals, relative clauses, etc.) and then covers Lessons 21–25 of <em>The Heart of Tibetan Language, Volume 3</em>.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Who can join Advanced 301?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed mb-2" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Alumni of Intermediate 201 & 202 are ready to continue.
 							</p>
-							<p class="text-sm leading-relaxed mb-2" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Auditing students of Intermediate 201/Intermediate 202 must submit an Entrance Presentation video to join as general students.
 							</p>
-							<p class="text-sm leading-relaxed mb-2" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								New students who studied Volumes 1 & 2 elsewhere can join if they submit the Entrance Presentation.
 							</p>
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Other learners with intermediate experience are asked to review Volumes 1 & 2 and/or purchase access to our Intermediate resources to prepare.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What is the Entrance Presentation?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Instead of an exam, new and former auditing students submit a short video: part in Tibetan, part in English. This shows your language skills, motivation, and basic tech readiness. You'll submit it before the beginning of the Course.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What will I learn?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed mb-2" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								You'll begin working with Buddhist topics in colloquial Tibetan, such as:
 							</p>
-							<ul class="text-sm leading-relaxed space-y-1 ml-4 mb-2" style="font-family: 'DM Sans', sans-serif; color: #666; list-style-type: disc;">
+							<ul class="text-sm leading-relaxed space-y-1 ml-4 mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666; list-style-type: disc;">
 								<li>The spreading of Buddhism</li>
 								<li>The Buddha's life</li>
 								<li>The Three Turnings of the Dharma Wheel</li>
 								<li>How to listen to the Dharma</li>
 								<li>Taking refuge</li>
 							</ul>
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Grammar includes temporal connectives, new nominalizers, and advanced modal verbs.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							How much time should I plan each week?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Plan for about 11–13 hours per week.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							How long is each module?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								301 follows the "Mr. Sloth" pace: 4 weeks per Module. This slower rhythm gives you time to absorb the advanced material.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							When are the live classes?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								There are four live sessions per Module, usually Saturdays, with two time slots (likely 11:00 and 18:00 CE(S)T). One session per Module is a Live Forum focused on soft skills. Optional White Wednesday cultural talks are also included. All sessions are recorded and shared privately.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What if I miss a class?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Send your questions in advance, then catch up with the recording afterward. Recordings are posted to Moodle or shared via YouTube with your Gmail login.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Who are the teachers?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Classes are led by Franziska Oertle, Gen Lhakpa Tsering-la, and sometimes an assistant. You'll also learn with native speaker tutors and your Small Learning Community (SLC).
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What materials are included?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'DM Sans', sans-serif; color: #666; list-style-type: disc;">
+							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666; list-style-type: disc;">
 								<li>Live classes with speaking practice, songs, games, and Dharma vocabulary</li>
 								<li>Beta-version grammar webinars (10–15 min segments)</li>
 								<li>Weekly SLC meetings</li>
@@ -1690,28 +1683,28 @@ import Analytics from "@vercel/analytics/astro";
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Which Textbook Do I Need?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								We use <em>The Heart of Tibetan Language, Volume 3</em>. If the final print isn't out, you'll receive a PDF draft of Lessons 21–25. The exercise book accompanies it.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What platforms and tools are used?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'DM Sans', sans-serif; color: #666; list-style-type: disc;">
+							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666; list-style-type: disc;">
 								<li>Moodle for resources and assignments</li>
 								<li>Zoom for live classes</li>
 								<li>YouTube for recordings</li>
@@ -1722,56 +1715,56 @@ import Analytics from "@vercel/analytics/astro";
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							How much is tuition?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Tuition follows a sliding scale. The minimum fee is $475 ($325 for monastics). The auditing option is available for $300 ($225 for monastics).
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Can I pay in installments?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Yes, but not every month! Payment plans are available. Contact us before registering.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							Do you offer scholarships or sponsorships?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<p class="text-sm leading-relaxed" style="font-family: 'DM Sans', sans-serif; color: #666;">
+							<p class="text-sm leading-relaxed" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666;">
 								Actually, monastics don't have to "apply" for it - we just offer the 30% discount to them. Other students can add a $108 sponsorship to support peers.
 							</p>
 						</div>
 					</details>
 
 					<details class="group border-b border-gray-200">
-						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'DM Sans', sans-serif; color: #000;">
+						<summary class="cursor-pointer py-4 text-base font-medium flex items-center justify-between hover:text-[#CF4D21] transition-colors list-none" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #000;">
 							What is the refund policy?
 							<svg class="w-4 h-4 transition-transform group-open:rotate-180" style="color: #CF4D21;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</summary>
 						<div class="pb-4 pt-2">
-							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'DM Sans', sans-serif; color: #666; list-style-type: disc;">
+							<ul class="text-sm leading-relaxed space-y-1 ml-4" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif; color: #666; list-style-type: disc;">
 								<li>Review Module 1: 55% refund</li>
 								<li>Module 2: 40%</li>
 								<li>Module 3: 30%</li>
@@ -1810,33 +1803,33 @@ import Analytics from "@vercel/analytics/astro";
 					<!-- Logo and Name Column -->
 					<div class="flex flex-col items-start">
 						<img src="/assets/illustrations/Logo-original.png" alt="Tibetan at SINI Logo" class="w-24 h-24 mb-4">
-						<p class="text-white font-bold text-lg mb-2" style="font-family: 'Merriweather', serif;">བོད་སྐད་སྙིང་པོ།</p>
-						<p class="text-white text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">The Heart of Tibetan Language</p>
+						<p class="text-white font-bold text-lg mb-2" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">བོད་སྐད་སྙིང་པོ།</p>
+						<p class="text-white text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">The Heart of Tibetan Language</p>
 					</div>
 					<!-- Courses Column -->
 					<div>
-						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Courses</h3>
+						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Courses</h3>
 						<ul class="space-y-2">
-							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Live Courses</a></li>
-							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Self-Paced</a></li>
+							<li><a href="/live" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Live Courses</a></li>
+							<li><a href="/self-paced" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Self-Paced</a></li>
 						</ul>
 					</div>
 
 					<!-- About Column -->
 					<div>
-						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">About</h3>
+						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">About</h3>
 						<ul class="space-y-2">
-							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">Our Story</a></li>
-							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">FAQ</a></li>
+							<li><a href="/about" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Our Story</a></li>
+							<li><a href="/faq" class="text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">FAQ</a></li>
 						</ul>
 					</div>
 
 					<!-- Contact Column -->
 					<div>
-						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Work Sans', Arial, sans-serif;">Contact</h3>
+						<h3 class="text-white font-bold text-sm uppercase mb-4 tracking-wider" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">Contact</h3>
 						<ul class="space-y-3">
 							<li>
-								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+								<a href="mailto:tibetanatsini@gmail.com" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
 									</svg>
@@ -1844,7 +1837,7 @@ import Analytics from "@vercel/analytics/astro";
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Work Sans', Arial, sans-serif;">
+								<a href="https://www.instagram.com/tibetanatsini/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white hover:text-orange-200 transition-colors text-sm" style="font-family: 'Cabin', Helvetica, Arial, Lucida, sans-serif;">
 									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
 										<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
 									</svg>
