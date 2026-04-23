@@ -3,8 +3,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
 Sitemap: https://www.heartoftibetanlanguage.com/sitemap.xml
-
-# Crawl-delay for good practice
-Crawl-delay: 1
